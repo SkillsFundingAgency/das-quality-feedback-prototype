@@ -41,6 +41,7 @@
     "notifications-node-client": "^5.1.0",
     "nunjucks": "^3.2.1",
     "portscanner": "^2.1.1",
+    "postcss": ">=8.2.13",
     "require-dir": "^1.0.0",
     "sync-request": "^6.0.0",
     "universal-analytics": "^0.4.16",
