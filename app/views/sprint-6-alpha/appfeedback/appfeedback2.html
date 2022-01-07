@@ -1,28 +1,13 @@
 {% extends "layout_cmad.html" %}
 
-
+{% block beforeContent %}
+<a class="govuk-back-link" href="appfeedback1">
+  Back
+</a>
+{% endblock %}
 
 {% block content %}
-<style>
 
-
-.govuk-main-wrapper {
-    display: block;
-    margin-top:-20px;
-}
-
-</style>
-
-
-
-
-
-<div class="govuk-width-container">
-   
-    <a class="govuk-back-link" href="appfeedback1">
-        Back
-    </a>
-    <main class="govuk-main-wrapper " id="main-content" role="main">
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
           <div class="govuk-form-group">
@@ -66,6 +51,5 @@
   
        
       </div>
-    </main>
-  </div>
+
 {% endblock %}
