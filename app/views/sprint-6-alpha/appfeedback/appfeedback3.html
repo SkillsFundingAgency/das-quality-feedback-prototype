@@ -1,71 +1,59 @@
 {% extends "layout_cmad.html" %}
 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "appfeedback2"
+  }) }}
+{% endblock %}
 
 {% block content %}
-<style>
+<form action="appfeedback4" method="post"></form>
 
 
-.govuk-main-wrapper {
-    display: block;
-    margin-top:-20px;
-}
+{{ govukRadios({
+  idPrefix: "where-do-you-live",
+  name: "where-do-you-live",
+  fieldset: {
+    legend: {
+      text: "How would you rate South & City College's training?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "  "
+  },
+  items: [
+    {
+      value: "excellent",
+      text: "Excellent"
+    },
+    {
+      value: "good",
+      text: "Good"
+    },
+    {
+      value: "poor",
+      text: "Poor"
+    },
+    {
+      value: "verypoor",
+      text: "Very Poor"
+    }
+  ]
+}) }}
+<br>
 
-</style>
 
+{{ govukButton({
+  text: "Continue",
+  href: "appfeedback4"
+}) }}
 
-
-
-
-<div class="govuk-width-container">
-   
-    <a class="govuk-back-link" href="appfeedback1">
-        Back
-    </a>
-    <main class="govuk-main-wrapper " id="main-content" role="main">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h1 class="govuk-fieldset__heading">
-                  Overall rating
-                </h1>
-              </legend>
-              <div class="govuk-radios" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-                    England
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-                    Scotland
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
-                    Wales
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
-                    Northern Ireland
-                  </label>
-                </div>
-              </div>
-          
-            </fieldset>
-          </div>
-  
-        </div>
-  
-       
-      </div>
-    </main>
-  </div>
+</form>
 {% endblock %}

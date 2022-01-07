@@ -1,0 +1,160 @@
+{% extends "layout_cmademail.html" %}
+
+
+
+{% block content %}
+
+
+<style>
+
+
+.govuk-main-wrapper {
+    display: block;
+   
+    padding-bottom: 20px;
+}
+
+main {
+    font-family: nta,Arial,sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    display: block;}
+.email-message {
+    padding: 15px 60px 0 0;
+    margin-right: 100px;
+}
+    
+ .email-message-body {
+ 
+    width: 100%;
+    box-sizing: border-box;
+   
+    margin: 0;
+    clear: both;
+    position: relative;
+    word-wrap: break-word;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+}
+
+
+table td, table th {
+    font-family: nta,Arial,sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25;
+    padding: 0.6315789474em 1.0526315789em 0.4736842105em 0;
+    text-align: left;
+    border-bottom: 1px solid #bfc1c3;
+}
+td {
+    vertical-align: top;
+}
+
+table td:last-child, table th:last-child {
+    padding-right: 0;
+}
+
+.email-message-meta th {
+    color: #6f777b;
+    
+}
+
+.email-message-meta td {
+    
+    
+    width: 100%;
+    padding-right: 60px;
+    word-break: break-word;
+    
+}
+.email-message-meta td, .email-message-meta th {
+    
+    font-family: nta,Arial,sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25;
+    border-top: 0;
+    border-bottom: 1px solid #bfc1c3;
+    vertical-align: top;
+}
+
+
+
+
+
+
+</style>
+
+
+
+<main class="govuk-main-wrapper column-main govuk-!-padding-top-0 govuk-!-padding-bottom-0 sticky-scroll-area" id="main-content" role="main">
+        
+          
+
+  
+
+          
+  
+  
+    
+  
+    <div class="email-message">
+    <table class="email-message-meta">
+      <tbody>
+        
+          
+            <tr>
+              <th scope="row">From</th>
+              <td>
+                The Apprenticeship services
+              </td>
+            </tr>
+          
+          
+          <tr>
+            <th scope="row">To</th>
+            <td>
+              johndoe@gmail.co.uk
+            </td>
+          </tr>
+        
+        <tr class="email-message-meta">
+          <th scope="row">Subject</th>
+          <td>
+            Give feedback on your training provider
+          </td>
+        </tr>
+      </tbody>
+    </table><br><br>
+    <div class="email-message-body">
+      <p style="Margin: 0 0 20px 0; font-size: 19px; line-height: 25px; color: #0B0C0C;">Hello Emma,</p><p style="Margin: 0 0 20px 0; font-size: 19px; line-height: 25px; color: #0B0C0C;">Please answer 3 multiple choice questions about your training provider.<br><a style="word-wrap: break-word; color: #1D70B8;" href="https://test-feedback.apprenticeships.education.gov.uk">https://test-feedback.apprenticeships.education.gov.uk</a></p><p style="Margin: 0 0 20px 0; font-size: 19px; line-height: 25px; color: #0B0C0C;">We’ll use it to help other employers choose a training provider and to help your training provider improve.</p><p style="Margin: 0 0 20px 0; font-size: 19px; line-height: 25px; color: #0B0C0C;">Your feedback is anonymous.</p><p style="Margin: 0 0 20px 0; font-size: 19px; line-height: 25px; color: #0B0C0C;">Many thanks,<br>The Apprenticeship service</p><hr style="border: 0; height: 1px; background: #B1B4B6; Margin: 30px 0 30px 0;"><p style="Margin: 0 0 20px 0; font-size: 19px; line-height: 25px; color: #0B0C0C;">For more information you can read our blog here: <a style="word-wrap: break-word; color: #1D70B8;" href="https://https://sfadigital.blog.gov.uk/">https://https://sfadigital.blog.gov.uk/</a></p><p style="Margin: 0 0 20px 0; font-size: 19px; line-height: 25px; color: #0B0C0C;">If you do not want to receive these emails, you can unsubscribe here.</p>
+    </div>
+  </div>
+  
+  
+  
+          
+          </main>
+
+
+{% endblock %}

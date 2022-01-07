@@ -1,55 +1,355 @@
 {% extends "layout_cmad.html" %}
 
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
 {% block beforeContent %}
-<a class="govuk-back-link" href="appfeedback1">
-  Back
-</a>
+  {{ govukBackLink({
+    text: "Back",
+    href: "appfeedback1"
+  }) }}
 {% endblock %}
 
 {% block content %}
+<h1 class="govuk-heading-l">Tell us about South & City College</h1>
 
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h1 class="govuk-fieldset__heading">
-                  How is South & City College doing on these aspects of your apprenticeship training?
-                </h1>
-              </legend>
-              <div class="govuk-radios" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-                    England
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-                    Scotland
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
-                    Wales
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
-                    Northern Ireland
-                  </label>
-                </div>
-              </div>
-          
-            </fieldset>
-          </div>
-  
-        </div>
-  
-       
-      </div>
+<h1 class="govuk-heading-m">Do you think that South & City College is providing the following aspects of your apprenticeship training to a reasonable standard?</h1>
+<span class="govuk-caption-m">It’s optional. You can skip any of these questions.</span>
+
+
+
+<br><br>
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+
+<form action="appfeedback3" method="post">
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "changed-name",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "Organised and well-structured training",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Agree",
+      text: "Agree"
+    },
+    {
+      value: "Disagree",
+      text: "Disagree"
+    }
+  ]
+}) }}
+
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "changed-name",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "Communicating clearly with you",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Agree",
+      text: "Agree"
+    },
+    {
+      value: "Disagree",
+      text: "Disagree"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "changed-name",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "Providing accessible training resources",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Agree",
+      text: "Agree"
+    },
+    {
+      value: "Disagree",
+      text: "Disagree"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "changed-name",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "Engaging and interesting training",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Agree",
+      text: "Agree"
+    },
+    {
+      value: "Disagree",
+      text: "Disagree"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "changed-name",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "Helping you learn new skills and develop existing ones",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Agree",
+      text: "Agree"
+    },
+    {
+      value: "Disagree",
+      text: "Disagree"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "changed-name",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "Relevant training that helps you perform your job better",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Agree",
+      text: "Agree"
+    },
+    {
+      value: "Disagree",
+      text: "Disagree"
+    }
+  ]
+}) }}
+
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "changed-name",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "Supporting you and your apprenticeship",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Agree",
+      text: "Agree"
+    },
+    {
+      value: "Disagree",
+      text: "Disagree"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "changed-name",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "Giving you your full 20% Off the Job training time",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Agree",
+      text: "Agree"
+    },
+    {
+      value: "Disagree",
+      text: "Disagree"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "changed-name",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "Responding to your needs",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Agree",
+      text: "Agree"
+    },
+    {
+      value: "Disagree",
+      text: "Disagree"
+    }
+  ]
+}) }}
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "changed-name",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "Fair and non-discriminatory treatment",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Agree",
+      text: "Agree"
+    },
+    {
+      value: "Disagree",
+      text: "Disagree"
+    }
+  ]
+}) }}
+
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "changed-name",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "Looking after your mental wellbeing",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Agree",
+      text: "Agree"
+    },
+    {
+      value: "Disagree",
+      text: "Disagree"
+    }
+  ]
+}) }}
+
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "changed-name",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "Safe and positive environment for you to learn in",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Agree",
+      text: "Agree"
+    },
+    {
+      value: "Disagree",
+      text: "Disagree"
+    }
+  ]
+}) }}
+
+
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{{ govukRadios({
+  classes: "govuk-radios--inline",
+  idPrefix: "changed-name",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "Preparing you for success in your future career",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+    {
+      value: "Agree",
+      text: "Agree"
+    },
+    {
+      value: "Disagree",
+      text: "Disagree"
+    }
+  ]
+}) }}
+
+
+<br><br>
+
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+</form>
 
 {% endblock %}

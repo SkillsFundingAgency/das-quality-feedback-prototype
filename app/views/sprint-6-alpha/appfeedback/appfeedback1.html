@@ -1,11 +1,14 @@
 {% extends "layout_cmad.html" %}
 
-{% block beforeContent %}
-<a class="govuk-back-link" href="appfeedback0">
-    Back
-</a>
-{% endblock %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
 
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "appfeedback0"
+  }) }}
+{% endblock %}
 
 {% block content %}
 
