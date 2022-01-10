@@ -2,6 +2,7 @@
 
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {% block beforeContent %}
   {{ govukBackLink({
@@ -11,24 +12,27 @@
 {% endblock %}
 
 {% block content %}
+<main class="govuk-main-wrapper " id="main-content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
 <h1 class="govuk-heading-l">Tell us about South & City College</h1>
 
 <h1 class="govuk-heading-m">Do you think that South & City College is providing the following aspects of your apprenticeship training to a reasonable standard?</h1>
-<span class="govuk-caption-m">It’s optional. You can skip any of these questions.</span>
+<span class="govuk-caption-m">It’s optional. You can skip all of these questions.</span>
 
-
-
+</div>
+</div>
+</main>
 <br><br>
 
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 
-<form action="appfeedback3" method="post">
+<form method="post" action="appfeedback4">
 
 {{ govukRadios({
   classes: "govuk-radios--inline",
-  idPrefix: "changed-name",
-  name: "changed-name",
+  idPrefix: "answer1",
+  name: "answer1",
   fieldset: {
     legend: {
       text: "Organised and well-structured training",
@@ -48,12 +52,10 @@
 }) }}
 
 
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
-
 {{ govukRadios({
   classes: "govuk-radios--inline",
-  idPrefix: "changed-name",
-  name: "changed-name",
+  idPrefix: "answer2",
+  name: "answer2",
   fieldset: {
     legend: {
       text: "Communicating clearly with you",
@@ -72,12 +74,14 @@
   ]
 }) }}
 
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+
+
 
 {{ govukRadios({
   classes: "govuk-radios--inline",
-  idPrefix: "changed-name",
-  name: "changed-name",
+  idPrefix: "answer3",
+  name: "answer3",
   fieldset: {
     legend: {
       text: "Providing accessible training resources",
@@ -96,12 +100,12 @@
   ]
 }) }}
 
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
 
 {{ govukRadios({
   classes: "govuk-radios--inline",
-  idPrefix: "changed-name",
-  name: "changed-name",
+  idPrefix: "answer4",
+  name: "answer4",
   fieldset: {
     legend: {
       text: "Engaging and interesting training",
@@ -120,12 +124,12 @@
   ]
 }) }}
 
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
 
 {{ govukRadios({
   classes: "govuk-radios--inline",
-  idPrefix: "changed-name",
-  name: "changed-name",
+  idPrefix: "answer5",
+  name: "answer5",
   fieldset: {
     legend: {
       text: "Helping you learn new skills and develop existing ones",
@@ -144,12 +148,13 @@
   ]
 }) }}
 
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+
 
 {{ govukRadios({
   classes: "govuk-radios--inline",
-  idPrefix: "changed-name",
-  name: "changed-name",
+  idPrefix: "answer6",
+  name: "answer6",
   fieldset: {
     legend: {
       text: "Relevant training that helps you perform your job better",
@@ -169,12 +174,10 @@
 }) }}
 
 
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
-
 {{ govukRadios({
   classes: "govuk-radios--inline",
-  idPrefix: "changed-name",
-  name: "changed-name",
+  idPrefix: "answer7",
+  name: "answer7",
   fieldset: {
     legend: {
       text: "Supporting you and your apprenticeship",
@@ -193,12 +196,12 @@
   ]
 }) }}
 
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
 
 {{ govukRadios({
   classes: "govuk-radios--inline",
-  idPrefix: "changed-name",
-  name: "changed-name",
+  idPrefix: "answer8",
+  name: "answer8",
   fieldset: {
     legend: {
       text: "Giving you your full 20% Off the Job training time",
@@ -217,12 +220,11 @@
   ]
 }) }}
 
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
   classes: "govuk-radios--inline",
-  idPrefix: "changed-name",
-  name: "changed-name",
+  idPrefix: "answer9",
+  name: "answer9",
   fieldset: {
     legend: {
       text: "Responding to your needs",
@@ -241,12 +243,12 @@
   ]
 }) }}
 
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
 
 {{ govukRadios({
   classes: "govuk-radios--inline",
-  idPrefix: "changed-name",
-  name: "changed-name",
+  idPrefix: "answer10",
+  name: "answer10",
   fieldset: {
     legend: {
       text: "Fair and non-discriminatory treatment",
@@ -266,12 +268,10 @@
 }) }}
 
 
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
-
 {{ govukRadios({
   classes: "govuk-radios--inline",
-  idPrefix: "changed-name",
-  name: "changed-name",
+  idPrefix: "answer11",
+  name: "answer11",
   fieldset: {
     legend: {
       text: "Looking after your mental wellbeing",
@@ -291,12 +291,10 @@
 }) }}
 
 
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
-
 {{ govukRadios({
   classes: "govuk-radios--inline",
-  idPrefix: "changed-name",
-  name: "changed-name",
+  idPrefix: "answer12",
+  name: "answer12",
   fieldset: {
     legend: {
       text: "Safe and positive environment for you to learn in",
@@ -316,12 +314,10 @@
 }) }}
 
 
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
-
 {{ govukRadios({
   classes: "govuk-radios--inline",
-  idPrefix: "changed-name",
-  name: "changed-name",
+  idPrefix: "answer13",
+  name: "answer13",
   fieldset: {
     legend: {
       text: "Preparing you for success in your future career",
@@ -344,12 +340,17 @@
 <br><br>
 
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
 
-{{ govukButton({
-  text: "Continue"
-}) }}
 
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Continue",
+    href: "appfeedback3"
+  }) }}
+
+  <a class="govuk-link--no-visited-state" href="appfeedback3">Skip these questions</a>
+</div>
 </form>
+
 
 {% endblock %}

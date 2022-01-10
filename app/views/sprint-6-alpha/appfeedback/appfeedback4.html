@@ -14,61 +14,131 @@
 {% endblock %}
 
 {% block content %}
+<style>
+  
+  #alignright{
+    float: right;
+    padding-right: 15px;
+  }
+
+
+
+    .govuk-table__header {
+    width: 100%;
+
+  }
+.govuk-table__cell{
+  float:right;
+}
+ 
+</style>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      <h1 class="govuk-heading-l">Check your answers</h1>
-
-
-
-      <h2 class="govuk-heading-m">Training provider: South & City College</h2>
-
-      {{ govukSummaryList({
-        classes: 'govuk-!-margin-bottom-9',
-        rows: [
-          {
-            key: {
-              text: "Previous application number"
-            },
-            value: {
-              text: "502135326"
-            },
-            actions: {
-              items: [
-                {
-                  href: "appfeedback2",
-                  text: "Change",
-                  visuallyHiddenText: "previous application number",
-                  classes:"govuk-link--no-visited-state"
-                }
-              ]
-            }
-          },
-          {
-            key: {
-              text: "Overall rating"
-            },
-            value: {
-              text: "Excellent"
-            },
-            actions: {
-              items: [
-                {
-                  href: "appfeedback3",
-                  text: "Change",
-                  visuallyHiddenText: "overall rating",
-                  classes:"govuk-link--no-visited-state"
-                }
-              ]
-            }
-          }
-        ]
-      }) }}
-
-
+      <h1 class="govuk-heading-l">Check your answers</h1><br>
      
 
+      <div class="govuk-grid-row govuk-!-margin-bottom-2">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-m">What you told us about South & City College</h2>
+        </div>
       
+                <a id="alignright" href="appfeedback2" class="govuk-link govuk-link--no-visited-state">Change</a>
+       
+    </div>
+       
+ 
+
+
+    <form action="appfeedback4" method="post">
+    <table class="govuk-table">
+      <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Organised and well-structured training</th>
+          <td id="answer" class="govuk-table__cell">{{ data['answer1'] }}</td>
+          
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">Communicating clearly with you</th>
+        <td id="answer" class="govuk-table__cell">{{ data['answer2'] }}</td>
+        
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Providing accessible training resources</th>
+      <td id="answer" class="govuk-table__cell">{{ data['answer3'] }}</td>
+      
+  </tr>
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header">Engaging and interesting training</th>
+    <td id="answer" class="govuk-table__cell">{{ data['answer4'] }}</td>
+    
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">Helping you learn new skills and develop existing ones</th>
+  <td id="answer" class="govuk-table__cell">{{ data['answer5'] }}</td>
+  
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">Relevant training that helps you perform your job better</th>
+  <td id="answer" class="govuk-table__cell">{{ data['answer6'] }}</td>
+  
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">Supporting you and your apprenticeship</th>
+  <td id="answer" class="govuk-table__cell">{{ data['answer7'] }}</td>
+  
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">Giving you your full 20% Off the Job training time</th>
+  <td id="answer" class="govuk-table__cell">{{ data['answer8'] }}</td>
+  
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">Responding to your needs</th>
+  <td id="answer" class="govuk-table__cell">{{ data['answer9'] }}</td>
+  
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">Fair and non-discriminatory treatment</th>
+  <td id="answer" class="govuk-table__cell">{{ data['answer10'] }}</td>
+  
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">Looking after your mental wellbeing</th>
+  <td id="answer" class="govuk-table__cell">{{ data['answer11'] }}</td>
+  
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">Safe and positive environment for you to learn in</th>
+  <td id="answer" class="govuk-table__cell">{{ data['answer12'] }}</td>
+  
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">Preparing you for success in your future career</th>
+  <td id="answer" class="govuk-table__cell">{{ data['answer13'] }}</td>
+  
+</tr>
+      </tbody>
+  </table>
+     <br><br>
+  <div class="govuk-grid-row govuk-!-margin-bottom-2">
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">How you rated South & City College's apprenticeship training</h2>
+    </div>
+  
+            <a id="alignright" href="appfeedback3" class="govuk-link govuk-link--no-visited-state">Change</a>
+   
+</div>
+<table class="govuk-table">
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Overall rating</th>
+      <td id="rating" class="govuk-table__cell">{{ checked['ratings'] }}</td>
+      
+  </tr>
+  </tbody>
+  </table>
+<br><br>
 
 {{ govukCheckboxes({
   idPrefix: "organisation",
@@ -92,16 +162,16 @@
   ]
 }) }}
 
-      <form action="appfeedback5" method="post">
+     </form>
 
-        <input type="hidden" name="answers-checked" value="true">
+        
 
         {{ govukButton({
-          text: "Submit"
+          text: "Submit",
+          href: "appfeedback5"
         }) }}
 
-      </form>
-
+      
     </div>
   </div>
 {% endblock %}

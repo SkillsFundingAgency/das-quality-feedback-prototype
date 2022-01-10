@@ -12,12 +12,16 @@
 {% endblock %}
 
 {% block content %}
-<form action="appfeedback4" method="post"></form>
+<main class="govuk-main-wrapper " id="main-content" role="main">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      
+<form method="post" action="appfeedback4" >
 
 
 {{ govukRadios({
-  idPrefix: "where-do-you-live",
-  name: "where-do-you-live",
+  idPrefix: "rating",
+  name: "rating",
   fieldset: {
     legend: {
       text: "How would you rate South & City College's training?",
@@ -25,20 +29,17 @@
       classes: "govuk-fieldset__legend--l"
     }
   },
-  hint: {
-    text: "  "
-  },
   items: [
     {
-      value: "excellent",
+      value: "Excellent",
       text: "Excellent"
     },
     {
-      value: "good",
+      value: "Good",
       text: "Good"
     },
     {
-      value: "poor",
+      value: "Poor",
       text: "Poor"
     },
     {
@@ -47,6 +48,8 @@
     }
   ]
 }) }}
+
+
 <br>
 
 
@@ -56,4 +59,8 @@
 }) }}
 
 </form>
+
+</div>
+</div>
+</main>
 {% endblock %}
