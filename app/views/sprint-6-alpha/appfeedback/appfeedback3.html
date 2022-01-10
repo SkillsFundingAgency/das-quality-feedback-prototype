@@ -1,8 +1,7 @@
 {% extends "layout_cmad.html" %}
 
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
-{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
 
 {% block beforeContent %}
   {{ govukBackLink({
@@ -12,55 +11,60 @@
 {% endblock %}
 
 {% block content %}
-<main class="govuk-main-wrapper " id="main-content" role="main">
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop">
-      
-<form method="post" action="appfeedback4" >
 
 
-{{ govukRadios({
-  idPrefix: "rating",
-  name: "rating",
-  fieldset: {
-    legend: {
-      text: "How would you rate South & City College's training?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [
-    {
-      value: "Excellent",
-      text: "Excellent"
-    },
-    {
-      value: "Good",
-      text: "Good"
-    },
-    {
-      value: "Poor",
-      text: "Poor"
-    },
-    {
-      value: "verypoor",
-      text: "Very Poor"
-    }
-  ]
-}) }}
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-<br>
+    <form action="appfeedback4" method="post" class="form">
 
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              How would you rate South & City College's training?
+            </h1>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rating-excellent" name="rating" type="radio" value="Excellent" {{ checked("rating", "Excellent") }}>
+              <label class="govuk-label govuk-radios__label" for="rating-excellent">
+               Excellent
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rating-good" name="rating" type="radio" value="Good" {{ checked("rating", "Good") }}>
+              <label class="govuk-label govuk-radios__label" for="rating-good">
+               Good
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rating-poor" name="rating" type="radio" value="Poor" {{ checked("rating", "Poor") }}>
+              <label class="govuk-label govuk-radios__label" for="rating-poor">
+               Poor
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rating-verypoor" name="rating" type="radio" value="Very Poor" {{ checked("rating", "Very Poor") }}>
+              <label class="govuk-label govuk-radios__label" for="rating-verypoor">
+               Very Poor
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      <br><br>
 
-{{ govukButton({
-  text: "Continue",
-  href: "appfeedback4"
-}) }}
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
 
-</form>
-
+    </form>
 </div>
+  </div>
 </div>
-</main>
+
+
+
+
+
+
 {% endblock %}
