@@ -19,17 +19,30 @@
   #alignright{
     float: right;
     padding-right: 15px;
+    font-family: "GDS Transport",arial,sans-serif;
+    font-size: 1.2rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: underline;
+    text-decoration-thickness: max(1px, 0.0625rem);
+    text-underline-offset: 0.1em;
   }
+#overall {
+  white-space: nowrap;
+  overflow: hidden;
+}
+  .govuk-table__cell {
+    text-align:right;
 
-
-
+  }
     .govuk-table__header {
     width: 100%;
 
   }
-.govuk-table__cell{
-  float:right;
-}
+ 
+
+
+
  
 </style>
   <div class="govuk-grid-row">
@@ -54,67 +67,67 @@
       <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Organised and well-structured training</th>
-          <td id="answer" class="govuk-table__cell">{{ data['answer1'] }}</td>
+          <td class="govuk-table__cell">{{ data['answer1'] }}</td>
           
       </tr>
       <tr class="govuk-table__row">
         <th scope="row" class="govuk-table__header">Communicating clearly with you</th>
-        <td id="answer" class="govuk-table__cell">{{ data['answer2'] }}</td>
+        <td class="govuk-table__cell">{{ data['answer2'] }}</td>
         
     </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Providing accessible training resources</th>
-      <td id="answer" class="govuk-table__cell">{{ data['answer3'] }}</td>
+      <td class="govuk-table__cell">{{ data['answer3'] }}</td>
       
   </tr>
   <tr class="govuk-table__row">
     <th scope="row" class="govuk-table__header">Engaging and interesting training</th>
-    <td id="answer" class="govuk-table__cell">{{ data['answer4'] }}</td>
+    <td class="govuk-table__cell">{{ data['answer4'] }}</td>
     
 </tr>
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">Helping you learn new skills and develop existing ones</th>
-  <td id="answer" class="govuk-table__cell">{{ data['answer5'] }}</td>
+  <td class="govuk-table__cell">{{ data['answer5'] }}</td>
   
 </tr>
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">Relevant training that helps you perform your job better</th>
-  <td id="answer" class="govuk-table__cell">{{ data['answer6'] }}</td>
+  <td class="govuk-table__cell">{{ data['answer6'] }}</td>
   
 </tr>
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">Supporting you and your apprenticeship</th>
-  <td id="answer" class="govuk-table__cell">{{ data['answer7'] }}</td>
+  <td class="govuk-table__cell">{{ data['answer7'] }}</td>
   
 </tr>
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">Giving you your full 20% Off the Job training time</th>
-  <td id="answer" class="govuk-table__cell">{{ data['answer8'] }}</td>
+  <td class="govuk-table__cell">{{ data['answer8'] }}</td>
   
 </tr>
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">Responding to your needs</th>
-  <td id="answer" class="govuk-table__cell">{{ data['answer9'] }}</td>
+  <td class="govuk-table__cell">{{ data['answer9'] }}</td>
   
 </tr>
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">Fair and non-discriminatory treatment</th>
-  <td id="answer" class="govuk-table__cell">{{ data['answer10'] }}</td>
+  <td class="govuk-table__cell">{{ data['answer10'] }}</td>
   
 </tr>
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">Looking after your mental wellbeing</th>
-  <td id="answer" class="govuk-table__cell">{{ data['answer11'] }}</td>
+  <td class="govuk-table__cell">{{ data['answer11'] }}</td>
   
 </tr>
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">Safe and positive environment for you to learn in</th>
-  <td id="answer" class="govuk-table__cell">{{ data['answer12'] }}</td>
+  <td class="govuk-table__cell">{{ data['answer12'] }}</td>
   
 </tr>
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">Preparing you for success in your future career</th>
-  <td id="answer" class="govuk-table__cell">{{ data['answer13'] }}</td>
+  <td class="govuk-table__cell">{{ data['answer13'] }}</td>
   
 </tr>
       </tbody>
@@ -132,7 +145,7 @@
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Overall rating</th>
-      <td class="govuk-table__cell">{{ data['rating'] }}</td>
+      <td id="overall" class="govuk-table__cell">{{ data['rating'] }}</td>
       
   </tr>
   </tbody>
