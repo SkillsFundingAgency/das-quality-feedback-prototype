@@ -33,6 +33,8 @@
 }
   .govuk-table__cell {
     text-align:right;
+    white-space: nowrap;
+  overflow: hidden;
 
   }
     .govuk-table__header {
@@ -67,67 +69,119 @@
       <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Organised and well-structured training</th>
-          <td class="govuk-table__cell">{{ data['answer1'] }}</td>
+          <td class="govuk-table__cell"> {% if data['answer1'] %}
+                                      {{ data['answer1'] }}
+                                         {% else %}
+                                        No selection
+                                         {% endif %}</td>
           
       </tr>
       <tr class="govuk-table__row">
         <th scope="row" class="govuk-table__header">Communicating clearly with you</th>
-        <td class="govuk-table__cell">{{ data['answer2'] }}</td>
+        <td class="govuk-table__cell">{% if data['answer2'] %}
+          {{ data['answer2'] }}
+             {% else %}
+            No selection
+             {% endif %}</td>
         
     </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Providing accessible training resources</th>
-      <td class="govuk-table__cell">{{ data['answer3'] }}</td>
+      <td class="govuk-table__cell">{% if data['answer3'] %}
+        {{ data['answer3'] }}
+           {% else %}
+          No selection
+           {% endif %}</td>
       
   </tr>
   <tr class="govuk-table__row">
     <th scope="row" class="govuk-table__header">Engaging and interesting training</th>
-    <td class="govuk-table__cell">{{ data['answer4'] }}</td>
+    <td class="govuk-table__cell">{% if data['answer4'] %}
+      {{ data['answer4'] }}
+         {% else %}
+        No selection
+         {% endif %}</td>
     
 </tr>
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">Helping you learn new skills and develop existing ones</th>
-  <td class="govuk-table__cell">{{ data['answer5'] }}</td>
+  <td class="govuk-table__cell">{% if data['answer5'] %}
+    {{ data['answer5'] }}
+       {% else %}
+      No selection
+       {% endif %}</td>
   
 </tr>
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">Relevant training that helps you perform your job better</th>
-  <td class="govuk-table__cell">{{ data['answer6'] }}</td>
+  <td class="govuk-table__cell">{% if data['answer6'] %}
+    {{ data['answer6'] }}
+       {% else %}
+      No selection
+       {% endif %}</td>
   
 </tr>
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">Supporting you and your apprenticeship</th>
-  <td class="govuk-table__cell">{{ data['answer7'] }}</td>
+  <td class="govuk-table__cell">{% if data['answer7'] %}
+    {{ data['answer7'] }}
+       {% else %}
+      No selection
+       {% endif %}</td>
   
 </tr>
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">Giving you your full 20% Off the Job training time</th>
-  <td class="govuk-table__cell">{{ data['answer8'] }}</td>
+  <td class="govuk-table__cell">{% if data['answer8'] %}
+    {{ data['answer8'] }}
+       {% else %}
+      No selection
+       {% endif %}</td>
   
 </tr>
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">Responding to your needs</th>
-  <td class="govuk-table__cell">{{ data['answer9'] }}</td>
+  <td class="govuk-table__cell">{% if data['answer9'] %}
+    {{ data['answer9'] }}
+       {% else %}
+      No selection
+       {% endif %}</td>
   
 </tr>
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">Fair and non-discriminatory treatment</th>
-  <td class="govuk-table__cell">{{ data['answer10'] }}</td>
+  <td class="govuk-table__cell">{% if data['answer10'] %}
+    {{ data['answer10'] }}
+       {% else %}
+      No selection
+       {% endif %}</td>
   
 </tr>
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">Looking after your mental wellbeing</th>
-  <td class="govuk-table__cell">{{ data['answer11'] }}</td>
+  <td class="govuk-table__cell">{% if data['answer11'] %}
+    {{ data['answer11'] }}
+       {% else %}
+      No selection
+       {% endif %}</td>
   
 </tr>
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">Safe and positive environment for you to learn in</th>
-  <td class="govuk-table__cell">{{ data['answer12'] }}</td>
+  <td class="govuk-table__cell">{% if data['answer12'] %}
+    {{ data['answer12'] }}
+       {% else %}
+      No selection
+       {% endif %}</td>
   
 </tr>
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">Preparing you for success in your future career</th>
-  <td class="govuk-table__cell">{{ data['answer13'] }}</td>
+  <td class="govuk-table__cell">{% if data['answer13'] %}
+    {{ data['answer13'] }}
+       {% else %}
+      No selection
+       {% endif %}</td>
   
 </tr>
       </tbody>
