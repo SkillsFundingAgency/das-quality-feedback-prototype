@@ -42,11 +42,9 @@
 
   }
  
-
-
-
  
 </style>
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
@@ -79,9 +77,9 @@
       <tr class="govuk-table__row">
         <th scope="row" class="govuk-table__header">Communicating clearly with you</th>
         <td class="govuk-table__cell">{% if data['answer2'] %}
-          {{ data['answer2'] }}
-             {% else %}
-            No selection
+                                         {{ data['answer2'] }}
+                                             {% else %}
+                                          No selection
              {% endif %}</td>
         
     </tr>
@@ -130,15 +128,7 @@
        {% endif %}</td>
   
 </tr>
-<tr class="govuk-table__row">
-  <th scope="row" class="govuk-table__header">Giving you your full 20% Off the Job training time</th>
-  <td class="govuk-table__cell">{% if data['answer8'] %}
-    {{ data['answer8'] }}
-       {% else %}
-      No selection
-       {% endif %}</td>
-  
-</tr>
+
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">Responding to your needs</th>
   <td class="govuk-table__cell">{% if data['answer9'] %}
