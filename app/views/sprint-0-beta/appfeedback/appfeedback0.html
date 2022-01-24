@@ -1,0 +1,101 @@
+{% extends "layout_cmad.html" %}
+
+
+
+{% block content %}
+
+<style>
+
+.das-inline-button-link {
+    display: inline-block;
+    margin-left: 2px;
+    padding: 0.526315em 0 0.263157em 0;
+    line-height: 1.25;
+
+    
+}
+
+.govuk-button:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -4px;
+    left: -2px;
+    background: rgba(0,0,0,0);
+}
+
+
+
+</style>
+
+
+
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+  
+              
+  
+              <h1 class="govuk-heading-xl">Sign in to My apprenticeship</h1>
+  
+              
+  
+                  <div class="govuk-form-group">
+                      <label class="govuk-label govuk-label--m" for="Username">
+                          Email address
+                      </label>
+                      <input class="govuk-input govuk-input--width-20" type="text" autocomplete="username" data-val="true" data-val-required="Enter an email address" id="Username" name="Username" value="">
+                  </div>
+  
+                  <div class="govuk-form-group">
+                      <label class="govuk-label govuk-label--m" for="Password">
+                          Password
+                      </label>
+                      <div class="show-password-container">
+                          <input class="govuk-input govuk-input--width-20 show-hide-password-input" type="password" autocomplete="current-password" data-show-hide="password" data-val="true" data-val-required="Enter a password" id="Password" name="Password">
+                          <div class="show-password-control-container">
+                             
+                             
+                          </div>
+                      </div>
+                  </div>
+  
+  
+                  <div class="govuk-inset-text">
+                      By continuing you confirm you have:
+                      <ul class="govuk-list govuk-list--bullet">
+                          <li>read the service <a class="govuk-link--no-visited-state" href="appfeedbackprivacy.html
+                            ">privacy notice</a></li>
+                      </ul>
+                  </div>
+  
+                  <div class="govuk-form-group">
+                    <form class="js-disable-on-submit" action="myappdashboard.html">
+                    <button class="govuk-button" type="submit">
+                        Sign in
+                    </button>
+
+                    <div class="das-inline-button-link">
+                        <span class="govuk-body">
+                             or
+                            <a class="govuk-link--no-visited-state" href="#">create an account</a>
+                        </span>
+                    </form>
+                    </div>
+                </div>
+  
+                  <div class="govuk-form-group">
+                      <h2 class="govuk-heading-m">Problems signing in</h2>
+                      <p class="govuk-body">
+                          <a class="govuk-link--no-visited-state" href="#">I have forgotten my password</a>
+                      </p>
+                  </div>
+            </form>
+  
+              <!-- <p class="govuk-body"><a class="govuk-link" href="https://confirm.pp-aas.apprenticeships.education.gov.uk/">Having problems with sign in?</a></p> -->
+          </div>
+      </div>
+
+
+{% endblock %}

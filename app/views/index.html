@@ -6,6 +6,18 @@
 {% endblock %}
 
 {% block content %}
+
+
+<style>
+
+     .margine {
+          padding-left: 20px;
+     }
+</style>
+
+
+
+
 <!-- Main content starts -->
 
 <!-- Full width heading starts -->
@@ -104,14 +116,19 @@
                  <tr class="govuk-table__row">
                    <th scope="col" class="govuk-table__header">Name</th>
                    <th scope="col" class="govuk-table__header">Status</th>
-                   <th scope="col" class="govuk-table__header govuk-table__header--numeric">Notes</th>
+                   <th scope="col" class="govuk-table__header margine">Notes</th>
                  </tr>
                </thead>
                <tbody class="govuk-table__body">
                  <tr class="govuk-table__row">
+                    <tr class="govuk-table__row">
+                         <th scope="row" class="govuk-table__header"><a href="/sprint-0-beta/appfeedback/appfeedback0.html" class="govuk-link govuk-link--no-visited-state">Apprentice feedback journey (multiple training providers)</a></th>
+                         <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Ready for UR</strong></td>
+                         <td class="govuk-table__cell margine">This journey starts with the My apprenticeship log in page, it includes the My apprenticeship dashboard and also covers the multiple training providers scenario.</td>
+                       </tr>
                    <th scope="row" class="govuk-table__header"><a href="/sprint-6-alpha/appfeedback/email1.html" class="govuk-link govuk-link--no-visited-state">Apprentice feedback journey</a></th>
                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue">Ready for UR</strong></td>
-                   <td class="govuk-table__cell govuk-table__cell--numeric">Journey built as defined in <a class="govuk-link--no-visited-state" href="https://skillsfundingagency.atlassian.net/browse/QF-156?atlOrigin=eyJpIjoiMDBmZmMzYzQxZTIxNGVlZDljNGI5ZmYzYzI3ZTE4OWEiLCJwIjoiaiJ9">this Jira ticket.</a></td>
+                   <td class="govuk-table__cell margine">Journey built as defined in <a class="govuk-link--no-visited-state" href="https://skillsfundingagency.atlassian.net/browse/QF-156?atlOrigin=eyJpIjoiMDBmZmMzYzQxZTIxNGVlZDljNGI5ZmYzYzI3ZTE4OWEiLCJwIjoiaiJ9">this Jira ticket.</a></td>
                  </tr>
                </tbody>
              </table>
@@ -131,20 +148,36 @@
 <div class="govuk-grid-row">
      <!-- Sprints section starts -->
      <div class="govuk-grid-column-two-thirds">
-          {% include './sprint-6-alpha/_summary.html' %}
+          {% include './sprint-0-beta/_summary.html' %}
 
 
 
           <h2 class="govuk-heading-l govuk-!-margin-top-9">
                Previous sprints and archive
           </h2>
+          {% set sprint0betaHtml %}
+          {% include './sprint-0-beta/_summary.html' %}
+          {% endset %}
           {% set sprint6alphaHtml %}
           {% include './sprint-6-alpha/_summary.html' %}
           {% endset %}
-         
+
+
           {{ govukAccordion({
                id: "accordion-default",
                items: [
+
+               {
+                    heading: {
+                         text: "Sprint 0 Beta"
+                    },
+                    content: {
+                         html: sprint0betaHtml
+                    },
+                    summary: {
+                         html: '19th Jan — 2nd Feb 2022'
+                    }
+               },
               
                {
                     heading: {
