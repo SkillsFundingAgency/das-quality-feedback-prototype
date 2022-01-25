@@ -7,7 +7,7 @@
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
-    href: "appfeedback1"
+    href: "appfeedback2a"
   }) }}
 {% endblock %}
 
@@ -16,7 +16,7 @@
 
 
 <h2 class="govuk-heading-l">
-  Do you think that South & City College is providing the following aspects of your apprenticeship training to a reasonable standard?
+  Do you think that {{ data['provider'] }} is providing the following aspects of your apprenticeship training to a reasonable standard?
 </h2><br>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">

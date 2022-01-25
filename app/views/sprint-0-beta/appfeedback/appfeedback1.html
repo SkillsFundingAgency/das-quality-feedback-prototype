@@ -1,36 +1,65 @@
 {% extends "layout_cmad.html" %}
+{% extends "layout_cmad.html" %}
 
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-{% from "govuk/components/button/macro.njk" import govukButton %}
+
 
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
-    href: "myappdashboard"
+    href: "appfeedback2"
   }) }}
 {% endblock %}
 
 {% block content %}
 
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <h1 class="govuk-heading-l">Give feedback on South & City College</h1>
-  
-          <p class="govuk-body">Give your feedback to help South & City College improve their apprenticeship training. It'll also help other apprentices and employers know how South & City College is doing.</p>
-  
-          
-  
-          <p class="govuk-body">We publish your feedback but without your name so your training provider doesn't know who has given feedback.</p>
-          <p class="govuk-body">By continuing, you agree to us using your feedback and publishing it anonymously on <a class="govuk-link--no-visited-state" href="https://findapprenticeshiptraining.apprenticeships.education.gov.uk/">Find apprenticeship training (opens in a new tab)</a>.</p>
 
-          
-          <a href="appfeedback2.html" role="button" draggable="false" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8 govuk-button--start" data-module="govuk-button">
-            Start now
-            <svg class="govuk-button__start-icon" xmlns="#" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
-              <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-            </svg></a>
 
-        </div>
-      </div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="appfeedback2a" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Confirm your training provider
+            </h1><br>
+          </legend>
+          <h2 class="govuk-heading-m">Which current training provider would you like to give feedback on?
+          </h2>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="multiverse-provider" name="provider" type="radio" value="Multiverse LTD" {{ checked("provider", "multiverse-provider") }}>
+              <label class="govuk-label govuk-radios__label" for="multiverse-provider">
+               Multiverse LTD
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="south-provider" name="provider" type="radio" value="South and City College" {{ checked("rating", "south-provider") }}>
+              <label class="govuk-label govuk-radios__label" for="outh-provider">
+              South and City College
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      <br><br>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+</div>
+
+
+
+
+  </div>
+</div>
+
+
+
+
+
 
 {% endblock %}

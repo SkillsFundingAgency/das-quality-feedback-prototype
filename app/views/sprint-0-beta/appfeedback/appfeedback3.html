@@ -6,7 +6,7 @@
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
-    href: "appfeedback2"
+    href: "appfeedback2b"
   }) }}
 {% endblock %}
 
@@ -23,7 +23,7 @@
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              How would you rate South & City College's training?
+              How would you rate {{ data['provider'] }}'s training?
             </h1><br>
           </legend>
           <div class="govuk-radios">
