@@ -1,0 +1,104 @@
+{% extends "layout_ma2.html" %}
+
+
+
+
+
+
+
+
+
+{% block content %}
+
+{{ govukBackLink({
+    text: "Back",
+    href: "empfeedback8"
+  }) }}
+
+
+
+  <div class="govuk-width-container">
+
+  
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds-from-desktop">
+  
+            <form action="empfeedback10" method="post" class="form">
+          <h1 class="govuk-heading-l">Check your answers</h1>
+  
+          <h2 class="govuk-heading-m">Training provider: South & City College</h2>
+  
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+               Strengths
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {% if data['answer1'] %}
+                {{ data['answer1'] }}
+                   {% else %}
+                 You didn't select any
+                   {% endif %}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Areas to improve
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {% if data['answer1'] %}
+                                      {{ data['answer1'] }}
+                                         {% else %}
+                                       You didn't select any
+                                         {% endif %}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> date of birth</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Overall rating
+              </dt>
+              <dd class="govuk-summary-list__value">
+               Good
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> address</span>
+                </a>
+              </dd>
+            </div>
+           
+          </dl>
+  
+  
+          
+  
+          <p class="govuk-body">Your answers will be published anonymously on the <strong>Find apprenticeship training service</strong> in the new future.</p>
+  
+      
+  
+            <input type="hidden" name="answers-checked" value="true">
+  
+            <button class="govuk-button" data-module="govuk-button">
+              Submit
+            </button>
+  
+          </form>
+  
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+{% endblock %}

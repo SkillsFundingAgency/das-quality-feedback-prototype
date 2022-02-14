@@ -1,0 +1,364 @@
+{% extends "layout_ma2.html" %}
+
+
+
+
+
+
+{% block beforeContent %}
+<style>
+    #dreapta {
+       margin-right: 0;
+       padding-right: 0;
+    }
+
+
+
+</style>
+
+<link href="https://das-pp-frnt-end.azureedge.net/css/main.css" rel="stylesheet">
+
+{% endblock %}
+
+
+{% block content %}
+
+{{ govukBackLink({
+    text: "Back",
+    href: "empfeedback2"
+  }) }}
+
+  
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+                
+
+
+
+    <h1 class="govuk-heading-xl">Select a training provider</h1>
+    
+            <form method="get" action="/10005760/apprentices">
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <div class="govuk-inset-text">
+     You can give feedback once every three weeks for each training provider.
+    </div>
+                    </div>
+                </div>
+
+
+        
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                        <div class="das-pane govuk-!-margin-bottom-3">
+                            <div class="govuk-grid-row">
+                                <div class="govuk-grid-column-one-third">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label" for="selectedEmployer">Training provider</label>
+                                        <select class="govuk-select govuk-!-width-full" id="selectedEmployer" name="selectedEmployer">
+                                            <option label="All" aria-label="All employers" value="">All</option>
+                                                    <option label="ALL TRADES TRAINING LIMITED" value="ALL TRADES TRAINING LIMITED">ALL TRADES TRAINING LIMITED</option>
+                                                    <option label="ANNUKKA LIMITED" value="ANNUKKA LIMITED">ANNUKKA LIMITED</option>
+                                                    <option label="AUTOMATION &amp; OPTIMISATION LTD" value="AUTOMATION &amp; OPTIMISATION LTD">AUTOMATION &amp; OPTIMISATION LTD</option>
+                                                    <option label="AutomationTestForSingleOrgAorn720" value="AutomationTestForSingleOrgAorn720">AutomationTestForSingleOrgAorn720</option>
+                                                    <option label="BAMBINOS DAY NURSERY LIMITED" value="BAMBINOS DAY NURSERY LIMITED">BAMBINOS DAY NURSERY LIMITED</option>
+                                                    <option label="BARBERRY COVENTRY LIMITED" value="BARBERRY COVENTRY LIMITED">BARBERRY COVENTRY LIMITED</option>
+                                                    <option label="BLOBAL HOLDINGS  LIMITED" value="BLOBAL HOLDINGS  LIMITED">BLOBAL HOLDINGS  LIMITED</option>
+                                                    <option label="BOB LTD." value="BOB LTD.">BOB LTD.</option>
+                                                    <option label="COMPLIANCE LIMITED" value="COMPLIANCE LIMITED">COMPLIANCE LIMITED</option>
+                                                    <option label="COVENTRY &amp; WARWICKSHIRE CHAMBER OF COMMERCE" value="COVENTRY &amp; WARWICKSHIRE CHAMBER OF COMMERCE">COVENTRY &amp; WARWICKSHIRE CHAMBER OF COMMERCE</option>
+                                                    <option label="COVENTRY ACCOUNTANTS LTD" value="COVENTRY ACCOUNTANTS LTD">COVENTRY ACCOUNTANTS LTD</option>
+                                                    <option label="COVENTRY AIRPORT LIMITED" value="COVENTRY AIRPORT LIMITED">COVENTRY AIRPORT LIMITED</option>
+                                                    <option label="Coventry City Council" value="Coventry City Council">Coventry City Council</option>
+                                                    <option label="COVENTRY NEWSPAPERS LIMITED" value="COVENTRY NEWSPAPERS LIMITED">COVENTRY NEWSPAPERS LIMITED</option>
+                                                    <option label="DEPARTMENT OF EDUCATION  LTD" value="DEPARTMENT OF EDUCATION  LTD">DEPARTMENT OF EDUCATION  LTD</option>
+                                                    <option label="ESFA  LTD" value="ESFA  LTD">ESFA  LTD</option>
+                                                    <option label="ESFA LTD" value="ESFA LTD">ESFA LTD</option>
+                                                    <option label="FUN TIMES LIMITED" value="FUN TIMES LIMITED">FUN TIMES LIMITED</option>
+                                                    <option label="HAPPY LIMITED" value="HAPPY LIMITED">HAPPY LIMITED</option>
+                                                    <option label="LITTLE FISH LIMITED" value="LITTLE FISH LIMITED">LITTLE FISH LIMITED</option>
+                                                    <option label="M5 CORPORATION  LIMITED" value="M5 CORPORATION  LIMITED">M5 CORPORATION  LIMITED</option>
+                                                    <option label="Old Park School &amp; Children Centre" value="Old Park School &amp; Children Centre">Old Park School &amp; Children Centre</option>
+                                                    <option label="ONA CONSULTING  LTD" value="ONA CONSULTING  LTD">ONA CONSULTING  LTD</option>
+                                                    <option label="QA LIMITED" value="QA LIMITED">QA LIMITED</option>
+                                                    <option label="SCIENCE RESEARCH  LIMITED" value="SCIENCE RESEARCH  LIMITED">SCIENCE RESEARCH  LIMITED</option>
+                                                    <option label="SECOND LIMITED" value="SECOND LIMITED">SECOND LIMITED</option>
+                                                    <option label="SETUP &amp; GROW LTD" value="SETUP &amp; GROW LTD">SETUP &amp; GROW LTD</option>
+                                                    <option label="SOMEONE ELSE LIMITED" value="SOMEONE ELSE LIMITED">SOMEONE ELSE LIMITED</option>
+                                                    <option label="SPECS &amp; BEAR HORSEBOX CANTEEN LTD" value="SPECS &amp; BEAR HORSEBOX CANTEEN LTD">SPECS &amp; BEAR HORSEBOX CANTEEN LTD</option>
+                                                    <option label="SUBHA  LIMITED" value="SUBHA  LIMITED">SUBHA  LIMITED</option>
+                                                    <option label="TAB A CAB LTD" value="TAB A CAB LTD">TAB A CAB LTD</option>
+                                                    <option label="TEN BAT LTD" value="TEN BAT LTD">TEN BAT LTD</option>
+                                                    <option label="TESCO PLC" value="TESCO PLC">TESCO PLC</option>
+                                                    <option label="WAT (UK) LIMITED" value="WAT (UK) LIMITED">WAT (UK) LIMITED</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                 <div class="govuk-grid-column-one-third">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label" for="selectedStatus">Feedback status</label>
+                                        <select class="govuk-select govuk-!-width-full" id="selectedApprenticeConfirmation" name="selectedApprenticeConfirmation">
+                                            <option label="All" aria-label="All confirmations" value="">All</option>
+                                                                                                                                                                                                    <option label="Not yet submitted" value="NA">Not yet submitted</option>                                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+    
+                            
+                            <button class="govuk-button govuk-!-margin-0" type="submit">Apply filters</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <br><br>
+            <table class="govuk-table das-table--responsive das-table--double-arrows das-table--condensed">
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        
+                        
+                        <th scope="col" class="govuk-table__header">
+                            <a class="das-table__sort" title="Sort the table by name" href="#">
+                              Training provider
+                            </a>
+                        </th>
+                        
+                        
+                        <th scope="col" class="govuk-table__header">
+                            <a class="das-table__sort" title="Sort the table by status" href="#">
+                               Feedback status
+                            </a>
+                        </th>
+                        <th scope="col" class="govuk-table__header govuk-table__header--numeric">
+                            <a class="das-table__sort" title="Sort the table by name"href="#">Date submitted</a>
+                        </th>
+                        
+                        
+                        <th id="dreapta" scope="col" class="govuk-table__header govuk-table__header--numeric">
+                          Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    <tr class="govuk-table__row">
+                        
+                        
+                        <td class="govuk-table__cell" data-label="Employer">
+                            BARBERRY COVENTRY LIMITED
+                        </td>
+                        
+                        
+                        <td data-label="Apprentice confirmation" class="govuk-table__cell">
+                           Not yet submitted
+                        </td><td class="govuk-table__cell govuk-table__cell--numeric" data-label="Planned end date">
+                           N/A
+                        </td>
+                        
+                        <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Apprentice confirmation">
+                          <a class="govuk-link--no-visited-state" href="#">Select</a>
+                        </td>
+                        
+                        
+                    </tr>
+                    <tr class="govuk-table__row">
+                        
+                        
+                        <td class="govuk-table__cell" data-label="Employer">
+                            Coventry City Council
+                        </td>
+                        
+                        
+                        <td class="govuk-table__cell" data-label="Apprentice confirmation">Not yet submitted</td><td class="govuk-table__cell govuk-table__cell--numeric" data-label="Planned end date">N/A</td>
+                        
+                        
+                        <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Apprentice confirmation">
+                            <a class="govuk-link--no-visited-state" href="#">Select</a>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        
+                        
+                        <td class="govuk-table__cell" data-label="Employer">
+                           South & City College
+                        </td>
+                        
+                        
+                        <td class="govuk-table__cell" data-label="Apprentice confirmation">	Not yet submitted</td><td class="govuk-table__cell govuk-table__cell--numeric" data-label="Planned end date">N/A</td>
+                        
+                        <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Apprentice confirmation">
+                            <a class="govuk-link--no-visited-state" href="empfeedback4.html">Select</a>
+                        </td>
+                        
+                    </tr>
+                    <tr class="govuk-table__row">
+                        
+                        
+                        <td class="govuk-table__cell" data-label="Employer">
+                            COVENTRY &amp; WARWICKSHIRE CHAMBER OF COMMERCE
+                        </td>
+                        
+                        
+                        <td class="govuk-table__cell" data-label="Apprentice confirmation">	Not yet submitted</td><td class="govuk-table__cell govuk-table__cell--numeric" data-label="Planned end date">N/A</td>
+                        
+                        <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Apprentice confirmation">
+                            <a class="govuk-link--no-visited-state" href="#">Select</a>
+                        </td>
+                        
+                    </tr>
+                    <tr class="govuk-table__row">
+                        
+                        
+                        <td class="govuk-table__cell" data-label="Employer">
+                            COVENTRY ACCOUNTANTS LTD
+                        </td>
+                        
+                        
+                        <td class="govuk-table__cell" data-label="Apprentice confirmation">	Not yet submitted</td><td class="govuk-table__cell govuk-table__cell--numeric" data-label="Planned end date">N/A</td>
+                        
+                        <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Apprentice confirmation">
+                            <a class="govuk-link--no-visited-state" href="#">Select</a>
+                        </td>
+                        
+                    </tr>
+                    <tr class="govuk-table__row">
+                        
+                        
+                        <td class="govuk-table__cell" data-label="Employer">
+                            COVENTRY ACCOUNTANTS LTD
+                        </td>
+                        
+                        
+                        <td class="govuk-table__cell" data-label="Apprentice confirmation">	Not yet submitted</td><td class="govuk-table__cell govuk-table__cell--numeric" data-label="Planned end date">
+                           N/A
+                        </td>
+                        
+                        <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Apprentice confirmation">
+                            <a class="govuk-link--no-visited-state" href="#">Select</a>
+                        </td>
+                        
+                    </tr>
+                    <tr class="govuk-table__row">
+                        
+                        
+                        <td class="govuk-table__cell" data-label="Employer">
+                            Coventry City Council
+                        </td>
+                        
+                        
+                        <td class="govuk-table__cell" data-label="Apprentice confirmation">	Not yet submitted</td><td class="govuk-table__cell govuk-table__cell--numeric" data-label="Planned end date">N/A</td>
+                        
+                        <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Apprentice confirmation">
+                            <a class="govuk-link--no-visited-state" href="#">Select</a>
+                        </td>
+                        
+                    </tr>
+                    <tr class="govuk-table__row">
+                        
+                        
+                        <td class="govuk-table__cell" data-label="Employer">
+                            Coventry City Council
+                        </td>
+                        
+                        
+                        <td class="govuk-table__cell" data-label="Apprentice confirmation">	Not yet submitted</td><td class="govuk-table__cell govuk-table__cell--numeric" data-label="Planned end date">N/A</td>
+                        
+                        <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Apprentice confirmation">
+                            <a class="govuk-link--no-visited-state" href="#">Select</a>
+                        </td>
+                        
+                    </tr>
+                    <tr class="govuk-table__row">
+                        
+                        
+                        <td class="govuk-table__cell" data-label="Employer">
+                            Coventry City Council
+                        </td>
+                        
+                        
+                        <td class="govuk-table__cell" data-label="Apprentice confirmation">
+                         Submitted</td><td class="govuk-table__cell govuk-table__cell--numeric" data-label="Planned end date">
+                            1 Sep 2021
+                        </td>
+                        
+                        <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Apprentice confirmation">
+                           
+                        </td>
+                        
+                    </tr>
+                    <tr class="govuk-table__row">
+                        
+                        
+                        <td class="govuk-table__cell" data-label="Employer">
+                            Coventry City Council
+                        </td>
+                        
+                        
+                        <td class="govuk-table__cell" data-label="Apprentice confirmation">Submitted</td><td class="govuk-table__cell govuk-table__cell--numeric" data-label="Planned end date">
+                            3 Sep 2022
+                        </td>
+                        
+                        <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Apprentice confirmation">
+                          
+                        </td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+    
+        <nav role="navigation" aria-label="Pagination">
+                <div class="das-pagination__summary">
+                    Showing 1 to 10 of 293 training providers
+                </div>
+            <ul class="das-pagination">
+                    <li class="das-pagination__item">
+                        <a class="das-pagination__link current" aria-current="aria-current" aria-label="Page 1" href="#">
+                            1
+                        </a>
+                    </li>
+                    <li class="das-pagination__item">
+                        <a class="das-pagination__link " aria-label="Page 2" href="#">
+                            2
+                        </a>
+                    </li>
+                    <li class="das-pagination__item">
+                        <a class="das-pagination__link " aria-label="Page 3" href="#">
+                            3
+                        </a>
+                    </li>
+                    <li class="das-pagination__item">
+                        <a class="das-pagination__link " aria-label="Page 4" href="#">
+                            4
+                        </a>
+                    </li>
+                    <li class="das-pagination__item">
+                        <a class="das-pagination__link " aria-label="Page 5" href="#">
+                            5
+                        </a>
+                    </li>
+                    <li class="das-pagination__item">
+                        <a class="das-pagination__link " aria-label="Next page" href="#">
+                            Next
+                        </a>
+                    </li>
+            </ul>
+        </nav>
+    
+    
+    
+    
+    
+    
+                </main>
+
+
+{% endblock %}
