@@ -34,15 +34,29 @@
               <dt class="govuk-summary-list__key">
                Strengths
               </dt>
-              <dd class="govuk-summary-list__value">
-                {% if data['answer1'] %}
-                {{ data['answer1'] }}
-                   {% else %}
-                 You didn't select any
-                   {% endif %}
+              <dd class="govuk-summary-list__value" style="white-space: inherit;">
+               
+                {{ data['strength1'] }}<br>
+               
+               {{ data['strength2'] }}<br>
+               
+               {{ data['strength3'] }}<br>
+               
+               {{ data['strength4'] }}
+               
+               {{ data['strength5'] }}
+               
+               {{ data['strength6'] }}
+               
+               {{ data['strength7'] }}
+               
+               {{ data['strength8'] }}
+               
+               {{ data['strength9'] }}
+               
               </dd>
               <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
+                <a class="govuk-link--no-visited-state" href="empfeedback6.html">
                   Change<span class="govuk-visually-hidden"> name</span>
                 </a>
               </dd>
@@ -52,14 +66,20 @@
                 Areas to improve
               </dt>
               <dd class="govuk-summary-list__value">
-                {% if data['answer1'] %}
-                                      {{ data['answer1'] }}
-                                         {% else %}
-                                       You didn't select any
-                                         {% endif %}
+                {{ data['weak4'] }}
+               
+                {{ data['weak5'] }}<br>
+                
+                {{ data['weak6'] }}
+                
+                {{ data['weak7'] }}
+                
+                {{ data['weak8'] }}
+                
+                {{ data['weak9'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
+                <a class="govuk-link--no-visited-state" href="empfeedback7.html">
                   Change<span class="govuk-visually-hidden"> date of birth</span>
                 </a>
               </dd>
@@ -69,10 +89,10 @@
                 Overall rating
               </dt>
               <dd class="govuk-summary-list__value">
-               Good
+                {{ data['rating'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">
+                <a class="govuk-link--no-visited-state" href="empfeedback8.html">
                   Change<span class="govuk-visually-hidden"> address</span>
                 </a>
               </dd>

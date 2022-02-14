@@ -77,7 +77,12 @@
                 </fieldset>
             </div>
 
-            <button id="continue-button" type="submit" class="govuk-button">Continue</button>
+            <div class="govuk-button-group">
+                {{ govukButton({
+                  text: "Continue",
+                  href: "empfeedback5.html"
+                }) }}
+              </div>
         <input name="__RequestVerificationToken" type="hidden" value="#"></form>
     </div>
 </div>
