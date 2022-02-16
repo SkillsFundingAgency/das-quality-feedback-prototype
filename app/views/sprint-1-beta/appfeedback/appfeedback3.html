@@ -1,0 +1,74 @@
+{% extends "layout_cmad.html" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "appfeedback2b"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="appfeedback4" method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              How would you rate {{ data['provider'] }}'s training?
+            </h1><br>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rating-excellent" name="rating" type="radio" value="Excellent" {{ checked("rating", "Excellent") }}>
+              <label class="govuk-label govuk-radios__label" for="rating-excellent">
+               Excellent
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rating-good" name="rating" type="radio" value="Good" {{ checked("rating", "Good") }}>
+              <label class="govuk-label govuk-radios__label" for="rating-good">
+               Good
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rating-poor" name="rating" type="radio" value="Poor" {{ checked("rating", "Poor") }}>
+              <label class="govuk-label govuk-radios__label" for="rating-poor">
+               Poor
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rating-verypoor" name="rating" type="radio" value="Very Poor" {{ checked("rating", "Very Poor") }}>
+              <label class="govuk-label govuk-radios__label" for="rating-verypoor">
+               Very Poor
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      <br><br>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+</div>
+
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

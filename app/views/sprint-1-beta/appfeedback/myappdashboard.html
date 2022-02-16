@@ -1,0 +1,91 @@
+
+{% extends "layout_landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/navigation.html" %}
+
+<div id="service-title-section" class="dashboard-page">
+     <style>
+       
+         </style>
+     <div class="govuk-width-container">
+
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-full">
+                    <h1 class="govuk-heading-xl">
+                         Welcome, Joe Bloggs
+                         <!-- <a href="#" class="share">Share my progress</a> -->
+                         <span class="govuk-caption-m">Military Engineering Construction Technician apprenticeship</span>
+                    </h1>
+               </div>
+
+          </div>
+
+     </div>
+
+
+</div>
+
+<!--
+<div id="" class="time-left">
+     <div class="govuk-width-container">
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-full">
+                    <div class="govuk-caption-m left-message">
+                         You have <b>1 year, 25 weeks and 3 days</b> left of your apprenticeship
+                    </div>
+               </div>
+          </div>
+     </div>
+</div>
+-->
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container" id="dashboard-section">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+               <ul class="dashboard-nav">
+                   <li class="dashboard-one">
+                       <a href="#">
+                           <h2 class="govuk-heading-m">Edit sign in details</h2>
+                           <p>View and edit your personal details, email address and password.</p>
+                       </a>
+                   </li>
+                   <li class="dashboard-one">
+                       <a href="#">
+                           <h2 class="govuk-heading-m">My apprenticeship details</h2>
+                           <p>Details of your employer, training provider and apprenticeship.</p>
+                       </a>
+                   </li>
+                    <li class="dashboard-one">
+                      <a href="#">
+                              <h2 class="govuk-heading-m">Help and support</h2>
+                              <p>Who to contact if you have questions or concerns during your apprenticeship.</p>
+
+                              </a>
+                    </li>
+                   <li class="dashboard-one">
+                       <a href="appfeedback2a.html">
+                           <h2 class="govuk-heading-m">Apprenticeship training feedback</h2>
+                           <p>Give feedback on your apprenticeship training.
+                           </p>
+                       </a>
+                   </li>
+                  
+
+<!-- ////////////////////////////////////////////  -->
+               </ul>
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+          </div>
+
+     </div>
+</div>
+{% endblock %}

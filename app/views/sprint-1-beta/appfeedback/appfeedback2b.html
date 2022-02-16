@@ -1,0 +1,391 @@
+{% extends "layout_cmad.html" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "appfeedback2a"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+
+
+<h2 class="govuk-heading-l">
+  Do you think that {{ data['provider'] }} is providing the following aspects of your apprenticeship training to a reasonable standard?
+</h2><br>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<form action="appfeedback3" method="post"  class="form">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Organising well-structured training
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer1-agree" name="answer1" type="radio" value="Agree" {{ checked("answer1", "Agree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer1-agree">
+         Agree
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer1-disagree" name="answer1" type="radio" value="Disagree" {{ checked("answer1", "Disagree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer1-disagree">
+         Disagree
+        </label>
+      </div>
+  </fieldset>
+</div>
+<br>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Communicating clearly with you
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer2-agree" name="answer2" type="radio" value="Agree" {{ checked("answer2", "Agree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer2-agree">
+         Agree
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer2-disagree" name="answer2" type="radio" value="Disagree" {{ checked("answer2", "Disagree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer2-disagree">
+         Disagree
+        </label>
+      </div>
+  </fieldset>
+</div>
+<br>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Providing accessible training resources
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer3-agree" name="answer3" type="radio" value="Agree" {{ checked("answer3", "Agree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer3-agree">
+         Agree
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer3-disagree" name="answer3" type="radio" value="Disagree" {{ checked("answer3", "Disagree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer3-disagree">
+         Disagree
+        </label>
+      </div>
+  </fieldset>
+</div>
+<br>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+       Balancing online learning with classroom-based training to suit your apprenticeship
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer4-agree" name="answer4" type="radio" value="Agree" {{ checked("answer4", "Agree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer4-agree">
+         Agree
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer4-disagree" name="answer4" type="radio" value="Disagree" {{ checked("answer4", "Disagree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer4-disagree">
+         Disagree
+        </label>
+      </div>
+  </fieldset>
+</div>
+<br>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+       Taking into account your previous learning
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer5-agree" name="answer5" type="radio" value="Agree" {{ checked("answer5", "Agree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer5-agree">
+         Agree
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer5-disagree" name="answer5" type="radio" value="Disagree" {{ checked("answer5", "Disagree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer5-disagree">
+         Disagree
+        </label>
+      </div>
+  </fieldset>
+</div>
+<br>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Helping you learn new skills and develop existing ones
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer6-agree" name="answer6" type="radio" value="Agree" {{ checked("answer6", "Agree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer6-agree">
+         Agree
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer6-disagree" name="answer6" type="radio" value="Disagree" {{ checked("answer6", "Disagree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer6-disagree">
+         Disagree
+        </label>
+      </div>
+  </fieldset>
+</div>
+<br>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Giving you relevant training that helps you perform your job better
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer7-agree" name="answer7" type="radio" value="Agree" {{ checked("answer7", "Agree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer7-agree">
+         Agree
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer7-disagree" name="answer7" type="radio" value="Disagree" {{ checked("answer7", "Disagree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer7-disagree">
+         Disagree
+        </label>
+      </div>
+  </fieldset>
+</div>
+<br>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Training that takes up at least 20% of your total apprenticeship time
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer8-agree" name="answer8" type="radio" value="Agree" {{ checked("answer8", "Agree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer8-agree">
+         Agree
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer8-disagree" name="answer8" type="radio" value="Disagree" {{ checked("answer8", "Disagree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer8-disagree">
+         Disagree
+        </label>
+      </div>
+  </fieldset>
+</div>
+<br>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Supporting you and your apprenticeship
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer9-agree" name="answer9" type="radio" value="Agree" {{ checked("answer9", "Agree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer9-agree">
+         Agree
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer9-disagree" name="answer9" type="radio" value="Disagree" {{ checked("answer9", "Disagree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer9-disagree">
+         Disagree
+        </label>
+      </div>
+  </fieldset>
+</div>
+<br>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+       Responding to your needs
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer10-agree" name="answer10" type="radio" value="Agree" {{ checked("answer10", "Agree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer10-agree">
+         Agree
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer10-disagree" name="answer10" type="radio" value="Disagree" {{ checked("answer10", "Disagree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer10-disagree">
+         Disagree
+        </label>
+      </div>
+  </fieldset>
+</div>
+<br>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Treating you in an equal,  fair and non-discriminatory way
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer11-agree" name="answer11" type="radio" value="Agree" {{ checked("answer11", "Agree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer11-agree">
+         Agree
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer11-disagree" name="answer11" type="radio" value="Disagree" {{ checked("answer11", "Disagree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer11-disagree">
+         Disagree
+        </label>
+      </div>
+  </fieldset>
+</div>
+<br>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+      Looking after your mental wellbeing
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer12-agree" name="answer12" type="radio" value="Agree" {{ checked("answer12", "Agree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer12-agree">
+         Agree
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer12-disagree" name="answer12" type="radio" value="Disagree" {{ checked("answer12", "Disagree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer12-disagree">
+         Disagree
+        </label>
+      </div>
+  </fieldset>
+</div>
+<br>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Maintaining a safe and positive environment for you to learn in
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer13-agree" name="answer13" type="radio" value="Agree" {{ checked("answer13", "Agree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer13-agree">
+         Agree
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer13-disagree" name="answer13" type="radio" value="Disagree" {{ checked("answer13", "Disagree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer13-disagree">
+         Disagree
+        </label>
+      </div>
+  </fieldset>
+</div><br>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+       Ensuring you understand the requirements of your end-point assessment
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer14-agree" name="answer14" type="radio" value="Agree" {{ checked("answer14", "Agree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer14-agree">
+         Agree
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer14-disagree" name="answer14 type="radio" value="Disagree" {{ checked("answer14", "Disagree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer14-disagree">
+         Disagree
+        </label>
+      </div>
+  </fieldset>
+</div><br>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Preparing you for success in your future career
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer15-agree" name="answer15" type="radio" value="Agree" {{ checked("answer15", "Agree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer15-agree">
+         Agree
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="answer15-disagree" name="answer15" type="radio" value="Disagree" {{ checked("answer15", "Disagree") }}>
+        <label class="govuk-label govuk-radios__label" for="answer15-disagree">
+         Disagree
+        </label>
+      </div>
+  </fieldset>
+</div>
+
+
+<br>
+
+
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+</div>
+
+</form>
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+{% endblock %}
