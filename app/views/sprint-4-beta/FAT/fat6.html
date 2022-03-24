@@ -275,167 +275,278 @@
 
 
 
+            <div class="govspeak js-enabled">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-            <details class="govuk-details" data-module="govuk-details">
-
-                    <summary class="govuk-details__summary">
-                        <span class="govuk-details__summary-text">
-                            Apprentice review details
-                        </span>
-                    </summary>
-                   
-                    <div class="govuk-details__text">
-                        <div class="govspeak">
-                          <button class="govuk-body-s mc-toggle-button"><span class="mc-toggle-text">Change to chart view</span><span class="govuk-visually-hidden mc-toggle-status" role="alert"></span></button>
-                        <br><br>  <span class="govuk-caption-l" style="text-align: left;">Support</span>
-                          <table class="js-barchart-table compact mc-auto-outdent js-barchart-table-init">
-                            <thead>
-                              <tr>
-                                <th scope="col">Statement</th>
-                                <th scope="col">Percentage of apprentices that agreed with this statement</th>
-                                <th scope="col">Percentage of apprentices that disagreed with this statement</th>
+                <button action="fat4.html" class="govuk-body-s mc-toggle-button"><span class="mc-toggle-text">Change to chart view</span><span class="govuk-visually-hidden mc-toggle-status" role="alert"></span></button>
+    </div><br><br>
+    
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    
+    
+    <form action="/form-handler" method="post" novalidate="">
+        
+          
+    
+        <div class="govuk-tabs" data-module="govuk-tabs">
+          <h2 class="govuk-tabs__title">
+            Contents
+          </h2>
+          <ul class="govuk-tabs__list" role="tablist">
+                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected" role="presentation">
+                  <a class="govuk-tabs__tab" href="#past-day" id="tab_past-day" role="tab" aria-controls="past-day" aria-selected="true" tabindex="0">
+                   Support
+                  </a>
+                </li>
+                <li class="govuk-tabs__list-item" role="presentation">
+                  <a class="govuk-tabs__tab" href="#past-week" id="tab_past-week" role="tab" aria-controls="past-week" aria-selected="false" tabindex="-1">
+                   Communication
+                  </a>
+                </li>
+                <li class="govuk-tabs__list-item" role="presentation">
+                  <a class="govuk-tabs__tab" href="#past-month" id="tab_past-month" role="tab" aria-controls="past-month" aria-selected="false" tabindex="-1">
+                  Organisation
+                  </a>
+                </li>
+             
+          </ul>
+              <div class="govuk-tabs__panel" id="past-day" role="tabpanel" aria-labelledby="tab_past-day">
+                <h2 class="govuk-heading-l">Support</h2>
+      
+                <div class="govspeak">
+                               
+                        
+                    <table class="js-barchart-table compact mc-auto-outdent js-barchart-table-init">
+                        <thead>
+                          <tr>
+                            <th scope="col">Statement</th>
+                            <th scope="col">Percentage of apprentices that agreed with this statement</th>
+                            <th scope="col">Percentage of apprentices that disagreed with this statement</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Helping you learn new skills and develop existing ones</td>
+                                <td>94%</td>
+                                <td>6%</td>
                               </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Helping you learn new skills and develop existing ones</td>
-                                    <td>94%</td>
-                                    <td>6%</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Responding to your needs</td>
-                                    <td>92%</td>
-                                    <td>8%</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Supporting you and your apprenticeship</td>
-                                    <td>90%</td>
-                                    <td>10%</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Preparing you for success in your future career</td>
-                                    <td>72%</td>
-                                    <td>28%</td>
-                                  </tr>
+                              <tr>
+                                <td>Responding to your needs</td>
+                                <td>92%</td>
+                                <td>8%</td>
+                              </tr>
+                              <tr>
+                                <td>Supporting you and your apprenticeship</td>
+                                <td>90%</td>
+                                <td>10%</td>
+                              </tr>
+                              <tr>
+                                <td>Preparing you for success in your future career</td>
+                                <td>72%</td>
+                                <td>28%</td>
+                              </tr>
 
 
 
-                             
-                            
-                           
+                         
+                        
+                       
 
 </tbody>
 </table>
-
-<br><br><br> <span class="govuk-caption-l" style="text-align: left;">Communication</span>
-<table class="js-barchart-table compact mc-auto-outdent js-barchart-table-init">
-<thead>
-    <tr>
-      <th scope="col">Statement</th>
-      <th scope="col">Percentage of apprentices that agreed with this statement</th>
-      <th scope="col">Percentage of apprentices that disagreed with this statement</th>
-    </tr>
-  </thead>
-
-  <tr>
-    <td>Communicating clearly with you</td>
-    <td>70%</td>
-    <td>30%</td>
-  </tr>
-  <tr>
-    <td>Ensuring you understand the requirements of your end-point assessment</td>
-    <td>58%</td>
-    <td>42%</td>
-  </tr>
-                             
-                             
-
-
-
-
-                            </tbody></table>
-                            <br><br><br> <span class="govuk-caption-l" style="text-align: left;">Organisation</span>
-                            <table class="js-barchart-table compact mc-auto-outdent js-barchart-table-init">
-                            <thead>
-                                <tr>
-                                  <th scope="col">Statement</th>
-                                  <th scope="col">Percentage of apprentices that agreed with this statement</th>
-                                  <th scope="col">Percentage of apprentices that disagreed with this statement</th>
-                                </tr>
-                              </thead><tbody>
-
-                                <tr>
-                                    <td>Taking into account your previous learning</td>
-                                    <td>93%</td>
-                                    <td>7%</td>
-                                  </tr>
-
-
-                                  <tr>
-                                    <td>Providing accessible training resources
-                              
-                              </td>
-                                    <td>90%</td>
-                                    <td>10%</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Organising well-structured training</td>
-                                    <td>80%</td>
-                                    <td>20%</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Training that takes up at least 20% of your total apprenticeship time</td>
-                                    <td>69%</td>
-                                    <td>31%</td>
-                                  </tr>
-                              <tr>
-                                <td>Giving you relevant training that helps you perform your job better</td>
-                                <td>57%</td>
-                                <td>43%</td>
-                              </tr>
-                             
-                              
-                             
-                              <tr>
-                                <td>Balancing online learning with classroom-based training to suit your apprenticeship</td>
-                                <td>50%</td>
-                                <td>50%</td>
-                              </tr>
-
-                             
-                             
-                            
-                            </tbody>
-                          </table>
-                          </div>
-                            
-                    </div>
                     
-                </details>
+            </div>
+        
+        
+              </div>
+              <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week" role="tabpanel" aria-labelledby="tab_past-week">
+                <h2 class="govuk-heading-l">Communication</h2>
+                <div class="govspeak">
+                    <table class="js-barchart-table compact mc-auto-outdent js-barchart-table-init">
+                        <thead>
+                            <tr>
+                              <th scope="col">Statement</th>
+                              <th scope="col">Percentage of apprentices that agreed with this statement</th>
+                              <th scope="col">Percentage of apprentices that disagreed with this statement</th>
+                            </tr>
+                          </thead>
+                        
+                          <tr>
+                            <td>Communicating clearly with you</td>
+                            <td>70%</td>
+                            <td>30%</td>
+                          </tr>
+                          <tr>
+                            <td>Ensuring you understand the requirements of your end-point assessment</td>
+                            <td>58%</td>
+                            <td>42%</td>
+                          </tr>
+                                                     
+                                                     
+                        
+                        
+                        
+                        
+                                                    </tbody></table>
+            </div>
+        
+              </div>
+              <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month" role="tabpanel" aria-labelledby="tab_past-month">
+                <h2 class="govuk-heading-l">Organisation</h2>
+                <div class="govspeak">
+                               
+                    <table class="js-barchart-table compact mc-auto-outdent js-barchart-table-init">
+                        <thead>
+                            <tr>
+                              <th scope="col">Statement</th>
+                              <th scope="col">Percentage of apprentices that agreed with this statement</th>
+                              <th scope="col">Percentage of apprentices that disagreed with this statement</th>
+                            </tr>
+                          </thead><tbody>
+
+                            <tr>
+                                <td>Taking into account your previous learning</td>
+                                <td>93%</td>
+                                <td>7%</td>
+                              </tr>
+
+
+                              <tr>
+                                <td>Providing accessible training resources
+                          
+                          </td>
+                                <td>90%</td>
+                                <td>10%</td>
+                              </tr>
+                              <tr>
+                                <td>Organising well-structured training</td>
+                                <td>80%</td>
+                                <td>20%</td>
+                              </tr>
+                              <tr>
+                                <td>Training that takes up at least 20% of your total apprenticeship time</td>
+                                <td>69%</td>
+                                <td>31%</td>
+                              </tr>
+                          <tr>
+                            <td>Giving you relevant training that helps you perform your job better</td>
+                            <td>57%</td>
+                            <td>43%</td>
+                          </tr>
+                         
+                          
+                         
+                          <tr>
+                            <td>Balancing online learning with classroom-based training to suit your apprenticeship</td>
+                            <td>50%</td>
+                            <td>50%</td>
+                          </tr>
+
+                         
+                         
+                        
+                        </tbody>
+                      </table>
+                    
+            </div>
+        
+        
+              </div>
+              <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year" role="tabpanel" aria-labelledby="tab_past-year">
+                <h2 class="govuk-heading-l">Past year</h2>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Case manager</th>
+              <th scope="col" class="govuk-table__header">Cases opened</th>
+              <th scope="col" class="govuk-table__header">Cases closed</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">David Francis</td>
+                  <td class="govuk-table__cell">1380</td>
+                  <td class="govuk-table__cell">1472</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Paul Farmer</td>
+                  <td class="govuk-table__cell">1129</td>
+                  <td class="govuk-table__cell">1083</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Rita Patel</td>
+                  <td class="govuk-table__cell">1539</td>
+                  <td class="govuk-table__cell">1265</td>
+                </tr>
+          </tbody>
+        </table>
+        
+        
+              </div>
+        </div>
+        
+        
+            
+          </form>
+          <script src="https://design-system.service.gov.uk/javascripts/govuk-frontend-4f559c8876d65ed24e986adbf702b813.js"></script>
+          <style>.tb_button {padding:1px;cursor:pointer;border-right: 1px solid #8b8b8b;border-left: 1px solid #FFF;border-bottom: 1px solid #fff;}.tb_button.hover {borer:2px outset #def; background-color: #f8f8f8 !important;}.ws_toolbar {z-index:100000} .ws_toolbar .ws_tb_btn {cursor:pointer;border:1px solid #555;padding:3px}   .tb_highlight{background-color:yellow} .tb_hide {visibility:hidden} .ws_toolbar img {padding:2px;margin:0px}</style>
+    <div style="clear: both; display: block;"></div>
+                  
+                    </div>
+                 </div>
+
+
+
+
+
+
+
+
+
+
+
+       
+
+                   
+                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+            
+
+
+
+
+
+
+
+
+
+
+
                 
                 <div class="govuk-!-margin-bottom-8">
                     <h2 class="govuk-heading-m">Provider overview</h2>
