@@ -1,0 +1,93 @@
+{% extends "layout_cmad.html" %}
+
+
+
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "exit4"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+<form action="exit6" method="post"  class="form">
+
+
+
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+  {{ govukRadios({
+    idPrefix: "circumstances",
+    name: "circumstances",
+    fieldset: {
+      legend: {
+        text: "I did not complete my apprenticeship due to personal circumstances…",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
+    },
+
+    hint: {
+      text: "Please select the answer that is most relevant to you."
+    },
+
+
+    items: [
+
+
+      {
+        value: "Mental health",
+        text: "Mental health"
+      },
+
+      {
+          value: "Caring responsibilities",
+          text: "Caring responsibilities"
+      }
+      ,
+
+      {
+          value: "The job was difficult",
+          text: "The job was difficult"
+      },
+
+      {
+          value: "Physical health issues",
+          text: "Physical health issues"
+      },
+      {
+        divider: "or"
+      },
+      {
+          value: "Prefer not to say",
+          text: "Prefer not to say"
+      }
+
+
+    ]
+  }) }}
+
+
+
+
+
+
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  </div>
+
+</form>
+</div>
+</div>
+{% endblock %}

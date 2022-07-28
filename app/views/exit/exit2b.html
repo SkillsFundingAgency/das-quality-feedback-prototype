@@ -1,0 +1,125 @@
+{% extends "layout_cmad.html" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "appfeedback1"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+
+
+<style>
+   .govuk-main-wrapper {
+    padding-top:20px;
+   }
+</style>
+
+
+<div class="govuk-width-container">
+
+    
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            
+            
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+
+       
+
+        
+
+       
+
+        <form method="post">
+            
+
+
+
+
+
+
+
+
+
+            {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+                    {{ govukRadios({
+                      idPrefix: "options",
+                      name: "options",
+                      fieldset: {
+                        legend: {
+                          text: "This is not correct because…",
+                          isPageHeading: true,
+                          classes: "govuk-fieldset__legend--l"
+                        }
+                      },
+
+
+
+
+                      items: [
+
+
+                        {
+                          value: "I completed the apprenticeship and had my end point assessment",
+                          text: "I completed the apprenticeship and had my end point assessment"
+                        },
+
+                        {
+                            value: "I completed my training and I'm waiting for the end point assessment",
+                            text: "I completed my training and I'm waiting for the end point assessment"
+                        }
+                        ,
+
+                        {
+                            value: " I am still doing my apprenticeship",
+                            text: " I am still doing my apprenticeship"
+                        },
+
+                        {
+                            value: "I never started an apprenticeship",
+                            text: "I never started an apprenticeship"
+                        }
+
+
+                      ]
+                    }) }}
+
+
+
+
+
+
+
+            <div class="govuk-button-group">
+                {{ govukButton({
+                  text: "Continue",
+                  href: "exit2c"
+                }) }}
+              </div>
+        <input name="__RequestVerificationToken" type="hidden" value="#"></form>
+    </div>
+</div>
+
+
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

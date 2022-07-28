@@ -1,0 +1,83 @@
+{% extends "layout_cmad.html" %}
+
+
+
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "exit5"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<form action="exit7" method="post"  class="form">
+
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+  {{ govukRadios({
+    idPrefix: "reason",
+    name: "reason",
+    fieldset: {
+      legend: {
+        text: "The main reason you did an apprenticeship was because…",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
+    },
+
+    hint: {
+      text: "Please select the answer that is most relevant to you."
+    },
+
+
+    items: [
+
+
+      {
+        value: "You had a specific career path in mind ",
+        text: "You had a specific career path in mind "
+      },
+
+      {
+          value: "You did not want to go to university",
+          text: "You did not want to go to university"
+      }
+      ,
+
+      {
+          value: "You wanted to gain work experience in industry whilst receiving an income",
+          text: "You wanted to gain work experience in industry whilst receiving an income"
+      },
+
+      {
+          value: "A requirement for your job",
+          text: "A requirement for your job"
+      }
+
+
+    ]
+  }) }}
+
+
+
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  </div>
+
+</form>
+</div>
+</div>
+
+{% endblock %}

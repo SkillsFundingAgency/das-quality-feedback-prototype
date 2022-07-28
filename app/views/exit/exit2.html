@@ -1,0 +1,104 @@
+{% extends "layout_cmad.html" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+
+
+{% block content %}
+
+
+
+<style>
+   .govuk-main-wrapper {
+    padding-top:20px;
+   }
+</style>
+
+
+<div class="govuk-width-container">
+
+    
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            
+            
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+
+        <h1 class="govuk-heading-l">According to our records, you did not complete your apprenticeship – Including your exams and/or end-point assessment
+        </h1>
+
+        
+
+
+        <form method="post">
+            
+
+
+
+
+
+
+
+
+            {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+                    {{ govukRadios({
+                      idPrefix: "chooseoption",
+                      name: "chooseoption",
+                      fieldset: {
+                        legend: {
+                          text: " Is this correct?",
+                          isPageHeading: true,
+                          classes: "govuk-fieldset__legend--m"
+                        }
+                      },
+
+
+
+
+                      items: [
+
+
+                        {
+                          value: "yes",
+                          text: "Yes, I did not complete"
+                        },
+
+                        {
+                            value: "no",
+                            text: "No"
+                        }
+
+                      ]
+                    }) }}
+
+
+                 
+
+            <div class="govuk-button-group">
+                {{ govukButton({
+                  text: "Continue",
+                  href: ""
+                }) }}
+              </div>
+     </form>
+    </div>
+</div>
+
+
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
