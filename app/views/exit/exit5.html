@@ -14,23 +14,22 @@
 {% block content %}
 
 
+
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-
 <form action="exit6" method="post"  class="form">
-
-
 
 
   {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
   {{ govukRadios({
-    idPrefix: "circumstances",
-    name: "circumstances",
+    idPrefix: "reason",
+    name: "reason",
     fieldset: {
       legend: {
-        text: "I did not complete my apprenticeship due to personal circumstances…",
+        text: "The main reason you did an apprenticeship was because…",
         isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
@@ -45,39 +44,29 @@
 
 
       {
-        value: "Mental health",
-        text: "Mental health"
+        value: "You had a specific career path in mind ",
+        text: "You had a specific career path in mind "
       },
 
       {
-          value: "Caring responsibilities",
-          text: "Caring responsibilities"
+          value: "You did not want to go to university",
+          text: "You did not want to go to university"
       }
       ,
 
       {
-          value: "The job was difficult",
-          text: "The job was difficult"
+          value: "You wanted to gain work experience in industry whilst receiving an income",
+          text: "You wanted to gain work experience in industry whilst receiving an income"
       },
 
       {
-          value: "Physical health issues",
-          text: "Physical health issues"
-      },
-      {
-        divider: "or"
-      },
-      {
-          value: "Prefer not to say",
-          text: "Prefer not to say"
+          value: "A requirement for your job",
+          text: "A requirement for your job"
       }
 
 
     ]
   }) }}
-
-
-
 
 
 
@@ -90,4 +79,5 @@
 </form>
 </div>
 </div>
+
 {% endblock %}

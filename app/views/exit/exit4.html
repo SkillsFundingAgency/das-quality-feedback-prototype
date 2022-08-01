@@ -21,14 +21,16 @@
 <form action="exit5" method="post"  class="form">
 
 
+
+
   {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
   {{ govukRadios({
-    idPrefix: "notcomplete",
-    name: "notcomplete",
+    idPrefix: "circumstances",
+    name: "circumstances",
     fieldset: {
       legend: {
-        text: " I did not complete my apprenticeship because...",
+        text: "I did not complete my apprenticeship due to personal circumstances…",
         isPageHeading: true,
         classes: "govuk-fieldset__legend--l"
       }
@@ -43,13 +45,13 @@
 
 
       {
-        value: "There was too much coursework",
-        text: "There was too much coursework"
+        value: "Mental health",
+        text: "Mental health"
       },
 
       {
-          value: "The training was difficult",
-          text: "The training was difficult"
+          value: "Caring responsibilities",
+          text: "Caring responsibilities"
       }
       ,
 
@@ -59,55 +61,20 @@
       },
 
       {
-          value: "The quality of the training was poor",
-          text: "The quality of the training was poor"
+          value: "Physical health issues",
+          text: "Physical health issues"
       },
-
       {
-          value: "The training provider did not think I would pass the end point assessment",
-          text: "The training provider did not think I would pass the end point assessment"
+        divider: "or"
       },
-
       {
-          value: "There was a delay in completing my end point assessment",
-          text: "There was a delay in completing my end point assessment"
-      },
-
-      {
-          value: "There was no career progression",
-          text: "There was no career progression"
-      },
-
-      {
-          value: "It was not relevant to the job role",
-          text: "It was not relevant to the job role"
-      },
-
-      {
-          value: "I was offered another role within the organisation",
-          text: "I was offered another role within the organisation"
-      },
-
-      {
-          value: "I was offered another job outside of my organisation",
-          text: "I was offered another job outside of my organisation"
-      },
-
-      {
-          value: "The salary did not meet my financial needs",
-          text: "The salary did not meet my financial needs"
-      },
-
-      {
-          value: "I was released from employment or made redundant",
-          text: "I was released from employment or made redundant"
+          value: "Prefer not to say",
+          text: "Prefer not to say"
       }
 
 
     ]
   }) }}
-
-
 
 
 
@@ -121,9 +88,6 @@
   </div>
 
 </form>
-
-
 </div>
 </div>
-
 {% endblock %}

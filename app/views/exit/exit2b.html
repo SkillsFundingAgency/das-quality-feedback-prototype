@@ -6,7 +6,7 @@
 {% block beforeContent %}
   {{ govukBackLink({
     text: "Back",
-    href: "appfeedback1"
+    href: "exit2a"
   }) }}
 {% endblock %}
 
@@ -93,15 +93,33 @@
                       ]
                     }) }}
 
+<hr><br>
 
-
-
+                    {{ govukCheckboxes({
+                      idPrefix: "organisation",
+                      name: "organisation",
+                      classes: "govuk-checkboxes--small",
+                      fieldset: {
+                        legend: {
+                          text: "",
+                          classes: "govuk-fieldset__legend--m"
+                        }
+                      },
+                      items: [
+                       
+                        {
+                          value: "happy",
+                          text: "I'm happy to be contacted by the Apprenticeship service about my answers"
+                        }
+                      ]
+                    }) }}
+                    
 
 
 
             <div class="govuk-button-group">
                 {{ govukButton({
-                  text: "Continue",
+                  text: "Confirm and submit",
                   href: "exit2c"
                 }) }}
               </div>

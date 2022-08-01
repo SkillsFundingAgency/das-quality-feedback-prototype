@@ -51,46 +51,59 @@ width:66.66%;
 
           <dl class="govuk-summary-list govuk-!-margin-bottom-9">
             <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
+              <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                According to our records, you did not complete your apprenticeship
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['chooseoption'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link--no-visited-state" href="exit2a">
+                  Change<span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-width-one-third">
                 I did not complete my apprenticeship because...
               </dt>
               <dd class="govuk-summary-list__value">
                 {{ data['notcomplete'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
-                <a class="govuk-link--no-visited-state" href="exit4">
+                <a class="govuk-link--no-visited-state" href="exit3">
                   Change<span class="govuk-visually-hidden"> name</span>
                 </a>
               </dd>
             </div>
             <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
+              <dt class="govuk-summary-list__key govuk-!-width-one-third">
                 I did not complete my apprenticeship due to personal circumstances…
               </dt>
               <dd class="govuk-summary-list__value">
                 {{ data['circumstances'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
-                <a class="govuk-link--no-visited-state" href="exit5">
+                <a class="govuk-link--no-visited-state" href="exit4">
                   Change<span class="govuk-visually-hidden"> date of birth</span>
                 </a>
               </dd>
             </div>
             <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
+              <dt class="govuk-summary-list__key govuk-!-width-one-third">
                 The main reason you did an apprenticeship was because…
               </dt>
               <dd class="govuk-summary-list__value">
                 {{ data['reason'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
-                <a class="govuk-link--no-visited-state" href="exit6">
+                <a class="govuk-link--no-visited-state" href="exit5">
                   Change<span class="govuk-visually-hidden"> address</span>
                 </a>
               </dd>
             </div>
             <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
+              <dt class="govuk-summary-list__key govuk-!-width-one-third">
                 I would have remained on the apprenticeship if…
               </dt>
               <dd class="govuk-summary-list__value">
@@ -98,7 +111,7 @@ width:66.66%;
                 {{ data['remain'] }}
               </dd>
               <dd class="govuk-summary-list__actions">
-                <a class="govuk-link--no-visited-state" href="exit7">
+                <a class="govuk-link--no-visited-state" href="exit6">
                   Change<span class="govuk-visually-hidden"> contact details</span>
                 </a>
               </dd>
