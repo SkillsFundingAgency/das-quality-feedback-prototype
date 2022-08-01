@@ -92,9 +92,7 @@
 
                       ]
                     }) }}
-
 <hr><br>
-
                     {{ govukCheckboxes({
                       idPrefix: "organisation",
                       name: "organisation",
@@ -110,6 +108,29 @@
                         {
                           value: "happy",
                           text: "I'm happy to be contacted by the Apprenticeship service about my answers"
+                        }
+                      ]
+                    }) }}
+                    
+
+
+
+
+                    {{ govukCheckboxes({
+                      idPrefix: "organisation",
+                      name: "organisation",
+                      classes: "govuk-checkboxes--small",
+                      fieldset: {
+                        legend: {
+                          text: "",
+                          classes: "govuk-fieldset__legend--m"
+                        }
+                      },
+                      items: [
+                       
+                        {
+                          value: "happy",
+                          text: "By ticking this box you confirm that you have not completed your apprenticeship"
                         }
                       ]
                     }) }}
