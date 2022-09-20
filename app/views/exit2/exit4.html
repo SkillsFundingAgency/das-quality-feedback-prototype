@@ -1,0 +1,92 @@
+{% extends "layout_cmadexit.html" %}
+
+
+
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "exit3"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+<form action="exit5" method="post"  class="form">
+
+
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h2 class="govuk-fieldset__heading">
+          Did any of the following factors contribute to you not completing your apprenticeship?
+        </h2>
+      </legend>
+      <div id="waste-hint" class="govuk-hint">
+        Please select any answers that are relevant to you.
+      </div>
+      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="strength1-com" name="strength1" type="checkbox" value="Communication with employers" {{ checked("strength1", "Communication with employers") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="strength1-com">
+            Caring responsibilities
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="strength2-com" name="strength2" type="checkbox" value="Adapting to my needs" {{ checked("strength2", "Adapting to my needs") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="strength2-com">
+            Family or relationship issues
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="strength3-com" name="strength3" type="checkbox" value="Initial assessment of apprentices" {{ checked("strength3", "Initial assessment of apprentices") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="strength3-com">
+            Financial issues
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="strength4-com" name="strength4" type="checkbox" value="Getting new apprentices started" {{ checked("strength4", "Getting new apprentices started") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="strength4-com">
+            Mental health
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="strength5-com" name="strength5" type="checkbox" value="Working with small number of apprentices" {{ checked("strength5", "Working with small number of apprentices") }}>
+            <label class="govuk-label govuk-checkboxes__label" for="strength5-com">
+              Physical health issues
+            </label>
+          </div>
+          <div class="govuk-checkboxes__divider">or</div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="strength6-com" name="strength6" type="checkbox" value="Reporting on progress of apprentices" {{ checked("strength6", "Reporting on progress of apprentices") }}>
+            <label class="govuk-label govuk-checkboxes__label" for="strength6-com">
+              None of the above
+            </label>
+          </div>
+          
+      </div>
+      
+  
+    </fieldset>
+  </div>
+
+
+
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  </div>
+
+</form>
+</div>
+</div>
+{% endblock %}

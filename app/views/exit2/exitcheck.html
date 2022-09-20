@@ -1,0 +1,167 @@
+{% extends "layout_cmadexit.html" %}
+
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "exit5"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<style>
+  
+  #alignright{
+    float: right;
+    padding-right: 15px;
+    font-family: "GDS Transport",arial,sans-serif;
+    font-size: 1.2rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: underline;
+    text-underline-offset: 0.1em;
+  }
+#overall {
+  white-space: nowrap;
+  overflow: hidden;
+}
+  .govuk-table__cell {
+   
+width:66.66%;
+
+  }
+    .govuk-table__header {
+    width: 33.33%;
+
+  }
+ 
+ 
+</style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">Check your answers</h1><br>
+     
+
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-width-one-third">
+               You did not complete your apprenticeship including your end-point assessment.
+               
+             <br>Is this correct?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['chooseoption'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link--no-visited-state" href="exit2a">
+                  Change<span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                I did not complete my apprenticeship because...
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['notcomplete'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link--no-visited-state" href="exit3">
+                  Change<span class="govuk-visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                Did any of the following factors contribute to you not completing your apprenticeship?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                {{ data['strength1'] }}<br><br>
+               
+                {{ data['strength2'] }}<br><br>
+                
+                {{ data['strength3'] }}<br><br>
+                
+                {{ data['strength4'] }}<br><br>
+                
+                {{ data['strength5'] }}<br><br>
+                
+                {{ data['strength6'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link--no-visited-state" href="exit4">
+                  Change<span class="govuk-visually-hidden"> date of birth</span>
+                </a>
+              </dd>
+            </div>
+            
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-width-one-third">
+                I would have remained on the apprenticeship if…
+              </dt>
+              <dd class="govuk-summary-list__value">
+               
+                {{ data['remain'] }}
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link--no-visited-state" href="exit5">
+                  Change<span class="govuk-visually-hidden"> contact details</span>
+                </a>
+              </dd>
+            </div>
+          </dl>
+  
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+
+{{ govukCheckboxes({
+  idPrefix: "organisation",
+  name: "organisation",
+  classes: "govuk-checkboxes--small",
+  fieldset: {
+    legend: {
+      text: "",
+      classes: "govuk-fieldset__legend--m"
+    }
+  },
+  items: [
+   
+    {
+      value: "happy",
+      text: "I'm happy to be contacted by the Apprenticeship service about my answers"
+    }
+  ]
+}) }}
+
+
+
+        
+
+        {{ govukButton({
+          text: "Submit",
+          href: "exitconfirm"
+        }) }}
+
+      
+    </div>
+  </div>
+{% endblock %}
+

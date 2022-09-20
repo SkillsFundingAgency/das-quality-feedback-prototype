@@ -2,8 +2,6 @@
 
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
-{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
-
 
 {% block beforeContent %}
   {{ govukBackLink({
@@ -67,9 +65,7 @@
                       hint: {
                         text: "Please select one answer that is most relevant to you."
                       },
-                   
-                   
-           
+
 
 
                       items: [
@@ -80,13 +76,13 @@
                     },
 
                         {
-                          value: "I completed the apprenticeship and had my end point assessment",
-                          text: "I completed the apprenticeship and had my end point assessment"
+                          value: "I completed the apprenticeship and had my end-point assessment",
+                          text: "I completed the apprenticeship and had my end-point assessment"
                         },
 
                         {
-                            value: "I completed my training and I'm waiting for the end point assessment",
-                            text: "I completed my training and I'm waiting for the end point assessment"
+                            value: "I completed my training and I'm waiting for the end-point assessment",
+                            text: "I completed my training and I'm waiting for the end-point assessment"
                         }
                         ,
 

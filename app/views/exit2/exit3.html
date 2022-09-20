@@ -1,0 +1,146 @@
+{% extends "layout_cmadexit.html" %}
+
+
+
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "exit2a"
+  }) }}
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+<form action="exit4" method="post"  class="form">
+
+
+  {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+  {{ govukRadios({
+    idPrefix: "notcomplete",
+    name: "notcomplete",
+    fieldset: {
+      legend: {
+        text: " I did not complete my apprenticeship because...",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
+    },
+
+    hint: {
+      text: "Please select one answer that is most relevant to you."
+    },
+
+
+    items: [
+
+    
+
+    {
+      value: "I have already done something similar",
+      text: "I have already done something similar"
+  },
+
+  {
+      value: "I was offered another role within the organisation",
+      text: "I was offered another role within the organisation"
+  },
+
+  {
+      value: "I was offered another job outside of my organisation",
+      text: "I was offered another job outside of my organisation"
+  },
+
+
+
+  {
+      value: "I was released from employment or made redundant",
+      text: "I was released from employment or made redundant"
+  },
+  {
+    value: "It was not relevant to the job role",
+    text: "It was not relevant to the job role"
+},
+{
+  value: "Of personal or health reasons",
+  text: "Of personal or health reasons"
+},
+      {
+        value: "There was too much coursework",
+        text: "There was too much coursework"
+      },
+
+      {
+          value: "The training was difficult",
+          text: "The training was difficult"
+      }
+      ,
+
+      {
+          value: "The job was difficult",
+          text: "The job was difficult"
+      },
+
+      {
+          value: "The quality of the training was poor",
+          text: "The quality of the training was poor"
+      },
+
+      {
+          value: "The training provider did not think I would pass the end point assessment",
+          text: "The training provider did not think I would pass the end point assessment"
+      },
+
+      {
+          value: "There was a delay in completing my end point assessment",
+          text: "There was a delay in completing my end point assessment"
+      },
+
+      {
+          value: "There was no career progression",
+          text: "There was no career progression"
+      },
+
+      {
+        value: "The salary did not meet my financial needs",
+        text: "The salary did not meet my financial needs"
+    },
+
+    {
+      divider: "or"
+    },
+    {
+        value: "None of the above",
+        text:  "None of the above"
+    }
+
+    ]
+  }) }}
+
+
+
+
+
+
+
+
+  <div class="govuk-button-group">
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+  </div>
+
+</form>
+
+
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,107 @@
+{% extends "layout_cmadexit.html" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "exit2"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+
+
+<style>
+   .govuk-main-wrapper {
+    padding-top:20px;
+   }
+</style>
+
+
+<div class="govuk-width-container">
+
+    
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            
+            
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+
+        <h1 class="govuk-heading-l">According to our records, you did not complete your apprenticeship including your end-point assessment. <br>Is this correct?</h1>
+
+       
+
+        <form method="post">
+            
+
+
+
+
+
+
+
+
+            {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+                    {{ govukRadios({
+                      idPrefix: "chooseoption",
+                      name: "chooseoption",
+                      fieldset: {
+                        legend: {
+                          text: "",
+                          isPageHeading: true,
+                          classes: "govuk-fieldset__legend--m"
+                        }
+                      },
+
+
+
+
+                      items: [
+
+
+                        {
+                          value: "Yes, this is correct",
+                          text: "Yes, this is correct"
+                        },
+
+                        {
+                            value: "No, this is not correct",
+                            text: "No, this is not correct"
+                        }
+
+                      ]
+                    }) }}
+
+
+                 
+
+            <div class="govuk-button-group">
+                {{ govukButton({
+                  text: "Continue",
+                  href: ""
+                }) }}
+              </div>
+     </form>
+    </div>
+</div>
+
+
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
