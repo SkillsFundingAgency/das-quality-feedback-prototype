@@ -2,6 +2,7 @@
 
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
 {% block beforeContent %}
   {{ govukBackLink({
@@ -46,9 +47,13 @@
 
 
 
-
-
-
+          <h2 class="govuk-heading-l">
+            This is not correct because…
+          </h2>
+          <div class="govuk-inset-text">
+            Answer this section if you have not withdrawn from your apprenticeship programme. If you have withdrawn please go back.
+          </div>
+        
             {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
                     {{ govukRadios({
@@ -56,41 +61,39 @@
                       name: "options",
                       fieldset: {
                         legend: {
-                          text: "This is not correct because…",
+                          text: "",
                           isPageHeading: true,
                           classes: "govuk-fieldset__legend--l"
                         }
-                      },
-
+                        },
+                      
                       hint: {
                         text: "Please select one answer that is most relevant to you."
                       },
 
-
-
                       items: [
 
                       {
-                        value: " I am still doing my apprenticeship",
-                        text: " I am still doing my apprenticeship"
+                        value: " i am still doing my apprenticeship",
+                        text: " i am still doing my apprenticeship"
                     },
 
                         {
-                          value: "I completed the apprenticeship and had my end-point assessment",
-                          text: "I completed the apprenticeship and had my end-point assessment"
+                          value: "i completed the apprenticeship and had my end-point assessment",
+                          text: "i completed the apprenticeship and had my end-point assessment"
                         },
 
                         {
-                            value: "I completed my training and I'm waiting for the end-point assessment",
-                            text: "I completed my training and I'm waiting for the end-point assessment"
+                            value: "i completed my training and I'm waiting for the end-point assessment",
+                            text: "i completed my training and I'm waiting for the end-point assessment"
                         }
                         ,
 
                        
 
                         {
-                            value: "I never started an apprenticeship",
-                            text: "I never started an apprenticeship"
+                            value: "i never started an apprenticeship",
+                            text: "i never started an apprenticeship"
                         }
 
 
