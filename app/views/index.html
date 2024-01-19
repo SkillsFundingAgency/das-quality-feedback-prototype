@@ -2,208 +2,33 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
- 
 {% endblock %}
-
 {% block content %}
-
-
-<style>
-
-     .margine {
-          padding-left: 20px;
-     }
-</style>
-
-
 
 
 <!-- Main content starts -->
 
-<!-- Full width heading starts -->
 <div class="govuk-grid-row">
-     <div class="govuk-grid-column-full">
+     <div class="govuk-grid-column-two-thirds">
           <h1 class="govuk-heading-xl">
                <!--<span class="govuk-tag">ALPHA</span><br>-->
-               {{serviceName}} design history
+               Welcome to the {{serviceName}} prototype library
           </h1>
      </div>
 </div>
-<!-- Full width heading ends -->
 
-<!-- Two thirds header section starts -->
-<div class="govuk-grid-row">
-     <div class="govuk-grid-column-two-thirds">
-          <h2 class="govuk-heading-l govuk-!-margin-top-6">
-               What is {{serviceName}}?
-          </h2>
-          <p class="govuk-body">
-               All documents and links are being collected on <a href="https://skillsfundingagency.atlassian.net/l/c/dfqZ6goT" class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank">this Confluence page (opens in a new tab)</a>.
-          </p>
-          <p class="govuk-body">
-               This documents the Alpha and Beta phases of the {{serviceName}} project, 1st of October 2021 onwards.
-          </p>
-
-          <h2 class="govuk-heading-l govuk-!-margin-top-6">
-               Who's working on this project?
-          </h2>
-          <ul class="govuk-list govuk-list--bullet">
-               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/spaces/DAS/pages/107224028/Research+Clan" title="Link to Mayurs profile on Confluence">Mayur Shah (opens in a new tab)</a> &ndash; User Researcher</li>
-               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/spaces/DAS/pages/1070924516/Interaction+Design+Clan" title="Link to Victor's profile on Confluence">Victor Ivan (opens in a new tab)</a> &ndash; Interaction Designer</li>
-               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/people/6026b1f13351c9006b860ea8" title="Link to Emma's profile on Confluence">Emma Challinor (opens in a new tab)</a> &ndash; Content Designer</li>
-
-
-
-          </ul>
-     </div>
-     <!-- Two thirds header section ends -->
-
-     <!-- One third header section starts -->
-     <div class="govuk-grid-column-one-third">
-          <!--<h2 class="govuk-heading-m">
-               <br>Design artefacts
-          </h2>
-          <div class="govuk-inset-text">
-               <ul class='govuk-list govuk-list--bullet'>
-                    <li><a href='#' class='govuk-link govuk-link--no-visited-state'>Thing #1</a></li>
-               </ul>
-          </div>-->
-     </div>
-     <!-- One third header section ends -->
-</div>
-
-<div class="govuk-grid-row">
-     <!-- Full width header section starts -->
-     <div class="govuk-grid-column-full">
-          <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-          <h2 class="govuk-heading-l">
-               What are we doing and why?
-          </h2>
-          <p class="govuk-body">
-               {{ govukDetails({
-                    summaryText: "Project design goals",
-                    html: "<table class='govuk-table'>
-                         <thead class='govuk-table__head'>
-                              <tr class='govuk-table__row'>
-                                   <th scope='col' class='govuk-table__header'>What we're doing</th>
-                                   <th scope='col' class='govuk-table__header'>Why we're doing it</th>
-                              </tr>
-                         </thead>
-                         <tbody class='govuk-table__body'>
-                              <tr class='govuk-table__row'>
-                                   <td class='govuk-table__cell'>We're building clickable prototypes for Employers and Apprentices.</td>
-                                   <td class='govuk-table__cell'>To account for all possible scenarios where feedback on training provision is involved and test with real users for insights that will inform future design decisions.</td>
-                              </tr>
-                         </tbody>
-                    </table>"
-               }) }}
-          </p>
-
-          <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-<br><br>
-          <h2 class="govuk-heading-l">
-              Prototypes
-          </h2>
-
-          
-    
-         
-          <table class="govuk-table govuk-table--small responsive">
-               <thead class="govuk-table__head">
-                 <tr class="govuk-table__row">
-                   <th scope="col" class="govuk-table__header">Name</th>
-                   <th scope="col" class="govuk-table__header">Status</th>
-                   <th scope="col" class="govuk-table__header margine">Notes</th>
-                 </tr>
-               </thead>
-               <tbody class="govuk-table__body">
-                    <tr class="govuk-table__row">
-                         <th scope="row" class="govuk-table__header"><a href="/exit2/exit0.html" class="govuk-link govuk-link--no-visited-state">Apprentice exit survey - version 1.1</a></th>
-                         <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow"  style="white-space: nowrap;">In progress</strong></td>
-                         <td class="govuk-table__cell margine">Journey built as defined in <a class="govuk-link--no-visited-state" href="https://skillsfundingagency.atlassian.net/browse/QF-562?atlOrigin=eyJpIjoiYjViYWRlOTQ2MzI5NDJmZDhmMzUxYWM3NmRkNDM0ZTMiLCJwIjoiaiJ9">this Jira ticket.</a></td>
-                       </tr>
-                    <tr class="govuk-table__row">
-                         <th scope="row" class="govuk-table__header"><a href="/exit/exit0.html" class="govuk-link govuk-link--no-visited-state">Apprentice exit survey - version 1.0</a></th>
-                         <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue"  style="white-space: nowrap;">Ready to present</strong></td>
-                         <td class="govuk-table__cell margine">Journey built as defined in <a class="govuk-link--no-visited-state" href="https://skillsfundingagency.atlassian.net/browse/QF-562?atlOrigin=eyJpIjoiYjViYWRlOTQ2MzI5NDJmZDhmMzUxYWM3NmRkNDM0ZTMiLCJwIjoiaiJ9">this Jira ticket.</a></td>
-                       </tr>
-                    <tr class="govuk-table__row">
-                         <th scope="row" class="govuk-table__header"><a href="/sprint-4-beta/FAT/fat0.html" class="govuk-link govuk-link--no-visited-state">Employer & apprentice feedback on FAT V2</a></th>
-                         <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green"  style="white-space: nowrap;">Tested</strong></td>
-                         <td class="govuk-table__cell margine">Journey built as defined in <a class="govuk-link--no-visited-state" href="https://skillsfundingagency.atlassian.net/browse/QF-308?atlOrigin=eyJpIjoiZDQwZGMyZjMxYzRkNDBkOGE2YjI0YTUxNjM0YzI5MzgiLCJwIjoiaiJ9">this Jira ticket.</a></td>
-                       </tr>
-                    <tr class="govuk-table__row">
-                         <th scope="row" class="govuk-table__header"><a href="/sprint-1-beta/FAT/fat0.html" class="govuk-link govuk-link--no-visited-state">Employer & apprentice feedback on FAT</a></th>
-                         <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green"  style="white-space: nowrap;">Tested</strong></td>
-                         <td class="govuk-table__cell margine">Journey built as defined in <a class="govuk-link--no-visited-state" href="https://skillsfundingagency.atlassian.net/browse/QF-189?atlOrigin=eyJpIjoiOWM3NjhiZjU0ODJkNDY0OThiNzAxZjAzNDJlZTgyYzEiLCJwIjoiaiJ9">this Jira ticket.</a></td>
-                       </tr>
-                    <tr class="govuk-table__row">
-                         <th scope="row" class="govuk-table__header"><a href="/sprint-1-beta/appfeedback/email2.html" class="govuk-link govuk-link--no-visited-state">Apprentice feedback journey - Terms of use</a></th>
-                         <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green"  style="white-space: nowrap;">Tested</strong></td>
-                         <td class="govuk-table__cell margine">Journey built as defined in <a class="govuk-link--no-visited-state" href="https://skillsfundingagency.atlassian.net/browse/QF-232?atlOrigin=eyJpIjoiMTBlYWM2NjI4NDAzNGNhMWE4OTU5YTVlZmYxZGI2Y2EiLCJwIjoiaiJ9">this Jira ticket.</a></td>
-                       </tr>
-                    <tr class="govuk-table__row">
-                         <th scope="row" class="govuk-table__header"><a href="/sprint-1-beta/empfeedback/empfeedback0.html" class="govuk-link govuk-link--no-visited-state">Employer feedback journey</a></th>
-                         <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green" style="white-space: nowrap;">Tested</strong></td>
-                         <td class="govuk-table__cell margine">Journey built as defined in <a class="govuk-link--no-visited-state" href="https://skillsfundingagency.atlassian.net/browse/QF-233?atlOrigin=eyJpIjoiZGY0M2E0YTVkODAwNGMyODlkZGQyMmU4OGJjYmExMmMiLCJwIjoiaiJ9">this Jira ticket.</a></td>
-                       </tr>
-                
-                    <tr class="govuk-table__row">
-                         <th scope="row" class="govuk-table__header"><a href="/sprint-0-beta/appfeedback/appfeedback0.html" class="govuk-link govuk-link--no-visited-state">Apprentice feedback journey (multiple training providers)</a></th>
-                         <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green"  style="white-space: nowrap;">Tested</strong></td>
-                         <td class="govuk-table__cell margine">This journey starts with the My apprenticeship log in page, it includes the My apprenticeship dashboard and also covers the multiple training providers scenario.</td>
-                       </tr>
-                       <tr class="govuk-table__row">
-                   <th scope="row" class="govuk-table__header"><a href="/sprint-6-alpha/appfeedback/email1.html" class="govuk-link govuk-link--no-visited-state">Apprentice feedback journey</a></th>
-                   <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green"  style="white-space: nowrap;">Tested</strong></td>
-                   <td class="govuk-table__cell margine">Journey built as defined in <a class="govuk-link--no-visited-state" href="https://skillsfundingagency.atlassian.net/browse/QF-156?atlOrigin=eyJpIjoiMDBmZmMzYzQxZTIxNGVlZDljNGI5ZmYzYzI3ZTE4OWEiLCJwIjoiaiJ9">this Jira ticket.</a></td>
-                 </tr>
-               </tbody>
-             </table>
-
-
-
-
-
-
-
-    <br><br><br>
-
-     </div>
-     <!-- Full width header section ends -->
-</div>
-
-
-
-     <!-- Sprints section starts -->
+<!-- Sprints section starts -->
 <div class="govuk-grid-row">
 
      <div class="govuk-grid-column-two-thirds">
-          {% include './sprint-4-beta/_summary.html' %}
-
-
+          {% include './sprint-50/_summary.html' %}
 
           <h2 class="govuk-heading-l govuk-!-margin-top-9">
                Previous sprints and archive
           </h2>
-          {% set sprint4betaHtml %}
-          {% include './sprint-4-beta/_summary.html' %}
-          {% endset %}
-          {% set sprint3betaHtml %}
-          {% include './sprint-3-beta/_summary.html' %}
-          {% endset %}
-          {% set sprint2betaHtml %}
-          {% include './sprint-2-beta/_summary.html' %}
-          {% endset %}
-          {% set sprint1betaHtml %}
-          {% include './sprint-1-beta/_summary.html' %}
-          {% endset %}
-          {% set sprint0betaHtml %}
-          {% include './sprint-0-beta/_summary.html' %}
-          {% endset %}
-          {% set sprint6alphaHtml %}
-          {% include './sprint-6-alpha/_summary.html' %}
-          {% endset %}
+          {# {% set pastsprintbetaHtml %}
+          {% include './past-sprint/_summary.html' %}
+          {% endset %} #}
 
 
           {{ govukAccordion({
@@ -212,69 +37,13 @@
                
                {
                     heading: {
-                         text: "Sprint 4 Beta"
+                         text: "PAST SPRINT"
                     },
                     content: {
-                         html: sprint4betaHtml
+                         html: pastsprintbetaHtml
                     },
                     summary: {
                          html: '16 Mar — 30 Mar 2022'
-                    }
-               },
-               {
-                    heading: {
-                         text: "Sprint 3 Beta"
-                    },
-                    content: {
-                         html: sprint3betaHtml
-                    },
-                    summary: {
-                         html: '2 Mar — 16 Mar 2022'
-                    }
-               },
-                {
-                    heading: {
-                         text: "Sprint 2 Beta"
-                    },
-                    content: {
-                         html: sprint2betaHtml
-                    },
-                    summary: {
-                         html: '16 Feb — 2 Mar 2022'
-                    }
-               },
-               {
-                    heading: {
-                         text: "Sprint 1 Beta"
-                    },
-                    content: {
-                         html: sprint1betaHtml
-                    },
-                    summary: {
-                         html: '2 Feb — 15 Feb 2022'
-                    }
-               },
-               {
-                    heading: {
-                         text: "Sprint 0 Beta"
-                    },
-                    content: {
-                         html: sprint0betaHtml
-                    },
-                    summary: {
-                         html: '19 Jan — 2 Feb 2022'
-                    }
-               },
-              
-               {
-                    heading: {
-                         text: "Sprint 6 Alpha"
-                    },
-                    content: {
-                         html: sprint6alphaHtml
-                    },
-                    summary: {
-                         html: '5 Jan — 18 Jan 2022'
                     }
                }
                ]
@@ -282,6 +51,14 @@
 
      </div>
   <!-- Sprints section ends -->
+</div>
+
+<div class="govuk-grid-row">
+     <h2 class="govuk-heading-l govuk-!-margin-top-9">
+          Design history
+     </h2>
+     <p class="govuk-body"><a href="design-history" class="govuk-link">View history from Oct 2021 - Apr 2022</a></p>
+
 </div>
 
 <!-- Main content ends -->
