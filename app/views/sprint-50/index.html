@@ -1,0 +1,789 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Training providers for
+Engineering technician (level 3) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "includes/header.html" %}
+{% include "includes/training-provider-account-header.html" %}
+{# <nav class="das-navigation" style="margin-bottom: 40px;">
+  <div class="govuk-width-container">
+    <ul class="das-navigation__list ">
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link das-navigation__link--current" href="index">Home</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="approvals/apprentice-requests">Apprentice requests</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link " href="reserve-reservations-pro">Manage funding</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="manage-apprentices">Manage your apprentices</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="{{ version }}/#">Recruit apprentices</a>
+      </li>
+      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
+          href="{{ version }}/#">More</a>
+        <ul class="das-navigation__priority-list govuk-visually-hidden">
+          <li class="das-navigation__list-item">
+            <a class="das-navigation__link" href="{{ version }}/#">Organisations and agreements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav> #}
+{% endblock %}
+
+
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <div class="govuk-breadcrumbs ">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="#">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="#">Apprenticeship training courses</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="#">Engineering technician (level&nbsp;3)</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <p class="govuk-body view-shortlist view-shortlist-2 ">
+      <a class="govuk-link govuk-link--no-visited-state" href="shortlist">View shortlist <span
+          class="shortlist-total shortlist-count">3</span></a>
+    </p>
+  </div>
+</div>{% endblock %}{% block content %}<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-8">
+      <span class="govuk-caption-xl">Training providers for</span>
+      Engineering technician (level&nbsp;3)
+    </h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third"> <!-- FILTERS  -->
+    <div class="fat-filter">
+      <div class="fat-filter__header">
+        <div class="fat-filter__header-title">
+          <h2 class="govuk-heading-m">Filter</h2>
+        </div>
+        <div class="fat-filter__header-action">
+        </div>
+      </div>
+      <div class="fat-filter__content">
+        <div class="fat-filter__options">
+          <form action="index" method="GET"> <button type="submit" class="fat-filter__submit govuk-button"
+              id="filters-submit">Apply filters</button> <!-- Location -->
+            <div class="govuk-form-group">
+              <label for="search-location" class="govuk-label">
+                <span class="govuk-!-font-weight-bold govuk-!-font-size-24">Apprenticeship location</span>
+                <span class="govuk-hint">Enter a town, city or postcode</span>
+              </label>
+              <input type="search" value="" id="search-location-old" name="" class="govuk-input">
+
+            </div> <!-- Training options -->
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  Training options
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="training-3" name="trainingoptions" type="checkbox"
+                      value="3">
+                    <label class="govuk-label govuk-checkboxes__label" for="training-3">
+                      At apprentice’s workplace
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__conditional">
+                    <div class="govuk-form-group">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="training-4" name="trainingoptions" type="checkbox"
+                          value="4">
+                        <label class="govuk-label govuk-checkboxes__label" for="training-4">
+                          National coverage
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="training-1" name="trainingoptions" type="checkbox"
+                      value="1">
+                    <label class="govuk-label govuk-checkboxes__label" for="training-1">
+                      Day release
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="training-2" name="trainingoptions" type="checkbox"
+                      value="2">
+                    <label class="govuk-label govuk-checkboxes__label" for="training-2">
+                      Block release
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div> <!-- Employer reviews -->
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  Average employer review
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="employer-1" name="employerreviews" type="checkbox"
+                      value="1">
+                    <label class="govuk-label govuk-checkboxes__label" for="employer-1">
+                      Excellent
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="employer-2" name="employerreviews" type="checkbox"
+                      value="2">
+                    <label class="govuk-label govuk-checkboxes__label" for="employer-2">
+                      Good
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="employer-3" name="employerreviews" type="checkbox"
+                      value="3">
+                    <label class="govuk-label govuk-checkboxes__label" for="employer-3">
+                      Poor
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="employer-4" name="employerreviews" type="checkbox"
+                      value="4">
+                    <label class="govuk-label govuk-checkboxes__label" for="employer-4">
+                      Very poor
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="employer-0" name="employerreviews" type="checkbox"
+                      value="0">
+                    <label class="govuk-label govuk-checkboxes__label" for="employer-0">
+                      Not yet reviewed
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div> <!-- Ofsted rating -->
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  Ofsted rating
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="ofsted-1" name="ofstedratings" type="checkbox" value="1">
+                    <label class="govuk-label govuk-checkboxes__label" for="ofsted-1">
+                      Outstanding
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="ofsted-2" name="ofstedratings" type="checkbox" value="2">
+                    <label class="govuk-label govuk-checkboxes__label" for="ofsted-2">
+                      Good
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="ofsted-3" name="ofstedratings" type="checkbox" value="3">
+                    <label class="govuk-label govuk-checkboxes__label" for="ofsted-3">
+                      Requires improvement
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="ofsted-4" name="ofstedratings" type="checkbox" value="4">
+                    <label class="govuk-label govuk-checkboxes__label" for="ofsted-4">
+                      Inadequate
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="ofsted-0" name="ofstedratings" type="checkbox" value="0">
+                    <label class="govuk-label govuk-checkboxes__label" for="ofsted-0">
+                      Not yet rated
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div> <!-- Search box -->
+            <!-- <div class="govuk-form-group" >
+                            <label for="search-providers" class="govuk-label" >
+                                <span class="govuk-!-font-weight-bold govuk-!-font-size-24">Training provider name</span>
+                            </label>
+                            <input type="search" value="" id="search-providers" name="q" title="Search" class="govuk-input">
+                        </div> --> <input type="hidden" value="167" name="standard"> <button type="submit"
+              class="govuk-button fat-filter__submit" id="filters-submit-2">Apply filters</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="fat-filter__togle-container filters-not-applied"><button
+        class="govuk-button govuk-button--secondary fat-filter__toggle" type="button" style="display: none;">Hide
+        filter</button></div>
+  </div>
+  <div class="govuk-grid-column-two-thirds"> <!--
+            0 results for filters
+        -->
+    <h2 class="govuk-heading-m">8 results</h2>
+    <div class="fat-panel fat-panel-blocked govuk-!-margin-bottom-5">
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Apprenticeship location</h2>
+      <p class="govuk-body govuk-!-margin-bottom-2">Only show providers who offer this training for the apprenticeship
+        location.</p>
+      <p class="govuk-body"><a href="#search-location"
+          class="focus-field-prompt govuk-link govuk-link--no-visited-state">Enter&nbsp;location</a></p>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-2"> <!--
+            Providers list OR No results
+        --> <!-- Providers -->
+    <!-- Employer Ratings -->
+
+
+    <!-- Total employer ratings --> <!-- Ofsted -->
+    <div class="govuk-grid-row govuk-!-margin-left-0 govuk-!-margin-right-0 govuk-!-margin-top-3">
+      <div class="govuk-grid-column-two-thirds govuk-!-padding-0">
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+          <a href="provider?provider=677&amp;standard=167" class="govuk-link govuk-link--no-visited-state">SKILLS
+            COLLEGE UK LIMITED</a>
+        </h2>
+        <ul class="govuk-list">
+          <!-- <li class="govuk-!-font-size-16 govuk-!-margin-bottom-2">
+                                <a href="#search-location" class="focus-field-prompt govuk-link govuk-link--no-visited-state" >Enter&nbsp;location</a>
+                            </li> -->
+          <li class="govuk-!-margin-top-2">
+            <ul
+              class="govuk-list fat-training-options govuk-!-font-size-16 govuk-!-margin-top-1 govuk-!-margin-bottom-2">
+              <li class="fat-cross-2" style="display: block;">
+                At&nbsp;apprentice’s&nbsp;workplace
+              </li>
+              <li class="fat-tick-2" style="display: block;">
+                Day&nbsp;release
+              </li>
+              <li class="fat-tick-2 govuk-!-margin-bottom-2" style="display: block;">
+                Block&nbsp;release
+              </li>
+            </ul>
+          </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2"> <img src="/public/images/icon-star-green.svg"
+              class="star-svg"><img src="/public/images/icon-star-green.svg" class="star-svg"><img
+              src="/public/images/icon-star-green.svg" class="star-svg"><img src="/public/images/icon-star-green.svg"
+              class="star-svg"> <span class="excellent-employer govuk-!-font-weight">Excellent</span> <span
+              style="color: #626a6e" class="govuk-!-font-size-16">(50+ employer reviews)</span> </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+            <img src="/public/images/icon-star-green.svg" class="star-svg"><img src="/public/images/icon-star-green.svg"
+              class="star-svg"><img src="/public/images/icon-star-green.svg" class="star-svg"><img
+              src="/public/images/icon-star-green.svg" class="star-svg"> <span
+              class="excellent-employer govuk-!-font-weight">Outstanding</span> <span style="color: #626a6e"
+              class="govuk-!-font-size-16">(Ofsted rating)</span>
+          </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+            <span class="govuk-!-font-size-16">68% pass rate</span> <span style="color: #626a6e"
+              class="govuk-!-font-size-16">(out of 50 apprentices)</span>
+          </li>
+          <!-- <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+                                20 total points
+                            </li> --> <!-- National -->
+        </ul>
+      </div>
+      <div class="govuk-grid-column-one-third govuk-!-padding-0">
+        <p class="govuk-body shortlist-label shortlist-label-non-js" style="display: none;"> <a
+            href="providers?&amp;standard=167&amp;fav=677" data-href="providers?&amp;standard=167&amp;fav=677"
+            class="govuk-link govuk-link--no-visited-state add-shortlist">Add to shortlist</a> </p>
+        <p class="govuk-body shortlist-label shortlist-label-js" style=""> <span class="remove-elements"
+            style="display: none">
+            <strong class="govuk-tag">
+              Shortlisted
+            </strong><br>
+            <a href="providers?&amp;standard=167&amp;favdel=677" data-href="providers?&amp;standard=167&amp;favdel=677"
+              class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-2 remove-shortlist">Remove from
+              shortlist</a>
+          </span> <a href="providers?&amp;standard=167&amp;fav=677" data-href="providers?&amp;standard=167&amp;fav=677"
+            class="govuk-link govuk-link--no-visited-state add-shortlist">Add to shortlist</a> </p>
+      </div>
+      <hr class="govuk-section-break govuk-section-break--visible" style="clear:both">
+    </div> <!-- Employer Ratings -->
+
+    <!-- Total employer ratings --> <!-- Ofsted -->
+    <div class="govuk-grid-row govuk-!-margin-left-0 govuk-!-margin-right-0 govuk-!-margin-top-3">
+      <div class="govuk-grid-column-two-thirds govuk-!-padding-0">
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+          <a href="provider?provider=668&amp;standard=167" class="govuk-link govuk-link--no-visited-state">BONA FIDE
+            SITE SERVICES LIMITED</a>
+        </h2>
+        <ul class="govuk-list">
+          <!-- <li class="govuk-!-font-size-16 govuk-!-margin-bottom-2">
+                                <a href="#search-location" class="focus-field-prompt govuk-link govuk-link--no-visited-state" >Enter&nbsp;location</a>
+                            </li> -->
+          <li class="govuk-!-margin-top-2">
+            <ul
+              class="govuk-list fat-training-options govuk-!-font-size-16 govuk-!-margin-top-1 govuk-!-margin-bottom-2">
+              <li class="fat-cross-2" style="display: block;">
+                At&nbsp;apprentice’s&nbsp;workplace
+              </li>
+              <li class="fat-tick-2" style="display: block;">
+                Day&nbsp;release
+              </li>
+              <li class="fat-tick-2 govuk-!-margin-bottom-2" style="display: block;">
+                Block&nbsp;release
+              </li>
+            </ul>
+          </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2"> <img src="/public/images/icon-star-green.svg"
+              class="star-svg"><img src="/public/images/icon-star-green.svg" class="star-svg"><img
+              src="/public/images/icon-star-green.svg" class="star-svg"><img src="/public/images/icon-star-green.svg"
+              class="star-svg"> <span class="excellent-employer govuk-!-font-weight">Excellent</span> <span
+              style="color: #626a6e" class="govuk-!-font-size-16">(50+ employer reviews)</span> </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+            <img src="/public/images/icon-star-green.svg" class="star-svg"><img src="/public/images/icon-star-green.svg"
+              class="star-svg"><img src="/public/images/icon-star-green.svg" class="star-svg"><img
+              src="/public/images/icon-star-green.svg" class="star-svg"> <span
+              class="excellent-employer govuk-!-font-weight">Outstanding</span> <span style="color: #626a6e"
+              class="govuk-!-font-size-16">(Ofsted rating)</span>
+          </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+            <span class="govuk-!-font-size-16">68% pass rate</span> <span style="color: #626a6e"
+              class="govuk-!-font-size-16">(out of 50 apprentices)</span>
+          </li>
+          <!-- <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+                                20 total points
+                            </li> --> <!-- National -->
+        </ul>
+      </div>
+      <div class="govuk-grid-column-one-third govuk-!-padding-0">
+        <p class="govuk-body shortlist-label shortlist-label-non-js" style="display: none;"> <a
+            href="providers?&amp;standard=167&amp;fav=668" data-href="providers?&amp;standard=167&amp;fav=668"
+            class="govuk-link govuk-link--no-visited-state add-shortlist">Add to shortlist</a> </p>
+        <p class="govuk-body shortlist-label shortlist-label-js" style=""> <span class="remove-elements"
+            style="display: none">
+            <strong class="govuk-tag">
+              Shortlisted
+            </strong><br>
+            <a href="providers?&amp;standard=167&amp;favdel=668" data-href="providers?&amp;standard=167&amp;favdel=668"
+              class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-2 remove-shortlist">Remove from
+              shortlist</a>
+          </span> <a href="providers?&amp;standard=167&amp;fav=668" data-href="providers?&amp;standard=167&amp;fav=668"
+            class="govuk-link govuk-link--no-visited-state add-shortlist">Add to shortlist</a> </p>
+      </div>
+      <hr class="govuk-section-break govuk-section-break--visible" style="clear:both">
+    </div> <!-- Employer Ratings --> <!-- Total employer ratings --> <!-- Ofsted -->
+    <div class="govuk-grid-row govuk-!-margin-left-0 govuk-!-margin-right-0 govuk-!-margin-top-3">
+      <div class="govuk-grid-column-two-thirds govuk-!-padding-0">
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+          <a href="provider?provider=336&amp;standard=167" class="govuk-link govuk-link--no-visited-state">E.J.MARKHAM
+            &amp; SON LIMITED</a>
+        </h2>
+        <ul class="govuk-list">
+          <!-- <li class="govuk-!-font-size-16 govuk-!-margin-bottom-2">
+                                <a href="#search-location" class="focus-field-prompt govuk-link govuk-link--no-visited-state" >Enter&nbsp;location</a>
+                            </li> -->
+          <li class="govuk-!-margin-top-2">
+            <ul
+              class="govuk-list fat-training-options govuk-!-font-size-16 govuk-!-margin-top-1 govuk-!-margin-bottom-2">
+              <li class="fat-tick-2" style="display: block;">
+                At&nbsp;apprentice’s&nbsp;workplace (national)
+              </li>
+              <li class="fat-tick-2" style="display: block;">
+                Day&nbsp;release
+              </li>
+              <li class="fat-tick-2 govuk-!-margin-bottom-2" style="display: block;">
+                Block&nbsp;release
+              </li>
+            </ul>
+          </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2"> <img src="/public/images/icon-star-green.svg"
+              class="star-svg"><img src="/public/images/icon-star-green.svg" class="star-svg"><img
+              src="/public/images/icon-star-green.svg" class="star-svg"><img src="/public/images/icon-star-green.svg"
+              class="star-svg"> <span class="excellent-employer govuk-!-font-weight">Excellent</span> <span
+              style="color: #626a6e" class="govuk-!-font-size-16">(50+ employer reviews)</span> </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+            <img src="/public/images/icon-star-green.svg" class="star-svg"><img src="/public/images/icon-star-green.svg"
+              class="star-svg"><img src="/public/images/icon-star-green.svg" class="star-svg"><img
+              src="/public/images/icon-star-green.svg" class="star-svg"> <span
+              class="excellent-employer govuk-!-font-weight">Outstanding</span> <span style="color: #626a6e"
+              class="govuk-!-font-size-16">(Ofsted rating)</span>
+          </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+            <span class="govuk-!-font-size-16">68% pass rate</span> <span style="color: #626a6e"
+              class="govuk-!-font-size-16">(out of 50 apprentices)</span>
+          </li>
+          <!-- <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+                                20 total points
+                            </li> --> <!-- National -->
+          <!-- <li class="govuk-!-font-size-16" ><span class="govuk-secondary-colour" style="color:red">National</span></li> -->
+        </ul>
+      </div>
+      <div class="govuk-grid-column-one-third govuk-!-padding-0">
+        <p class="govuk-body shortlist-label shortlist-label-non-js" style="display: none;"> <a
+            href="providers?&amp;standard=167&amp;fav=336" data-href="providers?&amp;standard=167&amp;fav=336"
+            class="govuk-link govuk-link--no-visited-state add-shortlist">Add to shortlist</a> </p>
+        <p class="govuk-body shortlist-label shortlist-label-js" style=""> <span class="remove-elements"
+            style="display: none">
+            <strong class="govuk-tag">
+              Shortlisted
+            </strong><br>
+            <a href="providers?&amp;standard=167&amp;favdel=336" data-href="providers?&amp;standard=167&amp;favdel=336"
+              class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-2 remove-shortlist">Remove from
+              shortlist</a>
+          </span> <a href="providers?&amp;standard=167&amp;fav=336" data-href="providers?&amp;standard=167&amp;fav=336"
+            class="govuk-link govuk-link--no-visited-state add-shortlist">Add to shortlist</a> </p>
+      </div>
+      <hr class="govuk-section-break govuk-section-break--visible" style="clear:both">
+    </div> <!-- Employer Ratings -->
+
+    <div class="govuk-grid-row govuk-!-margin-left-0 govuk-!-margin-right-0 govuk-!-margin-top-3">
+      <div class="govuk-grid-column-two-thirds govuk-!-padding-0">
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+          <a href="provider?provider=731&amp;standard=167" class="govuk-link govuk-link--no-visited-state">UNIVERSITY OF
+            NORTHUMBRIA AT NEWCASTLE</a>
+        </h2>
+        <ul class="govuk-list">
+          <!-- <li class="govuk-!-font-size-16 govuk-!-margin-bottom-2">
+                                <a href="#search-location" class="focus-field-prompt govuk-link govuk-link--no-visited-state" >Enter&nbsp;location</a>
+                            </li> -->
+          <li class="govuk-!-margin-top-2">
+            <ul
+              class="govuk-list fat-training-options govuk-!-font-size-16 govuk-!-margin-top-1 govuk-!-margin-bottom-2">
+              <li class="fat-cross-2" style="display: block;">
+                At&nbsp;apprentice’s&nbsp;workplace
+              </li>
+              <li class="fat-tick-2" style="display: block;">
+                Day&nbsp;release
+              </li>
+              <li class="fat-tick-2 govuk-!-margin-bottom-2" style="display: block;">
+                Block&nbsp;release
+              </li>
+            </ul>
+          </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2"> <img src="/public/images/icon-star-green.svg"
+              class="star-svg"><img src="/public/images/icon-star-green.svg" class="star-svg"><img
+              src="/public/images/icon-star-green.svg" class="star-svg"><img src="/public/images/icon-star-green.svg"
+              class="star-svg"> <span class="excellent-employer govuk-!-font-weight">Excellent</span> <span
+              style="color: #626a6e" class="govuk-!-font-size-16">(27 employer reviews)</span> </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+            <img src="/public/images/icon-star-green.svg" class="star-svg"><img src="/public/images/icon-star-green.svg"
+              class="star-svg"><img src="/public/images/icon-star-green.svg" class="star-svg"><img
+              src="/public/images/icon-star-green.svg" class="star-svg"> <span
+              class="excellent-employer govuk-!-font-weight">Outstanding</span> <span style="color: #626a6e"
+              class="govuk-!-font-size-16">(Ofsted rating)</span>
+          </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+            <span class="govuk-!-font-size-16">68% pass rate</span> <span style="color: #626a6e"
+              class="govuk-!-font-size-16">(out of 50 apprentices)</span>
+          </li>
+          <!-- <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+                                20 total points
+                            </li> --> <!-- National -->
+        </ul>
+      </div>
+      <div class="govuk-grid-column-one-third govuk-!-padding-0">
+        <p class="govuk-body shortlist-label shortlist-label-non-js" style="display: none;"> <a
+            href="providers?&amp;standard=167&amp;fav=731" data-href="providers?&amp;standard=167&amp;fav=731"
+            class="govuk-link govuk-link--no-visited-state add-shortlist">Add to shortlist</a> </p>
+        <p class="govuk-body shortlist-label shortlist-label-js" style=""> <span class="remove-elements"
+            style="display: none">
+            <strong class="govuk-tag">
+              Shortlisted
+            </strong><br>
+            <a href="providers?&amp;standard=167&amp;favdel=731" data-href="providers?&amp;standard=167&amp;favdel=731"
+              class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-2 remove-shortlist">Remove from
+              shortlist</a>
+          </span> <a href="providers?&amp;standard=167&amp;fav=731" data-href="providers?&amp;standard=167&amp;fav=731"
+            class="govuk-link govuk-link--no-visited-state add-shortlist">Add to shortlist</a> </p>
+      </div>
+      <hr class="govuk-section-break govuk-section-break--visible" style="clear:both">
+    </div>
+
+    <div class="govuk-grid-row govuk-!-margin-left-0 govuk-!-margin-right-0 govuk-!-margin-top-3">
+      <div class="govuk-grid-column-two-thirds govuk-!-padding-0">
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+          <a href="provider?provider=630&amp;standard=167" class="govuk-link govuk-link--no-visited-state">STANFORD
+            MANAGEMENT PROCESSES LIMITED</a>
+        </h2>
+        <ul class="govuk-list">
+          <!-- <li class="govuk-!-font-size-16 govuk-!-margin-bottom-2">
+                                <a href="#search-location" class="focus-field-prompt govuk-link govuk-link--no-visited-state" >Enter&nbsp;location</a>
+                            </li> -->
+          <li class="govuk-!-margin-top-2">
+            <ul
+              class="govuk-list fat-training-options govuk-!-font-size-16 govuk-!-margin-top-1 govuk-!-margin-bottom-2">
+              <li class="fat-tick-2" style="display: block;">
+                At&nbsp;apprentice’s&nbsp;workplace (national)
+              </li>
+              <li class="fat-tick-2" style="display: block;">
+                Day&nbsp;release
+              </li>
+              <li class="fat-tick-2 govuk-!-margin-bottom-2" style="display: block;">
+                Block&nbsp;release
+              </li>
+            </ul>
+          </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2"> <img src="/public/images/icon-star-green.svg"
+              class="star-svg"><img src="/public/images/icon-star-green.svg" class="star-svg"><img
+              src="/public/images/icon-star-green.svg" class="star-svg"><img src="/public/images/icon-star-green.svg"
+              class="star-svg"> <span class="excellent-employer govuk-!-font-weight">Excellent</span> <span
+              style="color: #626a6e" class="govuk-!-font-size-16">(26 employer reviews)</span> </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+            <img src="/public/images/icon-star-green.svg" class="star-svg"><img src="/public/images/icon-star-green.svg"
+              class="star-svg"><img src="/public/images/icon-star-green.svg" class="star-svg"><img
+              src="/public/images/icon-star-green.svg" class="star-svg"> <span
+              class="excellent-employer govuk-!-font-weight">Outstanding</span> <span style="color: #626a6e"
+              class="govuk-!-font-size-16">(Ofsted rating)</span>
+          </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+            <span class="govuk-!-font-size-16">68% pass rate</span> <span style="color: #626a6e"
+              class="govuk-!-font-size-16">(out of 50 apprentices)</span>
+          </li>
+          <!-- <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+                                20 total points
+                            </li> --> <!-- National -->
+          <!-- <li class="govuk-!-font-size-16" ><span class="govuk-secondary-colour" style="color:red">National</span></li> -->
+        </ul>
+      </div>
+      <div class="govuk-grid-column-one-third govuk-!-padding-0">
+        <p class="govuk-body shortlist-label shortlist-label-non-js" style="display: none;"> <a
+            href="providers?&amp;standard=167&amp;fav=630" data-href="providers?&amp;standard=167&amp;fav=630"
+            class="govuk-link govuk-link--no-visited-state add-shortlist">Add to shortlist</a> </p>
+        <p class="govuk-body shortlist-label shortlist-label-js" style=""> <span class="remove-elements"
+            style="display: none">
+            <strong class="govuk-tag">
+              Shortlisted
+            </strong><br>
+            <a href="providers?&amp;standard=167&amp;favdel=630" data-href="providers?&amp;standard=167&amp;favdel=630"
+              class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-2 remove-shortlist">Remove from
+              shortlist</a>
+          </span> <a href="providers?&amp;standard=167&amp;fav=630" data-href="providers?&amp;standard=167&amp;fav=630"
+            class="govuk-link govuk-link--no-visited-state add-shortlist">Add to shortlist</a> </p>
+      </div>
+      <hr class="govuk-section-break govuk-section-break--visible" style="clear:both">
+    </div>
+    <!-- Employer Ratings -->
+
+    <!-- Total employer ratings --> <!-- Ofsted -->
+    <div class="govuk-grid-row govuk-!-margin-left-0 govuk-!-margin-right-0 govuk-!-margin-top-3">
+      <div class="govuk-grid-column-two-thirds govuk-!-padding-0">
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+          <a href="provider?provider=1927&amp;standard=167" class="govuk-link govuk-link--no-visited-state">PINNACLE
+            RECRUITMENT SOLUTIONS LIMITED</a>
+        </h2>
+        <ul class="govuk-list">
+          <!-- <li class="govuk-!-font-size-16 govuk-!-margin-bottom-2">
+                                <a href="#search-location" class="focus-field-prompt govuk-link govuk-link--no-visited-state" >Enter&nbsp;location</a>
+                            </li> -->
+          <li class="govuk-!-margin-top-2">
+            <ul
+              class="govuk-list fat-training-options govuk-!-font-size-16 govuk-!-margin-top-1 govuk-!-margin-bottom-2">
+              <li class="fat-cross-2" style="display: block;">
+                At&nbsp;apprentice’s&nbsp;workplace
+              </li>
+              <li class="fat-tick-2" style="display: block;">
+                Day&nbsp;release
+              </li>
+              <li class="fat-tick-2 govuk-!-margin-bottom-2" style="display: block;">
+                Block&nbsp;release
+              </li>
+            </ul>
+          </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2"> <img src="/public/images/icon-star-green.svg"
+              class="star-svg"><img src="/public/images/icon-star-green.svg" class="star-svg"><img
+              src="/public/images/icon-star-green.svg" class="star-svg"><img
+              src="/public/images/icon-star-green-empty.svg" class="star-svg"> <span
+              class="good-employer govuk-!-font-weight">Good</span> <span style="color: #626a6e"
+              class="govuk-!-font-size-16">(50+ employer reviews)</span> </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+            <img src="/public/images/icon-star-green.svg" class="star-svg"><img src="/public/images/icon-star-green.svg"
+              class="star-svg"><img src="/public/images/icon-star-green.svg" class="star-svg"><img
+              src="/public/images/icon-star-green.svg" class="star-svg"> <span
+              class="excellent-employer govuk-!-font-weight">Outstanding</span> <span style="color: #626a6e"
+              class="govuk-!-font-size-16">(Ofsted rating)</span>
+          </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+            <span class="govuk-!-font-size-16">68% pass rate</span> <span style="color: #626a6e"
+              class="govuk-!-font-size-16">(out of 50 apprentices)</span>
+          </li>
+          <!-- <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+                                19 total points
+                            </li> --> <!-- National -->
+        </ul>
+      </div>
+      <div class="govuk-grid-column-one-third govuk-!-padding-0">
+        <p class="govuk-body shortlist-label shortlist-label-non-js" style="display: none;"> <a
+            href="providers?&amp;standard=167&amp;fav=1927" data-href="providers?&amp;standard=167&amp;fav=1927"
+            class="govuk-link govuk-link--no-visited-state add-shortlist">Add to shortlist</a> </p>
+        <p class="govuk-body shortlist-label shortlist-label-js" style=""> <span class="remove-elements"
+            style="display: none">
+            <strong class="govuk-tag">
+              Shortlisted
+            </strong><br>
+            <a href="providers?&amp;standard=167&amp;favdel=1927"
+              data-href="providers?&amp;standard=167&amp;favdel=1927"
+              class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-2 remove-shortlist">Remove from
+              shortlist</a>
+          </span> <a href="providers?&amp;standard=167&amp;fav=1927"
+            data-href="providers?&amp;standard=167&amp;fav=1927"
+            class="govuk-link govuk-link--no-visited-state add-shortlist">Add to shortlist</a> </p>
+      </div>
+      <hr class="govuk-section-break govuk-section-break--visible" style="clear:both">
+    </div> <!-- Employer Ratings -->
+
+    <!-- Total employer ratings --> <!-- Ofsted -->
+    <div class="govuk-grid-row govuk-!-margin-left-0 govuk-!-margin-right-0 govuk-!-margin-top-3">
+      <div class="govuk-grid-column-two-thirds govuk-!-padding-0">
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+          <a href="provider?provider=1442&amp;standard=167" class="govuk-link govuk-link--no-visited-state">ASPIRE
+            SPORTING ACADEMY LTD</a>
+        </h2>
+        <ul class="govuk-list">
+          <!-- <li class="govuk-!-font-size-16 govuk-!-margin-bottom-2">
+                                <a href="#search-location" class="focus-field-prompt govuk-link govuk-link--no-visited-state" >Enter&nbsp;location</a>
+                            </li> -->
+          <li class="govuk-!-margin-top-2">
+            <ul
+              class="govuk-list fat-training-options govuk-!-font-size-16 govuk-!-margin-top-1 govuk-!-margin-bottom-2">
+              <li class="fat-cross-2" style="display: block;">
+                At&nbsp;apprentice’s&nbsp;workplace
+              </li>
+              <li class="fat-tick-2" style="display: block;">
+                Day&nbsp;release
+              </li>
+              <li class="fat-tick-2 govuk-!-margin-bottom-2" style="display: block;">
+                Block&nbsp;release
+              </li>
+            </ul>
+          </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2"> <img src="/public/images/icon-star-green.svg"
+              class="star-svg"><img src="/public/images/icon-star-green.svg" class="star-svg"><img
+              src="/public/images/icon-star-green.svg" class="star-svg"><img
+              src="/public/images/icon-star-green-empty.svg" class="star-svg"> <span
+              class="good-employer govuk-!-font-weight">Good</span> <span style="color: #626a6e"
+              class="govuk-!-font-size-16">(50+ employer reviews)</span> </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+            <img src="/public/images/icon-star-green.svg" class="star-svg"><img src="/public/images/icon-star-green.svg"
+              class="star-svg"><img src="/public/images/icon-star-green.svg" class="star-svg"><img
+              src="/public/images/icon-star-green.svg" class="star-svg"> <span
+              class="excellent-employer govuk-!-font-weight">Outstanding</span> <span style="color: #626a6e"
+              class="govuk-!-font-size-16">(Ofsted rating)</span>
+          </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+            <span class="govuk-!-font-size-16">68% pass rate</span> <span style="color: #626a6e"
+              class="govuk-!-font-size-16">(out of 50 apprentices)</span>
+          </li>
+          <!-- <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+                                19 total points
+                            </li> --> <!-- National -->
+        </ul>
+      </div>
+      <div class="govuk-grid-column-one-third govuk-!-padding-0">
+        <p class="govuk-body shortlist-label shortlist-label-non-js" style="display: none;"> <a
+            href="providers?&amp;standard=167&amp;fav=1442" data-href="providers?&amp;standard=167&amp;fav=1442"
+            class="govuk-link govuk-link--no-visited-state add-shortlist">Add to shortlist</a> </p>
+        <p class="govuk-body shortlist-label shortlist-label-js" style=""> <span class="remove-elements"
+            style="display: none">
+            <strong class="govuk-tag">
+              Shortlisted
+            </strong><br>
+            <a href="providers?&amp;standard=167&amp;favdel=1442"
+              data-href="providers?&amp;standard=167&amp;favdel=1442"
+              class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-2 remove-shortlist">Remove from
+              shortlist</a>
+          </span> <a href="providers?&amp;standard=167&amp;fav=1442"
+            data-href="providers?&amp;standard=167&amp;fav=1442"
+            class="govuk-link govuk-link--no-visited-state add-shortlist">Add to shortlist</a> </p>
+      </div>
+      <hr class="govuk-section-break govuk-section-break--visible" style="clear:both">
+    </div> <!-- Employer Ratings -->
+
+
+    <div class="govuk-grid-row govuk-!-margin-left-0 govuk-!-margin-right-0 govuk-!-margin-top-3">
+      <div class="govuk-grid-column-two-thirds govuk-!-padding-0">
+        <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+          <a href="provider?provider=855&amp;standard=167" class="govuk-link govuk-link--no-visited-state">HERITAGE
+            CRAFT ALLIANCE LIMITED</a>
+        </h2>
+        <ul class="govuk-list"> <!-- <li class="govuk-!-font-size-16 govuk-!-margin-bottom-2">
+                                <a href="#search-location" class="focus-field-prompt govuk-link govuk-link--no-visited-state" >Enter&nbsp;location</a>
+                            </li> -->
+          <li class="govuk-!-margin-top-2">
+            <ul
+              class="govuk-list fat-training-options govuk-!-font-size-16 govuk-!-margin-top-1 govuk-!-margin-bottom-2">
+              <li class="fat-tick-2" style="display: block;">
+                At&nbsp;apprentice’s&nbsp;workplace
+              </li>
+              <li class="fat-tick-2" style="display: block;">
+                Day&nbsp;release
+              </li>
+              <li class="fat-tick-2 govuk-!-margin-bottom-2" style="display: block;">
+                Block&nbsp;release
+              </li>
+            </ul>
+          </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2"> <img src="/public/images/icon-star-green.svg"
+              class="star-svg"><img src="/public/images/icon-star-green.svg" class="star-svg"><img
+              src="/public/images/icon-star-green.svg" class="star-svg"><img
+              src="/public/images/icon-star-green-empty.svg" class="star-svg"> <span
+              class="good-employer govuk-!-font-weight">Good</span> <span style="color: #626a6e"
+              class="govuk-!-font-size-16">(44 employer reviews)</span> </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+            <img src="/public/images/icon-star-green.svg" class="star-svg"><img src="/public/images/icon-star-green.svg"
+              class="star-svg"><img src="/public/images/icon-star-green.svg" class="star-svg"><img
+              src="/public/images/icon-star-green.svg" class="star-svg"> <span
+              class="excellent-employer govuk-!-font-weight">Outstanding</span> <span style="color: #626a6e"
+              class="govuk-!-font-size-16">(Ofsted rating)</span>
+          </li>
+          <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+            <span class="govuk-!-font-size-16">68% pass rate</span> <span style="color: #626a6e"
+              class="govuk-!-font-size-16">(out of 50 apprentices)</span>
+          </li>
+          <!-- <li class="govuk-!-font-size-16 govuk-!-margin-top-2">
+                                19 total points
+                            </li> --> <!-- National -->
+        </ul>
+      </div>
+      <div class="govuk-grid-column-one-third govuk-!-padding-0">
+        <p class="govuk-body shortlist-label shortlist-label-non-js" style="display: none;"> <a
+            href="providers?&amp;standard=167&amp;fav=855" data-href="providers?&amp;standard=167&amp;fav=855"
+            class="govuk-link govuk-link--no-visited-state add-shortlist">Add to shortlist</a> </p>
+        <p class="govuk-body shortlist-label shortlist-label-js" style=""> <span class="remove-elements"
+            style="display: none">
+            <strong class="govuk-tag">
+              Shortlisted
+            </strong><br>
+            <a href="providers?&amp;standard=167&amp;favdel=855" data-href="providers?&amp;standard=167&amp;favdel=855"
+              class="govuk-link govuk-link--no-visited-state govuk-!-margin-top-2 remove-shortlist">Remove from
+              shortlist</a>
+          </span> <a href="providers?&amp;standard=167&amp;fav=855" data-href="providers?&amp;standard=167&amp;fav=855"
+            class="govuk-link govuk-link--no-visited-state add-shortlist">Add to shortlist</a> </p>
+      </div>
+      <hr class="govuk-section-break govuk-section-break--visible" style="clear:both">
+    </div>
+    <!-- Employer Ratings -->
+
+    <hr class="govuk-section-break govuk-section-break--m">
+    <div class="fat-panel fat-panel-blocked">
+      <p class="govuk-body"><strong>Can't find a training provider?</strong><br>
+        <a href="aed-employer-start?standard=167&amp;location=" class="govuk-link govuk-link--no-visited-state">Share
+          your interest</a> in Engineering technician (level&nbsp;3) with other potential training providers.
+      </p>
+    </div>
+  </div>
+</div>{% endblock %}
