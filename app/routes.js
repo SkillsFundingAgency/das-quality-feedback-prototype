@@ -15,9 +15,6 @@ const router = govukPrototypeKit.requests.setupRouter()
 router.post('/exit/exit2a', function (req, res) {
 
     let chooseoption = req.session.data['chooseoption']
-
-    console.log(req.session.data['chooseoption'])
-
     //Option 1
     if (chooseoption === 'I did not complete') {
         res.redirect('/exit/exit3')
@@ -37,9 +34,6 @@ router.post('/exit/exit2a', function (req, res) {
 router.post('/exit2/exit2a', function (req, res) {
 
     let chooseoption = req.session.data['chooseoption']
-
-    console.log(req.session.data['chooseoption'])
-
     //Option 1
     if (chooseoption === 'Yes, this is correct') {
         res.redirect('/exit2/exit3')
@@ -50,4 +44,19 @@ router.post('/exit2/exit2a', function (req, res) {
     }
 
     //end
+})
+
+
+// Sprint 50
+// -----------
+
+router.post('/sprint-50/suitability/action', function (req, res) {
+    var suitability = req.session.data['suitability']
+
+    if (suitability == "not-suitable") {
+        res.redirect('/sprint-50/confirm-excluded-providers')
+    }
+    else {
+        res.redirect('/sprint-50/select-prefered-providers')
+    }
 })

@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Training providers for
+Engineering technician (level 3) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "includes/header.html" %}
+{% include "includes/employer-account-header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a Prototype - GOV.UK Prototype kit
+    </span>
+  </p>
+</div>
+
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/sprint-50/suitability/action" method="post" novalidate>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="prefered-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Which training providers would you like more information from?
+            </h1>
+          </legend>
+          <div id="prefered-hint" class="govuk-hint">
+            Select all that apply.
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="prefered" name="prefered" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="prefered">
+                Skills college uk limited
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="prefered-2" name="prefered" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="prefered-2">
+                Bona fide site services limited
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="prefered-3" name="prefered" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="prefered-3">
+                E.J.Markham & son limited
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="prefered-4" name="prefered" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="prefered-4">
+                University of Northumbria at Newcastle
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="prefered-5" name="prefered" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="prefered-5">
+                Stanford management processes limited
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
