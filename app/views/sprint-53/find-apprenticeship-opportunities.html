@@ -1,0 +1,1028 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Training providers for
+Engineering technician (level 3) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "includes/header.html" %}
+{% include "includes/training-provider-account-header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a Prototype - GOV.UK Prototype kit
+    </span>
+  </p>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <div class="govuk-breadcrumbs ">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="#">Home</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Find employers that need a training provider
+    </h1>
+
+    <p class="govuk-body">Employers are trying to find a training provider for the following apprenticeship training
+      courses.</p>
+
+    <p class="govuk-body govuk-!-margin-bottom-8">We can share your contact details with employers that you’re
+      interested
+      in.</p>
+
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="das-show-hide" data-module="das-show-hide">
+      <div class="das-filter das-!-show--from-tablet das-show-hide__section" id="fat-filter" tabindex="0">
+        <div class="das-filter__header">
+          <h2 class="das-filter__heading">Filter</h2>
+        </div>
+        <div class="das-filter__body das-!-show--from-tablet" id="fat-filter-options">
+          <form method="GET" action="">
+
+            <button type="submit" class="govuk-button" id="filters-submit">Apply filters</button>
+            <div class="govuk-form-group govuk-!-margin-bottom-3">
+              <label class="govuk-label govuk-label--m govuk-!-margin-bottom-0" for="search-location">
+                Location
+              </label>
+              <span id="search-location-hint" class="govuk-hint">
+                Enter a town, city or postcode
+              </span>
+              <div id="autocomplete-container" class="das-autocomplete-wrap">
+                <div class="autocomplete__wrapper">
+                  <div
+                    style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
+                    <div id="search-location__status--A" role="status" aria-atomic="true" aria-live="polite"></div>
+                    <div id="search-location__status--B" role="status" aria-atomic="true" aria-live="polite"></div>
+                  </div><input aria-expanded="false" aria-owns="search-location__listbox" aria-autocomplete="both"
+                    aria-describedby="search-location__assistiveHint" autocomplete="off"
+                    class="autocomplete__input autocomplete__input--default" id="search-location" name="location"
+                    placeholder="" type="text" role="combobox">
+                  <ul class="autocomplete__menu autocomplete__menu--overlay autocomplete__menu--hidden"
+                    id="search-location__listbox" role="listbox"></ul><span id="search-location__assistiveHint"
+                    style="display: none;">When autocomplete results are available use up and down arrows to review and
+                    enter to select. Touch device users, explore by touch or with swipe gestures.</span>
+                </div>
+              </div>
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="radius">
+                Radius
+              </label>
+              <select class="govuk-select" id="radius" name="radius">
+                <option selected="" value="5">5 miles</option>
+                <option value="10">10 miles</option>
+                <option value="25">25 miles</option>
+                <option value="50">50 miles</option>
+                <option value="80">80 miles</option>
+                <option value="1000">England</option>
+              </select>
+            </div>
+            <div class="govuk-form-group">
+              <label for="SelectedCourseId" class="govuk-label govuk-label--m">Apprenticeship training course</label>
+              <div>
+                <div class="autocomplete__wrapper">
+                  <div
+                    style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
+                    <div id="SelectedCourseId__status--A" role="status" aria-atomic="true" aria-live="polite"></div>
+                    <div id="SelectedCourseId__status--B" role="status" aria-atomic="true" aria-live="polite"></div>
+                  </div><input aria-expanded="false" aria-owns="SelectedCourseId__listbox" aria-autocomplete="both"
+                    aria-describedby="SelectedCourseId__assistiveHint" autocomplete="off"
+                    class="autocomplete__input autocomplete__input--default" id="SelectedCourseId" name=""
+                    placeholder="" type="text" role="combobox">
+                  <ul class="autocomplete__menu autocomplete__menu--overlay autocomplete__menu--hidden"
+                    id="SelectedCourseId__listbox" role="listbox"></ul><span id="SelectedCourseId__assistiveHint"
+                    style="display: none;">When autocomplete results are available use up and down arrows to review and
+                    enter to select. Touch device users, explore by touch or with swipe gestures.</span>
+                </div>
+              </div><select id="SelectedCourseId-select" name="SelectedCourseId" class="govuk-select das-autocomplete"
+                style="display: none;">
+                <option value="">Select an apprenticeship training course</option>
+                <option value="274">Abattoir worker (level 2)</option>
+                <option value="272">Academic professional (level 7)</option>
+                <option value="176">Accident repair technician (level 3)</option>
+                <option value="204">Accountancy or taxation professional (level 7)</option>
+                <option value="698">Accounting finance manager (level 6)</option>
+                <option value="488">Accounts or finance assistant (level 2)</option>
+                <option value="17">Actuarial technician (level 4)</option>
+                <option value="255">Actuary (level 7)</option>
+                <option value="119">Adult care worker (level 2)</option>
+                <option value="545">Advanced and creative hair professional (level 3)</option>
+                <option value="563">Advanced beauty therapist (level 3)</option>
+                <option value="152">Advanced butcher (level 3)</option>
+                <option value="252">Advanced clinical practitioner (integrated degree) (level 7)</option>
+                <option value="148">Advanced credit controller and debt collection specialist (level 3)</option>
+                <option value="489">Advanced forensic practitioner (custody or sexual offence) (level 7)</option>
+                <option value="509">Advanced furniture CNC technician (level 3)</option>
+                <option value="689">Advanced sports turf technician (level 3)</option>
+                <option value="525">Advanced upholsterer (level 3)</option>
+                <option value="373">Advertising and media executive (level 3)</option>
+                <option value="37">Aerospace engineer (level 6)</option>
+                <option value="38">Aerospace software engineer (level 6)</option>
+                <option value="572">Agriculture or horticulture professional adviser (level 6)</option>
+                <option value="490">Air traffic controller (level 5)</option>
+                <option value="114">Aircraft certifying technician (level 4)</option>
+                <option value="298">Ambulance support worker (emergency, urgent and non-urgent) (level 3)</option>
+                <option value="332">Animal care and welfare assistant (level 2)</option>
+                <option value="730">Animal care and welfare manager (level 3)</option>
+                <option value="179">Animal technologist (level 3)</option>
+                <option value="379">Animal trainer (level 4)</option>
+                <option value="645">Anti-social behaviour and community safety officer (level 4)</option>
+                <option value="663">Applications support lead (level 4)</option>
+                <option value="660">Arboriculturist (level 4)</option>
+                <option value="180">Arborist (level 2)</option>
+                <option value="484">Archaeological specialist (degree) (level 7)</option>
+                <option value="429">Archaeological technician (level 3)</option>
+                <option value="300">Architect (integrated degree) (level 7)</option>
+                <option value="299">Architectural assistant (integrated degree) (level 6)</option>
+                <option value="668">Archivist and records manager (level 7)</option>
+                <option value="561">Artificial intelligence (AI) data specialist (level 7)</option>
+                <option value="432">Arts therapist (level 7)</option>
+                <option value="624">Asset manager (level 4)</option>
+                <option value="133">Assistant accountant (level 3)</option>
+                <option value="485">Assistant buyer and assistant merchandiser (level 6)</option>
+                <option value="726">Assistant farm manager (level 4)</option>
+                <option value="102">Assistant practitioner (health) (level 5)</option>
+                <option value="628">Assistant recording technician (level 4)</option>
+                <option value="156">Associate ambulance practitioner (level 4)</option>
+                <option value="483">Associate continuing healthcare practitioner (level 5)</option>
+                <option value="128">Associate project manager (level 4)</option>
+                <option value="684">Audiovisual technician (level 5)</option>
+                <option value="283">Autocare technician (level 2)</option>
+                <option value="474">Automation and controls engineering technician (level 4)</option>
+                <option value="304">Automotive glazing technician (level 3)</option>
+                <option value="657">Aviation customer service operative (level 2)</option>
+                <option value="658">Aviation ground handler (level 2)</option>
+                <option value="87">Aviation ground operative (level 2)</option>
+                <option value="86">Aviation ground specialist (level 3)</option>
+                <option value="141">Aviation maintenance mechanic - military (level 2)</option>
+                <option value="653">Aviation movement specialist (level 3)</option>
+                <option value="123">Aviation operations manager (level 4)</option>
+                <option value="177">Baker (level 2)</option>
+                <option value="708">Barbering professional (level 2)</option>
+                <option value="743">Battery manufacturing technician (level 3)</option>
+                <option value="390">Beauty and make up consultant (level 2)</option>
+                <option value="363">Beauty therapist (level 2)</option>
+                <option value="544">BEMS (building energy management systems) controls engineer (level 4)</option>
+                <option value="72">Bespoke cutter and tailor (level 5)</option>
+                <option value="521">Bespoke furniture maker (level 3)</option>
+                <option value="183">Bespoke saddler (level 3)</option>
+                <option value="339">Bicycle mechanic (level 2)</option>
+                <option value="400">Bid and proposal co-ordinator (level 3)</option>
+                <option value="406">Bioinformatics scientist (degree) (level 7)</option>
+                <option value="719">Biomedical scientist (level 6)</option>
+                <option value="534">Blacksmith (level 3)</option>
+                <option value="76">Boatbuilder (level 3)</option>
+                <option value="522">Boatmaster (level 3)</option>
+                <option value="294">Brewer (level 4)</option>
+                <option value="287">Bricklayer (level 2)</option>
+                <option value="354">Broadcast and media systems engineer (integrated degree) (level 6)</option>
+                <option value="460">Broadcast and media systems technical operator (level 3)</option>
+                <option value="547">Broadcast and media systems technician (level 5)</option>
+                <option value="447">Building control surveyor (integrated degree) (level 6)</option>
+                <option value="198">Building services design engineer (degree) (level 6)</option>
+                <option value="173">Building services engineering craftsperson (level 3)</option>
+                <option value="164">Building services engineering installer (level 2)</option>
+                <option value="275">Building services engineering senior technician (level 4)</option>
+                <option value="193">Building services engineering service and maintenance engineer (level 3)</option>
+                <option value="276">Building services engineering site management (degree) (level 6)</option>
+                <option value="178">Building services engineering technician 2022 (level 3)</option>
+                <option value="134">Bus and coach engineering technician (level 3)</option>
+                <option value="196">Business administrator (level 3)</option>
+                <option value="165">Business analyst (level 4)</option>
+                <option value="311">Business to business sales professional (integrated degree) (level 6)</option>
+                <option value="54">Butcher (level 2)</option>
+                <option value="458">Buying and merchandising assistant (level 4)</option>
+                <option value="305">Cabin crew (level 3)</option>
+                <option value="573">Camera prep technician (level 3)</option>
+                <option value="453">Career development professional (level 6)</option>
+                <option value="239">Carpentry and joinery (level 2)</option>
+                <option value="714">Cellular network field engineer (level 4)</option>
+                <option value="41">Chartered legal executive (level 6)</option>
+                <option value="713">Chartered legal executive litigator and advocate (level 7)</option>
+                <option value="55">Chartered manager (degree) (level 6)</option>
+                <option value="50">Chartered surveyor (degree) (level 6)</option>
+                <option value="424">Chartered town planner (degree) (level 7)</option>
+                <option value="169">Chef de partie (level 3)</option>
+                <option value="308">Children, young people and families manager (level 5)</option>
+                <option value="309">Children, young people and families practitioner (level 4)</option>
+                <option value="510">Church minister (integrated degree) (level 6)</option>
+                <option value="200">Civil engineer (degree) (level 6)</option>
+                <option value="259">Civil engineering senior technician (level 4)</option>
+                <option value="277">Civil engineering site management (degree) (level 6)</option>
+                <option value="199">Civil engineering technician (level 3)</option>
+                <option value="532">Cleaning hygiene operative (level 2)</option>
+                <option value="591">Clinical associate in psychology (CAP) (integrated degree) (level 7)</option>
+                <option value="444">Clinical coder (level 3)</option>
+                <option value="604">Clinical pharmacology scientist (integrated degree) (level 7)</option>
+                <option value="609">Clinical scientist (level 7)</option>
+                <option value="307">Clinical trials specialist (degree) (level 6)</option>
+                <option value="555">Coaching professional (level 5)</option>
+                <option value="479">Commercial catering equipment technician (level 3)</option>
+                <option value="296">Commercial laundry operative (level 2)</option>
+                <option value="222">Commercial procurement and supply (formerly Public sector commercial professional)
+                  (level 4)</option>
+                <option value="234">Commercial thermal insulation operative (level 2)</option>
+                <option value="93">Commis chef (level 2)</option>
+                <option value="215">Community activator coach (level 2)</option>
+                <option value="242">Community energy specialist (level 4)</option>
+                <option value="659">Community health and wellbeing worker (level 3)</option>
+                <option value="729">Community nurse specialist practitioner (NMC 2022) (level 7)</option>
+                <option value="427">Community safety advisor (level 3)</option>
+                <option value="251">Community sport and health officer (level 3)</option>
+                <option value="143">Compliance and risk officer (level 3)</option>
+                <option value="160">Composites technician (level 3)</option>
+                <option value="562">Compressed air and vacuum technician (level 3)</option>
+                <option value="467">Construction assembly and installation operative (level 2)</option>
+                <option value="500">Construction design and build technician (level 4)</option>
+                <option value="588">Construction equipment maintenance mechanic (level 2)</option>
+                <option value="575">Construction plant operative (level 2)</option>
+                <option value="468">Construction quantity surveying technician (level 4)</option>
+                <option value="482">Construction quantity surveyor (degree) (level 6)</option>
+                <option value="501">Construction site management (degree) (level 6)</option>
+                <option value="502">Construction site supervisor (level 4)</option>
+                <option value="673">Construction support technician (level 3)</option>
+                <option value="174">Content creator (level 3)</option>
+                <option value="9">Control systems engineer (degree) (level 6)</option>
+                <option value="622">Corporate responsibility and sustainability practitioner (level 4)</option>
+                <option value="503">Counter fraud investigator (level 4)</option>
+                <option value="585">Countryside ranger (level 4)</option>
+                <option value="543">Countryside worker (level 2)</option>
+                <option value="711">Craft bricklayer (level 3)</option>
+                <option value="240">Craft carpentry and joinery (level 3)</option>
+                <option value="542">Creative digital design professional (integrated degree) (level 6)</option>
+                <option value="528">Creative industries production manager (level 7)</option>
+                <option value="721">Creative industries production technician (level 3)</option>
+                <option value="77">Credit controller and collector (level 2)</option>
+                <option value="314">Crop technician (level 3)</option>
+                <option value="418">Cultural heritage conservation technician (level 4)</option>
+                <option value="451">Cultural heritage conservator (degree) (level 7)</option>
+                <option value="407">Cultural learning and participation officer (level 3)</option>
+                <option value="554">Curator (level 7)</option>
+                <option value="539">Curtain wall installer (level 3)</option>
+                <option value="269">Custody and detention professional (level 3)</option>
+                <option value="122">Customer service practitioner (level 2)</option>
+                <option value="278">Customer service specialist (level 3)</option>
+                <option value="355">Cyber security technical professional (integrated degree) (level 6)</option>
+                <option value="559">Cyber security technician (level 3)</option>
+                <option value="619">Cyber security technologist (2021) (level 4)</option>
+                <option value="149">Dairy technologist (level 5)</option>
+                <option value="80">Data analyst (level 4)</option>
+                <option value="746">Data engineer (level 5)</option>
+                <option value="676">Data protection and information governance practitioner (level 4)</option>
+                <option value="337">Data scientist (integrated degree) (level 6)</option>
+                <option value="576">Data technician (level 3)</option>
+                <option value="552">Debt adviser (level 3)</option>
+                <option value="343">Demolition operative (level 2)</option>
+                <option value="61">Dental nurse (integrated) (level 3)</option>
+                <option value="20">Dental practice manager (level 4)</option>
+                <option value="18">Dental technician (integrated) (level 5)</option>
+                <option value="511">Design and construction management (degree) (level 6)</option>
+                <option value="548">DevOps engineer (level 4)</option>
+                <option value="431">Diagnostic radiographer (level 6)</option>
+                <option value="469">Dietitian (level 6)</option>
+                <option value="643">Digital accessibility specialist (level 4)</option>
+                <option value="25">Digital and technology solutions professional (level 6)</option>
+                <option value="327">Digital and technology solutions specialist (integrated degree) (level 7)</option>
+                <option value="491">Digital community manager (level 4)</option>
+                <option value="195">Digital engineering technician (level 3)</option>
+                <option value="702">Digital forensic technician (level 4)</option>
+                <option value="709">Digital learning designer (level 5)</option>
+                <option value="293">Digital marketer (integrated degree) (level 6)</option>
+                <option value="705">Digital product manager (level 4)</option>
+                <option value="439">Digital support technician (level 3)</option>
+                <option value="541">Digital user experience (UX) professional (integrated degree) (level 6)</option>
+                <option value="747">Dispensing optician (level 6)</option>
+                <option value="504">District nurse (level 7)</option>
+                <option value="656">Dog groomer (level 2)</option>
+                <option value="678">Domestic electrician (level 3)</option>
+                <option value="456">Drinks dispense technician (level 3)</option>
+                <option value="26">Dual fuel smart meter installer (level 2)</option>
+                <option value="634">Early intervention practitioner (level 4)</option>
+                <option value="430">Early years educator (level 3)</option>
+                <option value="655">Early years lead practitioner (level 5)</option>
+                <option value="550">Early years practitioner (level 2)</option>
+                <option value="466">Ecologist (degree) (level 7)</option>
+                <option value="639">Education technician (he assistant technician and simulation-based technician)
+                  (level 3)</option>
+                <option value="10">Electrical or electronic technical support engineer (degree) (level 6)</option>
+                <option value="216">Electrical power networks engineer (level 4)</option>
+                <option value="127">Electrical power protection and plant commissioning engineer (level 4)</option>
+                <option value="212">Electrical, electronic product service and installation engineer (level 3)</option>
+                <option value="614">Electro-mechanical engineer (level 6)</option>
+                <option value="750">Embalmer (level 5)</option>
+                <option value="107">Embedded electronic systems design and development engineer (degree) (level 6)
+                </option>
+                <option value="262">Emergency contact handler (level 3)</option>
+                <option value="415">Employability practitioner (level 4)</option>
+                <option value="595">Engineer surveyor (level 4)</option>
+                <option value="376">Engineering construction erector rigger (level 3)</option>
+                <option value="202">Engineering construction pipefitter (level 3)</option>
+                <option value="92">Engineering design and draughtsperson (level 3)</option>
+                <option value="377">Engineering fitter (level 3)</option>
+                <option value="523">Engineering manufacturing technician (level 4)</option>
+                <option value="352">Engineering operative (level 2)</option>
+                <option value="167">Engineering technician (level 3)</option>
+                <option value="631">Enhanced clinical practitioner (level 6)</option>
+                <option value="464">Environmental health practitioner (integrated degree) (level 6)</option>
+                <option value="465">Environmental practitioner (Degree) (level 6)</option>
+                <option value="263">Equine groom (level 2)</option>
+                <option value="159">Event assistant (level 3)</option>
+                <option value="517">Express delivery manager (degree) (level 6)</option>
+                <option value="338">Express delivery operative (level 2)</option>
+                <option value="674">Express delivery sortation hub operative (level 2)</option>
+                <option value="162">Facilities management supervisor (level 3)</option>
+                <option value="266">Facilities manager (level 4)</option>
+                <option value="440">Facilities services operative (level 2)</option>
+                <option value="638">Fall protection technician (level 3)</option>
+                <option value="481">Farrier (level 3)</option>
+                <option value="361">Fashion and textiles pattern cutter (level 3)</option>
+                <option value="359">Fashion and textiles product technologist (level 4)</option>
+                <option value="408">Fashion studio assistant (level 3)</option>
+                <option value="356">Fencing installer (level 2)</option>
+                <option value="512">Fenestration fabricator (level 2)</option>
+                <option value="513">Fenestration installer (level 2)</option>
+                <option value="153">Financial adviser (level 4)</option>
+                <option value="8">Financial services administrator (level 3)</option>
+                <option value="28">Financial services customer adviser (level 2)</option>
+                <option value="213">Financial services professional (level 6)</option>
+                <option value="126">Fire emergency and security systems technician (level 3)</option>
+                <option value="250">Fire safety advisor (level 3)</option>
+                <option value="642">Fire safety engineer (degree) (level 6)</option>
+                <option value="530">Fire safety inspector (level 4)</option>
+                <option value="410">First officer pilot (level 6)</option>
+                <option value="640">Fisher (level 2)</option>
+                <option value="172">Fishmonger (level 2)</option>
+                <option value="498">Fitted furniture design technician (level 3)</option>
+                <option value="733">Fitted interiors installer (level 2)</option>
+                <option value="372">Floorlayer (level 2)</option>
+                <option value="567">Florist (level 2)</option>
+                <option value="245">Food and drink advanced engineer (integrated degree) (level 6)</option>
+                <option value="454">Food and drink engineer (level 5)</option>
+                <option value="16">Food and drink maintenance engineer (level 3)</option>
+                <option value="130">Food and drink process operator (level 2)</option>
+                <option value="129">Food and drink technical operator (level 3)</option>
+                <option value="184">Food industry technical professional (integrated degree) (level 6)</option>
+                <option value="131">Food technologist (level 3)</option>
+                <option value="289">Footwear manufacturer (level 2)</option>
+                <option value="683">Forest craftsperson (level 3)</option>
+                <option value="329">Formworker (level 2)</option>
+                <option value="582">Fundraiser (level 3)</option>
+                <option value="411">Funeral director (level 3)</option>
+                <option value="412">Funeral team member (level 2)</option>
+                <option value="137">Furniture manufacturer (level 2)</option>
+                <option value="650">Game programmer (level 7)</option>
+                <option value="514">Garment maker (level 3)</option>
+                <option value="74">Gas engineering operative (level 3)</option>
+                <option value="57">Gas network craftsperson (level 3)</option>
+                <option value="58">Gas network operative (level 2)</option>
+                <option value="621">General farm worker (level 2)</option>
+                <option value="94">General welder (arc processes) (level 2)</option>
+                <option value="254">Geospatial mapping and science specialist (degree) (level 6)</option>
+                <option value="244">Geospatial survey technician (level 3)</option>
+                <option value="652">Geotechnical engineer (integrated degree) (level 7)</option>
+                <option value="553">Golf course manager (level 5)</option>
+                <option value="21">Golf greenkeeper (level 2)</option>
+                <option value="710">Governance officer (level 4)</option>
+                <option value="388">Groundworker (level 2)</option>
+                <option value="157">Hairdressing professional (level 2)</option>
+                <option value="527">Harbour master (level 6)</option>
+                <option value="505">Health play specialist (level 5)</option>
+                <option value="630">Healthcare engineering specialist technician (level 3)</option>
+                <option value="99">Healthcare science assistant (level 2)</option>
+                <option value="150">Healthcare science associate (level 4)</option>
+                <option value="168">Healthcare science practitioner (integrated degree) (level 6)</option>
+                <option value="103">Healthcare support worker (level 2)</option>
+                <option value="421">Hearing aid dispenser (level 5)</option>
+                <option value="135">Heavy vehicle service and maintenance technician (level 3)</option>
+                <option value="341">Heritage engineering technician (level 3)</option>
+                <option value="220">High speed rail and infrastructure technician (level 4)</option>
+                <option value="125">Highway electrical maintenance and installation operative (level 2)</option>
+                <option value="124">Highways electrician or service operative (level 3)</option>
+                <option value="336">Highways maintenance skilled operative (level 2)</option>
+                <option value="385">Hire controller (plant, tools and equipment) (level 2)</option>
+                <option value="441">Historic environment advice assistant (level 4)</option>
+                <option value="108">HM forces serviceperson (protective services) (level 2)</option>
+                <option value="662">Horticulture and landscaping technical manager (level 5)</option>
+                <option value="181">Horticulture or landscape construction operative (level 2)</option>
+                <option value="392">Horticulture or landscaping supervisor (level 3)</option>
+                <option value="223">Hospitality manager (level 4)</option>
+                <option value="138">Hospitality supervisor (level 3)</option>
+                <option value="96">Hospitality team member (level 2)</option>
+                <option value="65">Housing and property management (level 3)</option>
+                <option value="64">Housing and property management assistant (level 2)</option>
+                <option value="191">HR support (level 3)</option>
+                <option value="706">Human factors specialist (level 7)</option>
+                <option value="584">Hygiene specialist (level 4)</option>
+                <option value="405">Improvement leader (level 6)</option>
+                <option value="237">Improvement practitioner (level 4)</option>
+                <option value="375">Improvement specialist (level 5)</option>
+                <option value="238">Improvement technician (level 3)</option>
+                <option value="358">Industrial coatings applicator (level 2)</option>
+                <option value="233">Industrial thermal insulation technician (level 3)</option>
+                <option value="618">Information communications technician (level 3)</option>
+                <option value="540">Information manager (level 4)</option>
+                <option value="5">Installation and maintenance electrician (level 3)</option>
+                <option value="60">Insurance practitioner (level 3)</option>
+                <option value="63">Insurance professional (level 4)</option>
+                <option value="382">Intelligence analyst (level 4)</option>
+                <option value="470">Interior systems installer (level 2)</option>
+                <option value="295">Internal audit practitioner (level 4)</option>
+                <option value="324">Internal audit professional (level 7)</option>
+                <option value="264">International freight forwarding specialist (level 3)</option>
+                <option value="29">Investment operations administrator (level 2)</option>
+                <option value="30">Investment operations specialist (level 4)</option>
+                <option value="33">Investment operations technician (level 3)</option>
+                <option value="413">IT solutions technician (level 3)</option>
+                <option value="142">IT technical salesperson (level 3)</option>
+                <option value="605">Jewellery, silversmithing, and allied trades professional (level 3)</option>
+                <option value="670">Journalist (level 5)</option>
+                <option value="574">Junior advertising creative (level 3)</option>
+                <option value="558">Junior animator (level 4)</option>
+                <option value="68">Junior energy manager (level 3)</option>
+                <option value="310">Junior estate agent (level 2)</option>
+                <option value="83">Junior management consultant (level 4)</option>
+                <option value="712">Junior visual effects - VFX artist or assistant technical director - ATD (level 4)
+                </option>
+                <option value="492">Keeper and aquarist (level 3)</option>
+                <option value="221">Laboratory scientist (degree) (level 6)</option>
+                <option value="14">Laboratory technician (level 3)</option>
+                <option value="612">Land referencer (level 4)</option>
+                <option value="69">Land-based service engineer (level 2)</option>
+                <option value="70">Land-based service engineering technician (level 3)</option>
+                <option value="565">Landscape technician (level 3)</option>
+                <option value="110">Large goods vehicle (LGV) driver C + E (level 2)</option>
+                <option value="118">Lead adult care worker (level 3)</option>
+                <option value="736">Lead baker (level 3)</option>
+                <option value="690">Lead engineering maintenance technician (level 4)</option>
+                <option value="551">Lead practitioner in adult care (level 4)</option>
+                <option value="724">Lead traffic management operative (level 2)</option>
+                <option value="537">Leader in adult care (level 5)</option>
+                <option value="493">Lean manufacturing operative (level 2)</option>
+                <option value="325">Learning and development consultant business partner (level 5)</option>
+                <option value="326">Learning and development practitioner (level 3)</option>
+                <option value="695">Learning and skills assessor (level 3)</option>
+                <option value="694">Learning and skills mentor (level 4)</option>
+                <option value="402">Learning and skills teacher (level 5)</option>
+                <option value="393">Leather craftsperson (level 2)</option>
+                <option value="228">Leisure duty manager (level 3)</option>
+                <option value="414">Leisure team member (level 2)</option>
+                <option value="395">Library, information and archive services assistant (level 3)</option>
+                <option value="404">Lift and escalator electromechanic (level 3)</option>
+                <option value="579">Lift truck and powered access engineering technician (level 3)</option>
+                <option value="667">Lifting equipment technician (level 3)</option>
+                <option value="219">Lifting technician (level 2)</option>
+                <option value="664">Lightning protection operative (level 2)</option>
+                <option value="636">Livestock unit technician (level 3)</option>
+                <option value="717">Low carbon heating technician (level 3)</option>
+                <option value="691">Machining technician (level 3)</option>
+                <option value="146">Maintenance and operations engineering technician (level 3)</option>
+                <option value="340">Mammography associate (level 4)</option>
+                <option value="11">Manufacturing engineer (degree) (level 6)</option>
+                <option value="417">Manufacturing manager (integrated degree) (level 6)</option>
+                <option value="394">Marina and boatyard operative (level 2)</option>
+                <option value="625">Marine electrician (level 3)</option>
+                <option value="226">Marine engineer (level 3)</option>
+                <option value="292">Marine pilot (level 5)</option>
+                <option value="279">Maritime caterer (level 2)</option>
+                <option value="362">Maritime mechanical and electrical mechanic (level 2)</option>
+                <option value="632">Market research executive (level 4)</option>
+                <option value="349">Marketing executive (level 4)</option>
+                <option value="348">Marketing manager (level 6)</option>
+                <option value="623">Mastic asphalter (level 2)</option>
+                <option value="592">Material cutter (level 2)</option>
+                <option value="426">Materials process engineer (degree) (level 7)</option>
+                <option value="477">Materials science technologist (degree) (level 6)</option>
+                <option value="598">Media production co-ordinator (level 4)</option>
+                <option value="669">Medical statistician (level 7)</option>
+                <option value="365">Metal casting, foundry and patternmaking technician (level 3)</option>
+                <option value="399">Metal fabricator (level 3)</option>
+                <option value="316">Metal recycling general operative (level 2)</option>
+                <option value="187">Metrology technician (level 3)</option>
+                <option value="603">Midwife (2019 NMC standards) (Integrated degree) (level 6)</option>
+                <option value="315">Military engineering construction technician (level 3)</option>
+                <option value="687">Mine management (level 6)</option>
+                <option value="366">Mineral and construction product sampling and testing operations (level 2)</option>
+                <option value="175">Mineral processing mobile and static plant operator (level 2)</option>
+                <option value="497">Mineral products technician (level 5)</option>
+                <option value="715">Mobile transport refrigeration technician (level 3)</option>
+                <option value="62">Mortgage adviser (level 3)</option>
+                <option value="677">Mortuary technician (level 3)</option>
+                <option value="210">Motor finance specialist (level 3)</option>
+                <option value="59">Motor vehicle service and maintenance technician - light vehicle (level 3)</option>
+                <option value="347">Motorcycle technician (repair and maintenance) (level 3)</option>
+                <option value="737">Multi-channel marketer (level 3)</option>
+                <option value="443">Museums and galleries technician (level 3)</option>
+                <option value="389">Nail services technician (level 2)</option>
+                <option value="448">Network cable installer (level 3)</option>
+                <option value="1">Network engineer (level 4)</option>
+                <option value="515">New furniture product developer (level 3)</option>
+                <option value="626">Non home office police officer (level 4)</option>
+                <option value="132">Non-destructive testing (NDT) operator (level 2)</option>
+                <option value="207">Non-destructive testing engineer (degree) (level 6)</option>
+                <option value="67">Non-destructive testing engineering technician (level 3)</option>
+                <option value="46">Nuclear health physics monitor (level 2)</option>
+                <option value="227">Nuclear operative (level 2)</option>
+                <option value="620">Nuclear reactor desk engineer (level 6)</option>
+                <option value="47">Nuclear scientist and nuclear engineer (integrated degree) (level 6)</option>
+                <option value="163">Nuclear technician (level 5)</option>
+                <option value="35">Nuclear welding inspection technician (level 4)</option>
+                <option value="434">Nursing associate (NMC 2018) (level 5)</option>
+                <option value="391">Occupational therapist (level 6)</option>
+                <option value="666">Officer of the watch (near coastal) (level 3)</option>
+                <option value="306">Operating department practitioner (level 6)</option>
+                <option value="241">Operational firefighter (level 3)</option>
+                <option value="600">Operational research specialist (level 7)</option>
+                <option value="104">Operations or departmental manager (level 5)</option>
+                <option value="693">Optical assistant 2022 (level 3)</option>
+                <option value="422">Oral health practitioner (level 4)</option>
+                <option value="328">Ordnance munitions and explosives (OME) professional (integrated degree) (level 6)
+                </option>
+                <option value="583">Ordnance munitions and explosives specialist (integrated degree) (level 7)</option>
+                <option value="560">Ordnance munitions explosives technician (level 4)</option>
+                <option value="608">Orthodontic therapist (integrated) (level 4)</option>
+                <option value="351">Outdoor activity instructor (level 3)</option>
+                <option value="672">Outdoor learning specialist (level 5)</option>
+                <option value="75">Outside broadcasting engineer (integrated degree) (level 7)</option>
+                <option value="302">Packaging professional (integrated degree) (level 6)</option>
+                <option value="290">Painter and decorator (level 2)</option>
+                <option value="42">Paralegal (level 3)</option>
+                <option value="318">Paramedic (level 6)</option>
+                <option value="48">Paraplanner (level 4)</option>
+                <option value="189">Passenger transport driver - bus and coach or tram (level 2)</option>
+                <option value="214">Passenger transport operations manager (level 4)</option>
+                <option value="206">Passenger transport operative (level 2)</option>
+                <option value="286">Payroll administrator (level 3)</option>
+                <option value="613">Payroll assistant manager (level 5)</option>
+                <option value="682">Peer worker (level 3)</option>
+                <option value="32">Pensions administrator (level 3)</option>
+                <option value="190">People professional (level 5)</option>
+                <option value="321">Personal trainer (level 3)</option>
+                <option value="396">Pharmacy services assistant (level 2)</option>
+                <option value="471">Pharmacy technician (integrated) (level 3)</option>
+                <option value="725">Photographer (level 4)</option>
+                <option value="438">Photographic assistant (level 3)</option>
+                <option value="506">Physician associate - integrated degree (level 7)</option>
+                <option value="397">Physiotherapist (level 6)</option>
+                <option value="312">Piling attendant (level 2)</option>
+                <option value="487">Pipe welder (level 3)</option>
+                <option value="529">Plasterer (level 2)</option>
+                <option value="486">Plate welder (level 3)</option>
+                <option value="635">Play therapist (level 7)</option>
+                <option value="696">Playworker (level 2)</option>
+                <option value="225">Plumbing and domestic heating technician (level 3)</option>
+                <option value="281">Podiatrist (level 6)</option>
+                <option value="282">Police community support officer (level 4)</option>
+                <option value="256">Police constable (integrated degree) (level 6)</option>
+                <option value="231">Policy officer (level 4)</option>
+                <option value="718">Polymer processing technician (level 3)</option>
+                <option value="265">Port marine operations officer (level 4)</option>
+                <option value="350">Port operative (level 2)</option>
+                <option value="166">Post graduate engineer (level 7)</option>
+                <option value="442">Post production technical operator (level 4)</option>
+                <option value="331">Poultry technician (level 3)</option>
+                <option value="284">Poultry worker (level 2)</option>
+                <option value="742">Power industry distribution cable jointer (level 3)</option>
+                <option value="740">Power industry overhead linesperson (level 3)</option>
+                <option value="741">Power industry substation fitter (level 3)</option>
+                <option value="6">Power network craftsperson (level 3)</option>
+                <option value="353">Powered pedestrian door installer and service engineer (level 2)</option>
+                <option value="646">Print operative (level 2)</option>
+                <option value="461">Print technician (level 3)</option>
+                <option value="201">Process automation engineer (degree) (level 7)</option>
+                <option value="744">Process industry manufacturing technician (level 3)</option>
+                <option value="419">Process leader (level 4)</option>
+                <option value="590">Procurement and supply assistant (level 3)</option>
+                <option value="12">Product design and development engineer (degree) (level 6)</option>
+                <option value="112">Production assistant - screen and audio (level 3)</option>
+                <option value="364">Production chef (level 2)</option>
+                <option value="117">Professional accounting or taxation technician (level 4)</option>
+                <option value="323">Professional economist (integrated degree) (level 6)</option>
+                <option value="647">Professional forester (integrated degree) (level 6)</option>
+                <option value="716">Professional security operative (level 2)</option>
+                <option value="651">Project controls professional (level 6)</option>
+                <option value="186">Project controls technician (level 3)</option>
+                <option value="291">Project manager (integrated degree) (level 6)</option>
+                <option value="23">Property maintenance operative (level 2)</option>
+                <option value="342">Propulsion technician (level 4)</option>
+                <option value="370">Prosthetic and orthotic technician (level 3)</option>
+                <option value="368">Prosthetist and orthotist (level 6)</option>
+                <option value="425">Psychological wellbeing practitioner (level 6)</option>
+                <option value="507">Public health practitioner - integrated degree (level 6)</option>
+                <option value="257">Public relations and communications assistant (level 4)</option>
+                <option value="420">Public sector compliance Investigator and officer (level 3)</option>
+                <option value="36">Public service operational delivery officer (level 3)</option>
+                <option value="280">Publishing assistant (level 3)</option>
+                <option value="602">Quality practitioner (level 4)</option>
+                <option value="611">Radio network technician (level 3)</option>
+                <option value="345">Rail and rail systems engineer (level 5)</option>
+                <option value="301">Rail and rail systems principal engineer (integrated degree) (level 7)</option>
+                <option value="313">Rail and rail systems senior engineer (integrated degree) (level 6)</option>
+                <option value="88">Rail engineering advanced technician (level 4)</option>
+                <option value="90">Rail engineering operative (level 2)</option>
+                <option value="89">Rail engineering technician (level 3)</option>
+                <option value="688">Rail infrastructure operator 2022 (level 3)</option>
+                <option value="24">Railway engineering design technician (level 3)</option>
+                <option value="217">Recruitment consultant (level 3)</option>
+                <option value="218">Recruitment resourcer (level 2)</option>
+                <option value="49">Refrigeration air conditioning and heat pump engineering technician (level 3)
+                </option>
+                <option value="409">Registered nurse degree (NMC 2018) (level 6)</option>
+                <option value="536">Registrar (creative and cultural) (level 6)</option>
+                <option value="371">Regulatory affairs specialist (level 7)</option>
+                <option value="253">Regulatory compliance officer (level 4)</option>
+                <option value="243">Rehabilitation worker (visual impairment) (level 5)</option>
+                <option value="457">Research scientist (level 7)</option>
+                <option value="707">Resilience and emergencies professional (level 6)</option>
+                <option value="384">Retail leadership (integrated degree) (level 6)</option>
+                <option value="147">Retail manager (level 4)</option>
+                <option value="140">Retail team leader (level 3)</option>
+                <option value="101">Retailer (level 2)</option>
+                <option value="320">Revenues and welfare benefits practitioner (level 4)</option>
+                <option value="346">Risk and safety management professional (degree) (level 7)</option>
+                <option value="476">Road surfacing operative (level 2)</option>
+                <option value="518">Roofer (level 2)</option>
+                <option value="260">Safety, health and environment technician (level 3)</option>
+                <option value="369">Sales executive (level 4)</option>
+                <option value="273">Scaffolder (level 2)</option>
+                <option value="232">School business professional (level 4)</option>
+                <option value="45">Science industry maintenance technician (level 3)</option>
+                <option value="248">Science industry process and plant engineer (degree) (level 6)</option>
+                <option value="249">Science manufacturing process operative (level 2)</option>
+                <option value="15">Science manufacturing technician (level 3)</option>
+                <option value="34">Seafarer (deck rating) (level 2)</option>
+                <option value="367">Security first line manager (level 3)</option>
+                <option value="258">Senior and head of facilities management (integrated degree) (level 6)</option>
+                <option value="144">Senior compliance and risk specialist (level 6)</option>
+                <option value="546">Senior culinary chef (level 4)</option>
+                <option value="335">Senior equine groom (level 3)</option>
+                <option value="31">Senior financial services customer adviser (level 3)</option>
+                <option value="151">Senior healthcare support worker (level 3)</option>
+                <option value="66">Senior housing and property management (level 4)</option>
+                <option value="205">Senior insurance professional (level 6)</option>
+                <option value="270">Senior investment and commercial banking professional (level 7)</option>
+                <option value="586">Senior journalist (level 7)</option>
+                <option value="236">Senior leader (level 7)</option>
+                <option value="317">Senior metrology technician (level 5)</option>
+                <option value="615">Senior people professional (level 7)</option>
+                <option value="139">Senior production chef (level 3)</option>
+                <option value="531">Senior professional economist (integrated degree) (level 7)</option>
+                <option value="570">Serious and complex crime investigator (integrated degree) (level 6)</option>
+                <option value="704">Service designer (level 6)</option>
+                <option value="334">Sewing machinist (level 2)</option>
+                <option value="607">Signage technician (level 3)</option>
+                <option value="322">Small commercial vessel crewmember (level 3)</option>
+                <option value="679">Small vessel chief engineer (level 4)</option>
+                <option value="524">Smart home technician (level 3)</option>
+                <option value="720">Social researcher (level 6)</option>
+                <option value="381">Social worker (integrated degree) (level 6)</option>
+                <option value="2">Software developer (level 4)</option>
+                <option value="154">Software development technician (level 3)</option>
+                <option value="91">Software tester (level 4)</option>
+                <option value="43">Solicitor (level 7)</option>
+                <option value="494">Sonographer (integrated degree) (level 6)</option>
+                <option value="594">Space engineering technician (level 4)</option>
+                <option value="699">Space systems engineer (level 6)</option>
+                <option value="520">Specialist community public health nurse (level 7)</option>
+                <option value="158">Spectacle maker (level 3)</option>
+                <option value="473">Speech and language therapist (level 6)</option>
+                <option value="446">Sporting excellence professional (level 3)</option>
+                <option value="616">Sports coach (level 4)</option>
+                <option value="145">Sports turf operative (level 2)</option>
+                <option value="661">Stained glass craftsperson (level 4)</option>
+                <option value="549">Stairlift, platform lift, service lift electromechanic (level 2)</option>
+                <option value="171">Steel fixer (level 2)</option>
+                <option value="637">Stonemason (level 2)</option>
+                <option value="398">Supply chain leadership professional (integrated degree) (level 6)</option>
+                <option value="109">Supply chain operator (level 2)</option>
+                <option value="209">Supply chain practitioner (fast moving consumer good) (previously Operator Manager)
+                  (level 3)</option>
+                <option value="111">Supply chain warehouse operative (level 2)</option>
+                <option value="703">Surface finisher (level 3)</option>
+                <option value="51">Surveying technician (level 3)</option>
+                <option value="116">Survival equipment fitter (level 3)</option>
+                <option value="564">Sustainability business specialist (integrated degree) (level 7)</option>
+                <option value="433">Systems engineer (degree) (level 7)</option>
+                <option value="556">Systems thinking practitioner (level 7)</option>
+                <option value="203">Teacher (level 6)</option>
+                <option value="297">Teaching assistant (level 3)</option>
+                <option value="105">Team leader or supervisor (level 3)</option>
+                <option value="319">Technician scientist (level 5)</option>
+                <option value="557">Telecoms field operative (level 2)</option>
+                <option value="267">Textile manufacturing operative (level 2)</option>
+                <option value="519">Textile technical specialist (level 4)</option>
+                <option value="445">Therapeutic radiographer (level 6)</option>
+                <option value="499">Through life engineering services specialist (integrated degree) (level 7)</option>
+                <option value="578">Tool process design engineer (level 6)</option>
+                <option value="633">Town planning assistant (level 4)</option>
+                <option value="261">Trade supplier (level 2)</option>
+                <option value="569">Trade union official (level 4)</option>
+                <option value="692">Trading standards professional (level 6)</option>
+                <option value="285">Train driver (level 3)</option>
+                <option value="428">Tramway construction operative (level 2)</option>
+                <option value="654">Transport and warehouse operations supervisor (level 3)</option>
+                <option value="462">Transport planner (integrated degree) (level 6)</option>
+                <option value="100">Transport planning technician (level 3)</option>
+                <option value="120">Travel consultant (level 3)</option>
+                <option value="230">Tunnelling operative (level 2)</option>
+                <option value="571">Underkeeper (level 2)</option>
+                <option value="671">Urban driver (level 2)</option>
+                <option value="53">Utilities engineering technician (level 3)</option>
+                <option value="450">Vehicle damage assessor (level 4)</option>
+                <option value="435">Vehicle damage mechanical, electrical and trim (MET) technician (level 3)</option>
+                <option value="436">Vehicle damage paint technician (level 3)</option>
+                <option value="437">Vehicle damage panel technician (level 3)</option>
+                <option value="627">Vet technician (livestock) (level 5)</option>
+                <option value="333">Veterinary nurse (level 3)</option>
+                <option value="629">VFX supervisor (level 7)</option>
+                <option value="380">Wall and floor tiler (level 2)</option>
+                <option value="374">Waste resource operative (level 2)</option>
+                <option value="235">Watchmaker (level 3)</option>
+                <option value="508">Water environment worker (level 3)</option>
+                <option value="686">Water industry network technician (level 3)</option>
+                <option value="685">Water industry treatment process technician (level 3)</option>
+                <option value="568">Water network operative (level 2)</option>
+                <option value="593">Water process operative (level 2)</option>
+                <option value="416">Water treatment technician (level 3)</option>
+                <option value="617">Wellbeing and holistic therapist (level 3)</option>
+                <option value="423">Wireless communications rigger (level 2)</option>
+                <option value="472">Wood product manufacturing operative (level 2)</option>
+                <option value="644">Youth justice practitioner (level 5)</option>
+                <option value="610">Youth support worker (level 3)</option>
+                <option value="675">Youth worker (level 6)</option>
+              </select>
+            </div>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  Apprenticeship category
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="route-45108ca0-eb0c-4403-a421-3754accd35e1" name="routes"
+                      type="checkbox" value="Agriculture, environmental and animal care">
+                    <label class="govuk-label govuk-checkboxes__label" for="route-45108ca0-eb0c-4403-a421-3754accd35e1">
+                      Agriculture, environmental and animal care
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="route-a5f662eb-b7b3-4036-8473-126707dda024" name="routes"
+                      type="checkbox" value="Business and administration">
+                    <label class="govuk-label govuk-checkboxes__label" for="route-a5f662eb-b7b3-4036-8473-126707dda024">
+                      Business and administration
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="route-6e9931b6-6626-4cb2-8372-1a0c33298c20" name="routes"
+                      type="checkbox" value="Care services">
+                    <label class="govuk-label govuk-checkboxes__label" for="route-6e9931b6-6626-4cb2-8372-1a0c33298c20">
+                      Care services
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="route-5d548394-b66d-4204-89cf-3e9837dad60c" name="routes"
+                      type="checkbox" value="Catering and hospitality">
+                    <label class="govuk-label govuk-checkboxes__label" for="route-5d548394-b66d-4204-89cf-3e9837dad60c">
+                      Catering and hospitality
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="route-b140d7cb-ea53-4264-a060-cb36e17141c1" name="routes"
+                      type="checkbox" value="Construction and the built environment">
+                    <label class="govuk-label govuk-checkboxes__label" for="route-b140d7cb-ea53-4264-a060-cb36e17141c1">
+                      Construction and the built environment
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="route-1b828523-5ec6-4552-823a-d745af845932" name="routes"
+                      type="checkbox" value="Creative and design">
+                    <label class="govuk-label govuk-checkboxes__label" for="route-1b828523-5ec6-4552-823a-d745af845932">
+                      Creative and design
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="route-118f3caf-1821-4bf1-9a1b-50a8607e7569" name="routes"
+                      type="checkbox" value="Digital">
+                    <label class="govuk-label govuk-checkboxes__label" for="route-118f3caf-1821-4bf1-9a1b-50a8607e7569">
+                      Digital
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="route-999273ab-85f3-408f-a598-f303ef851055" name="routes"
+                      type="checkbox" value="Education and early years">
+                    <label class="govuk-label govuk-checkboxes__label" for="route-999273ab-85f3-408f-a598-f303ef851055">
+                      Education and early years
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="route-952c37d2-7ed0-42b6-9ccf-d330883c6a88" name="routes"
+                      type="checkbox" value="Engineering and manufacturing">
+                    <label class="govuk-label govuk-checkboxes__label" for="route-952c37d2-7ed0-42b6-9ccf-d330883c6a88">
+                      Engineering and manufacturing
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="route-46eed396-d5d8-45d5-a35b-c20a0ef8088c" name="routes"
+                      type="checkbox" value="Hair and beauty">
+                    <label class="govuk-label govuk-checkboxes__label" for="route-46eed396-d5d8-45d5-a35b-c20a0ef8088c">
+                      Hair and beauty
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="route-9de4f4f2-a9f7-4f1c-aa94-6db7bd13b021" name="routes"
+                      type="checkbox" value="Health and science">
+                    <label class="govuk-label govuk-checkboxes__label" for="route-9de4f4f2-a9f7-4f1c-aa94-6db7bd13b021">
+                      Health and science
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="route-4ab850fb-5ba5-4c58-8157-0ba36fb2eeb1" name="routes"
+                      type="checkbox" value="Legal, finance and accounting">
+                    <label class="govuk-label govuk-checkboxes__label" for="route-4ab850fb-5ba5-4c58-8157-0ba36fb2eeb1">
+                      Legal, finance and accounting
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="route-0d46cce7-09e0-46be-8ba3-eb2935118d76" name="routes"
+                      type="checkbox" value="Protective services">
+                    <label class="govuk-label govuk-checkboxes__label" for="route-0d46cce7-09e0-46be-8ba3-eb2935118d76">
+                      Protective services
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="route-4f6a34fe-4780-4fe7-9532-272ab83376ce" name="routes"
+                      type="checkbox" value="Sales, marketing and procurement">
+                    <label class="govuk-label govuk-checkboxes__label" for="route-4f6a34fe-4780-4fe7-9532-272ab83376ce">
+                      Sales, marketing and procurement
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="route-9f0c6d53-c0de-4b54-9d91-cf1ae2b3f2c3" name="routes"
+                      type="checkbox" value="Transport and logistics">
+                    <label class="govuk-label govuk-checkboxes__label" for="route-9f0c6d53-c0de-4b54-9d91-cf1ae2b3f2c3">
+                      Transport and logistics
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <button type="submit" class="govuk-button" id="filters-submit-second">Apply filters</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body govuk-!-margin-bottom-6">Sorted by:
+      <span class="govuk-!-font-weight-bold">Course name</span>
+    </p>
+
+    <h2 class="govuk-heading-m">5 results</h2>
+    <hr class="govuk-section-break govuk-section-break--visible">
+
+    <div class="das-search-results">
+      <ol class="das-search-results__list">
+        <li class="das-search-results__list-item">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <h2 class="govuk-heading-m das-search-results__heading">
+                Accident repair technician <span class="das-no-wrap">(level 3)</span>
+              </h2>
+              <dl class="das-definition-list das-definition-list--meta govuk-!-margin-bottom-2">
+                <dt class="das-definition-list__title">Apprenticeship category</dt>
+                <dd class="das-definition-list__definition govuk-!-margin-bottom-1">Engineering and manufacturing</dd>
+                <dt class="das-definition-list__title">Apprentices</dt>
+                <dd class="das-definition-list__definition govuk-!-margin-bottom-1">3 apprentices</dd>
+                <dt class="das-definition-list__title">Employers</dt>
+                <dd class="das-definition-list__definition">3</dd>
+              </dl>
+            </div>
+            <div class="govuk-grid-column-one-third das-!-text-align-right--from-tablet">
+              <a id="view-176" class="govuk-link govuk-link--no-visited-state govuk-body" href="select-request">View
+                employers <span class="govuk-visually-hidden">looking for training providers for Accident repair
+                  technician</span></a>
+            </div>
+          </div>
+        </li>
+        <li class="das-search-results__list-item">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <h2 class="govuk-heading-m das-search-results__heading">
+                Advanced butcher <span class="das-no-wrap">(level 3)</span>
+              </h2>
+              <dl class="das-definition-list das-definition-list--meta govuk-!-margin-bottom-2">
+                <dt class="das-definition-list__title">Apprenticeship category</dt>
+                <dd class="das-definition-list__definition govuk-!-margin-bottom-1">Sales, marketing and procurement
+                </dd>
+                <dt class="das-definition-list__title">Apprentices</dt>
+                <dd class="das-definition-list__definition govuk-!-margin-bottom-1">74 apprentices</dd>
+                <dt class="das-definition-list__title">Employers</dt>
+                <dd class="das-definition-list__definition">72</dd>
+              </dl>
+            </div>
+            <div class="govuk-grid-column-one-third das-!-text-align-right--from-tablet">
+              <a id="view-152" class="govuk-link govuk-link--no-visited-state govuk-body" href="select-request">View
+                employers <span class="govuk-visually-hidden">looking for training providers for Advanced
+                  butcher</span></a>
+            </div>
+          </div>
+        </li>
+        <li class="das-search-results__list-item">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <h2 class="govuk-heading-m das-search-results__heading">
+                Advanced golf greenkeeper <span class="das-no-wrap">(level 3)</span>
+              </h2>
+              <dl class="das-definition-list das-definition-list--meta govuk-!-margin-bottom-2">
+                <dt class="das-definition-list__title">Apprenticeship category</dt>
+                <dd class="das-definition-list__definition govuk-!-margin-bottom-1">Agriculture, environmental and
+                  animal care</dd>
+                <dt class="das-definition-list__title">Apprentices</dt>
+                <dd class="das-definition-list__definition govuk-!-margin-bottom-1">4 apprentices</dd>
+                <dt class="das-definition-list__title">Employers</dt>
+                <dd class="das-definition-list__definition">3</dd>
+              </dl>
+            </div>
+            <div class="govuk-grid-column-one-third das-!-text-align-right--from-tablet">
+              <a id="view-535" class="govuk-link govuk-link--no-visited-state govuk-body" href="select-request">View
+                employers <span class="govuk-visually-hidden">looking for training providers for Advanced golf
+                  greenkeeper</span></a>
+            </div>
+          </div>
+        </li>
+        <li class="das-search-results__list-item">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <h2 class="govuk-heading-m das-search-results__heading">
+                Animal trainer <span class="das-no-wrap">(level 4)</span>
+              </h2>
+              <dl class="das-definition-list das-definition-list--meta govuk-!-margin-bottom-2">
+                <dt class="das-definition-list__title">Apprenticeship category</dt>
+                <dd class="das-definition-list__definition govuk-!-margin-bottom-1">Agriculture, environmental and
+                  animal care</dd>
+                <dt class="das-definition-list__title">Apprentices</dt>
+                <dd class="das-definition-list__definition govuk-!-margin-bottom-1">5 apprentices</dd>
+                <dt class="das-definition-list__title">Employers</dt>
+                <dd class="das-definition-list__definition">1</dd>
+              </dl>
+            </div>
+            <div class="govuk-grid-column-one-third das-!-text-align-right--from-tablet">
+              <a id="view-379" class="govuk-link govuk-link--no-visited-state govuk-body" href="select-request">View
+                employers <span class="govuk-visually-hidden">looking for training providers for Animal
+                  trainer</span></a>
+            </div>
+          </div>
+        </li>
+        <li class="das-search-results__list-item">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <h2 class="govuk-heading-m das-search-results__heading">
+                Horticulture and landscaping technical manager <span class="das-no-wrap">(level 5)</span>
+              </h2>
+              <dl class="das-definition-list das-definition-list--meta govuk-!-margin-bottom-2">
+                <dt class="das-definition-list__title">Apprenticeship category</dt>
+                <dd class="das-definition-list__definition govuk-!-margin-bottom-1">Agriculture, environmental and
+                  animal care</dd>
+                <dt class="das-definition-list__title">Apprentices</dt>
+                <dd class="das-definition-list__definition govuk-!-margin-bottom-1">5 apprentices</dd>
+                <dt class="das-definition-list__title">Employers</dt>
+                <dd class="das-definition-list__definition">1</dd>
+              </dl>
+            </div>
+            <div class="govuk-grid-column-one-third das-!-text-align-right--from-tablet">
+              <a id="view-662" class="govuk-link govuk-link--no-visited-state govuk-body" href="select-request">View
+                employers <span class="govuk-visually-hidden">looking for training providers for Horticulture and
+                  landscaping
+                  technical manager</span></a>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

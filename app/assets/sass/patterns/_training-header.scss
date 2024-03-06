@@ -96,7 +96,7 @@
   }
 }
 a.das-user-navigation__link {
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
   display: block;
   padding: 10px 15px;
@@ -298,7 +298,7 @@ a.das-navigation__link--current {
   position: relative;
   text-decoration: none;
   font-weight: 700;
-  color: #0b0c0c;
+  color: #0b0c0c !important;
 }
 
 a.das-navigation__link--current:after {

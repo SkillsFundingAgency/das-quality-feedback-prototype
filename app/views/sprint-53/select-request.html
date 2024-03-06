@@ -1,0 +1,154 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Training providers for
+Engineering technician (level 3) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "includes/header.html" %}
+{% include "includes/training-provider-account-header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a Prototype - GOV.UK Prototype kit
+    </span>
+  </p>
+</div>
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      <span class="govuk-caption-xl">Accident repair technician <span class="das-no-wrap">(level 3)</span></span>
+      Select the requests you are interested in
+    </h1>
+
+    <div class="das-highlight govuk-!-padding-bottom-0">
+      <form method="GET" action="#">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Filter employers by location</legend>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third das-float-right">
+              <div class="govuk-form-group govuk-!-margin-bottom-5">
+                <label class="govuk-label" for="radius">
+                  Radius
+                </label>
+                <select class="govuk-select govuk-!-width-three-quarters" id="radius" name="radius">
+                  <option selected="" value="5">5 miles</option>
+                  <option value="10">10 miles</option>
+                  <option value="25">25 miles</option>
+                  <option value="50">50 miles</option>
+                  <option value="80">80 miles</option>
+                  <option value="1000">England</option>
+                </select>
+              </div>
+            </div>
+            <div class="govuk-grid-column-two-thirds">
+              <div class="govuk-form-group govuk-!-margin-bottom-5 das-search-form">
+                <label class="govuk-label" for="search-location">
+                  Enter a town, city or postcode
+                </label>
+                <div class="das-search-form__group">
+                  <div id="autocomplete-container" class="das-autocomplete-wrap">
+                    <div class="autocomplete__wrapper">
+                      <div
+                        style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
+                        <div id="search-location__status--A" role="status" aria-atomic="true" aria-live="polite"></div>
+                        <div id="search-location__status--B" role="status" aria-atomic="true" aria-live="polite"></div>
+                      </div><input aria-expanded="false" aria-owns="search-location__listbox" aria-autocomplete="both"
+                        aria-describedby="search-location__assistiveHint" autocomplete="off"
+                        class="autocomplete__input autocomplete__input--default" id="search-location" name="location"
+                        placeholder="" type="text" role="combobox">
+                      <ul class="autocomplete__menu autocomplete__menu--overlay autocomplete__menu--hidden"
+                        id="search-location__listbox" role="listbox"></ul><span id="search-location__assistiveHint"
+                        style="display: none;">When autocomplete results are available use up and down arrows to review
+                        and enter to select. Touch device users, explore by touch or with swipe gestures.</span>
+                    </div>
+                  </div>
+                  <input type="hidden" name="id">
+                  <input type="hidden" name="fromLocation" value="true">
+                  <div class="das-search-form__button-wrap">
+                    <button class="govuk-button das-search-form__button" type="submit">
+                      Apply filters
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+
+
+    <form method="POST" action="edit-contact-details">
+
+      <div class="govuk-form-group ">
+        <fieldset class="govuk-fieldset" aria-describedby="employers-hint">
+          <p class="govuk-body">Select all that apply.</p>
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="EmployerDemandIds-1" name="EmployerDemands" type="checkbox"
+                value="EmployerDemandIds-1">
+              <label class="govuk-label govuk-checkboxes__label" for="EmployerDemandIds-1">
+                <span class="govuk-!-font-weight-bold">2 apprentices</span>
+                <br>
+                Canary Wharf, Greater London
+                <br>
+              </label>
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="EmployerDemandIds-4" name="EmployerDemands" type="checkbox"
+                value="EmployerDemandIds-4">
+              <label class="govuk-label govuk-checkboxes__label" for="EmployerDemandIds-4">
+                <span class="govuk-!-font-weight-bold">Apprentice number unknown</span>
+                <br>
+                Coventry, CV1 2WT
+                <br>
+              </label>
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="EmployerDemandIds-2" name="EmployerDemands" type="checkbox"
+                value="EmployerDemandIds-2">
+              <label class="govuk-label govuk-checkboxes__label" for="EmployerDemandIds-2">
+                <span class="govuk-!-font-weight-bold">1 apprentice</span>
+                <br>
+                Coventry, West Midlands
+                <br>
+              </label>
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="EmployerDemandIds-3" name="EmployerDemands" type="checkbox"
+                value="EmployerDemandIds-3">
+              <label class="govuk-label govuk-checkboxes__label" for="EmployerDemandIds-3">
+                <span class="govuk-!-font-weight-bold">Apprentice number unknown</span>
+                <br>
+                Crawley, West Sussex
+                <br>
+              </label>
+            </div>
+
+          </div>
+
+        </fieldset>
+      </div>
+      <button id="continue" type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

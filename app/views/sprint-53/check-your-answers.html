@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Training providers for
+Engineering technician (level 3) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "includes/header.html" %}
+{% include "includes/training-provider-account-header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a Prototype - GOV.UK Prototype kit
+    </span>
+  </p>
+</div>
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <h1 class="govuk-heading-xl">
+      Check your answers
+    </h1>
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Apprenticeship training course</dt>
+        <dd class="govuk-summary-list__value">Accident repair technician (level 3)</dd>
+        <dd class="govuk-summary-list__actions"></dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Opportunities</dt>
+        <dd class="govuk-summary-list__value">
+          <ul class="govuk-list govuk-list--spaced">
+            <li>
+              Coventry, West Midlands<br>
+              1 apprentice
+            </li>
+          </ul>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link govuk-link--no-visited-state"
+            href="/10044607/find-apprenticeship-opportunities/176?id=a74d5228-65e9-4ecb-a39a-a3c4894575f6">Change <span
+              class="govuk-visually-hidden">opportunities</span></a>
+        </dd>
+      </div>
+    </dl>
+    <h2 class="govuk-heading-m">User Name's contact details</h2>
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Email address</dt>
+        <dd class="govuk-summary-list__value"><span class="das-breakable das-!-display-block">{{ data['EmailAddress'] or
+            'admin@horizontraining.com' }}</span></dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link govuk-link--no-visited-state" href="edit-contact-details">Change
+            <span class="govuk-visually-hidden">email address</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Telephone number</dt>
+        <dd class="govuk-summary-list__value"><span class="das-breakable das-!-display-block">{{ data['PhoneNumber'] or
+            '01632 960000' }}</span></dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link govuk-link--no-visited-state" href="edit-contact-details">Change
+            <span class="govuk-visually-hidden">telephone number</span></a>
+        </dd>
+      </div>
+    </dl>
+    <p class="govuk-body">We'll share the details above with the employers you're showing interest in. </p>
+
+    <form action="#" method="post">
+      <button id="continue" class="govuk-button" data-module="govuk-button">Confirm</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

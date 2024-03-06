@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Training providers for
+Engineering technician (level 3) – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "includes/header.html" %}
+{% include "includes/training-provider-account-header.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a Prototype - GOV.UK Prototype kit
+    </span>
+  </p>
+</div>
+
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Edit User Name's contact details</h1>
+    <p>We'll share these with the employers you're showing interest in, so they can contact you about Accident repair
+      technician (level 3).</p>
+    <form method="POST" novalidate="" action="confirm-contact-details">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">
+          <div class="govuk-form-group ">
+            <label class="govuk-label govuk-label--m" for="EmailAddress">
+              Email address
+            </label>
+            <input class="govuk-input " type="email" autocomplete="email" id="EmailAddress" name="EmailAddress"
+              value="{{ data['EmailAddress']}}">
+          </div>
+          <div class="govuk-form-group ">
+            <label class="govuk-label govuk-label--m" for="PhoneNumber">
+              Telephone number
+            </label>
+            <input class="govuk-input " type="tel" autocomplete="tel" id="PhoneNumber" name="PhoneNumber"
+              value="{{ data['PhoneNumber']}}">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="Website">
+              Website (optional)
+            </label>
+            <div id="event-name-hint" class="govuk-hint das-no-wrap">You can link to any page on your website about this
+              course.</div>
+            <input class="govuk-input" type="text" id="Website" name="Website" value="">
+          </div>
+        </div>
+      </div>
+      <button id="continue" class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
